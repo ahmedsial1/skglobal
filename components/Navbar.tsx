@@ -34,7 +34,6 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/about#network", label: "Global Network" },
     { href: "/machinery", label: "Heavy Machinery" },
     { href: "/spare-parts", label: "Spare Parts" },
     { href: "/hardware", label: "Industrial Hardware" },

@@ -2,7 +2,6 @@ import React from "react";
 import { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
-import NetworkDirectory from "@/components/NetworkDirectory";
 
 export const metadata: Metadata = {
   title: "About Us & Leadership Profile",
@@ -119,28 +118,6 @@ export default function About() {
           </div>
         </section>
 
-
-
-        {/* Global Network Directory Section */}
-        <section id="network" className="space-y-12 pt-16 border-t border-white/5">
-          <ScrollReveal>
-            <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
-                Enterprise Footprint
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white uppercase tracking-wider">
-                Our Global Corporate Network
-              </h2>
-              <p className="text-xs sm:text-sm text-sial-gray-light font-light max-w-2xl mx-auto">
-                SIAL Group operates across multiple international jurisdictions. Filter our 10 registered subsidiaries, logistics pipelines, and direct sourcing hubs.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.15}>
-            <NetworkDirectory />
-          </ScrollReveal>
-        </section>
       </div>
     </div>
   );
