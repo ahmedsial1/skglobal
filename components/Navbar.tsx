@@ -20,6 +20,27 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Check translation cookie
+    const getCookie = (name: string) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(";").shift();
+      return null;
+    };
+
+    const transCookie = getCookie("googtrans");
+    if (transCookie) {
+      const lang = transCookie.split("/").pop();
+      if (lang) {
+        const matched = LANGUAGES.find((l) => l.code === lang || (l.code === "zh" && lang === "zh-CN"));
+        if (matched) {
+          setSelectedLang(matched.code);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setScrolled(true);
@@ -30,6 +51,21 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLangChange = (lang: string) => {
+    const domain = window.location.hostname;
+    if (lang === "en") {
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain}`;
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+    } else {
+      const target = lang === "zh" ? "zh-CN" : lang;
+      document.cookie = `googtrans=/en/${target}; path=/; domain=${domain}`;
+      document.cookie = `googtrans=/en/${target}; path=/`;
+    }
+    setSelectedLang(lang);
+    setLangOpen(false);
+    window.location.reload();
+  };
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -98,10 +134,7 @@ export default function Navbar() {
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => {
-                        setSelectedLang(lang.code);
-                        setLangOpen(false);
-                      }}
+                      onClick={() => handleLangChange(lang.code)}
                       className={`w-full text-left px-4 py-2 text-xs font-medium hover:bg-sial-slate-dark transition duration-150 ${
                         selectedLang === lang.code ? "text-sial-gold bg-sial-slate-dark/50" : "text-sial-gray-light hover:text-white"
                       }`}
@@ -195,10 +228,7 @@ export default function Navbar() {
         {LANGUAGES.map((lang) => (
           <button
             key={lang.code}
-            onClick={() => {
-              setSelectedLang(lang.code);
-              setLangOpen(false);
-            }}
+            onClick={() => handleLangChange(lang.code)}
             className="block w-full text-left px-3 py-2 text-xs font-semibold text-sial-gray-light hover:text-white hover:bg-sial-slate-dark/50"
           >
             {lang.label}
