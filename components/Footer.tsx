@@ -95,7 +95,7 @@ export default function Footer() {
             <Link href="/about" className="hover:text-white transition duration-200">
               CEO&apos;s Message
             </Link>
-            <Link href="/network" className="hover:text-white transition duration-200">
+            <Link href="/about#network" className="hover:text-white transition duration-200">
               Global Network
             </Link>
             <Link href="/contact" className="hover:text-white transition duration-200">
