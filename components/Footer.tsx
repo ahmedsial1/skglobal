@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand Profile */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src="/logo.png" alt="SIAL Group Logo" className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+              <img src="/logo.png" alt="SIAL Group Logo" className="h-28 w-auto object-contain transition-transform duration-300 hover:scale-105" />
             </div>
             <p className="text-sm text-sial-gray-light leading-relaxed">
               An 18-year legacy of global excellence in heavy industries, automotive parts distribution, and industrial hardware. Operating proprietary sourcing hubs in South Korea and China to deliver uncompromised quality.

@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img src="/logo.png" alt="SIAL Group Logo" className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+            <img src="/logo.png" alt="SIAL Group Logo" className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" />
           </Link>
 
           {/* Desktop Nav */}
