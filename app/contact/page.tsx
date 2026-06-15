@@ -12,52 +12,90 @@ export const metadata: Metadata = {
 
 const OFFICES = [
   {
-    country: "South Korea (Corporate HQ)",
-    entity: "SIAL & Young A Trading Co.",
-    role: "Proprietary Sourcing & Inspection Node",
-    address: "Seoul, South Korea",
+    country: "South Korea",
+    entity: "Sial & Young A Trading Co.",
+    role: "Strategic Automotive Sourcing HQ",
+    address: "Seoul, Incheon, South Korea",
     email: "sialautotraders@gmail.com",
     contact: "WeChat: SIALautoparts",
   },
   {
-    country: "China (Procurement Hub)",
-    entity: "Yiwu SIAL International Trading Co. Ltd.",
-    role: "Factory Verification & Quality Clearance",
-    address: "Yiwu, Zhejiang Province, China",
+    country: "China",
+    entity: "Yiwu Sial International Trading Co. Ltd.",
+    role: "Premier Industrial Hardware Node",
+    address: "Yiwu, Zhejiang, China",
     email: "sialautotraders@gmail.com",
     contact: "WeChat: SIALautoparts",
   },
   {
     country: "Oman (GCC HQ)",
-    entity: "SK Transports Oman & SIAL International LLC",
-    role: "Mobile Crane Sales, rentals & parts",
+    entity: "Yahya Bin Khalfan Bin Mohammed Al Sayabi Modern Trading LLC",
+    role: "Logistics, Automotive Trading & Parts Hub",
     address: "Muscat, Sultanate of Oman",
     email: "sialautotraders@gmail.com",
-    contact: "Web: www.sktransportsoman.com",
+    contact: "SK Transports Affiliated",
+    details: [
+      "Automotive Parts: Backbone of genuine Hyundai & Kia spare parts supply.",
+      "Network: 12-15 branches operating nationwide across the Sultanate.",
+      "Logistics: SK Transports crane rentals, sales & heavy fleet management.",
+      "Inventory: Advanced real-time tracking via integrated Odoo ERP systems."
+    ]
   },
   {
-    country: "Saudi Arabia (GCC Expansion)",
-    entity: "SIAL International Company",
-    role: "Fleet rentals, Crane sales & spare parts",
-    address: "Riyadh, Kingdom of Saudi Arabia",
+    country: "Oman",
+    entity: "Sial Kingdom LLC",
+    role: "Industrial Trading & Local Distribution",
+    address: "Near Abu Zaki Tile Store, Road 6, Way No 7749, Mabila'h Sanaiya, Seeb, Muscat, Oman",
     email: "sialautotraders@gmail.com",
-    contact: "Inquiries: B2B Routing Desk",
+    contact: "Muscat B2B Desk",
   },
   {
-    country: "Pakistan (South Asia)",
-    entity: "SIAL International Pakistan Pvt Ltd",
-    role: "Machinery Import & Regional Distribution",
-    address: "Lahore / Karachi, Pakistan",
+    country: "Oman",
+    entity: "Sial International LLC",
+    role: "Genuine & Aftermarket Auto Parts Supply",
+    address: "Al Mabaila Al Janubiyya, Seeb Wilayat, Muscat, Oman",
     email: "sialautotraders@gmail.com",
-    contact: "Support: East Asian Network Desk",
+    contact: "Parts Distribution Node",
   },
   {
-    country: "Mozambique (Africa Pipeline)",
-    entity: "SIAL Mozambique Logistics Node",
-    role: "Industrial Hardware & Steel Importation",
-    address: "Maputo Port, Mozambique",
+    country: "Saudi Arabia",
+    entity: "Sial International LLC",
+    role: "GCC Heavy Machinery & Fleet Operations",
+    address: "Jeddah, Saudi Arabia",
     email: "sialautotraders@gmail.com",
-    contact: "Clearance: Beira & Maputo Agents",
+    contact: "Jeddah Regional Desk",
+  },
+  {
+    country: "Mozambique",
+    entity: "Sial Kingdom LLC",
+    role: "Logistics Node & Industrial Importation",
+    address: "Nampula, Maputo, Mozambique",
+    email: "sialautotraders@gmail.com",
+    contact: "East Africa Hub Desk",
+  },
+  {
+    country: "Pakistan",
+    entity: "Sial Traders",
+    role: "Regional Distribution & Automotive Import",
+    address: "Sialkot, Punjab, Pakistan",
+    email: "sialautotraders@gmail.com",
+    contact: "South Asia Import Desk",
+  },
+  {
+    country: "Pakistan",
+    entity: "Sial International (Pvt) Limited",
+    role: "Corporate Head Office & Machinery Import",
+    address: "Sialkot, Punjab, Pakistan",
+    email: "sialautotraders@gmail.com",
+    contact: "Corporate Affairs Node",
+  },
+  {
+    country: "Pakistan",
+    entity: "Sial & Co",
+    role: "Logistics, Shipping & Supply Chain Operations",
+    address: "Sialkot, Punjab, Pakistan",
+    email: "sialautotraders@gmail.com",
+    contact: "Local Logistics Desk",
   },
 ];
 
@@ -74,7 +112,7 @@ export default function Contact() {
             </h1>
             <div className="h-1 w-20 bg-sial-gold mx-auto mt-4"></div>
             <p className="text-sm sm:text-base text-sial-gray-light font-light leading-relaxed pt-2">
-              Use our smart routing form to send specifications directly to regional compliance desks, or locate our individual hub coordinates.
+              Use our B2B routing system to send requirements to division desks, or locate coordinates for our 10 network companies.
             </p>
           </div>
         </ScrollReveal>
@@ -91,25 +129,42 @@ export default function Contact() {
           {/* Offices Column */}
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal delay={0.2}>
-              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold block">Global Office Coordinates</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold block">Global Corporate Directory (10 Companies)</span>
             </ScrollReveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {OFFICES.map((office, idx) => (
-                <ScrollReveal key={idx} delay={0.1 * idx + 0.2}>
+                <ScrollReveal key={idx} delay={0.05 * idx + 0.1}>
                   <HoverCard
-                    className="slate-gradient p-5 rounded-lg space-y-3"
+                    className="slate-gradient p-5 rounded-lg space-y-3 flex flex-col justify-between"
                   >
-                    <div className="space-y-1">
-                      <span className="text-xs font-bold text-sial-gold block uppercase tracking-wide">
-                        {office.country}
-                      </span>
-                      <h4 className="text-sm font-bold text-white leading-snug">{office.entity}</h4>
-                      <span className="text-[10px] text-sial-gray-medium font-semibold uppercase tracking-wider block">
-                        {office.role}
-                      </span>
+                    <div className="space-y-2">
+                      <div className="space-y-1">
+                        <span className="text-xs font-bold text-sial-gold block uppercase tracking-wide">
+                          {office.country}
+                        </span>
+                        <h4 className="text-sm font-bold text-white leading-snug">{office.entity}</h4>
+                        <span className="text-[10px] text-sial-gray-medium font-semibold uppercase tracking-wider block">
+                          {office.role}
+                        </span>
+                      </div>
+                      
+                      {office.details && (
+                        <ul className="text-[10px] text-sial-gray-light space-y-1 pt-2 border-t border-white/5 list-disc list-inside">
+                          {office.details.map((detail, dIdx) => {
+                            const [title, desc] = detail.split(":");
+                            return (
+                              <li key={dIdx} className="leading-relaxed list-none pl-1">
+                                <span className="text-sial-gold font-bold mr-1">• {title}:</span>
+                                <span>{desc}</span>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
                     </div>
+
                     <div className="space-y-1 text-xs text-sial-gray-light pt-2 border-t border-white/5">
-                      <p>📍 {office.address}</p>
+                      <p className="line-clamp-2">📍 {office.address}</p>
                       <p>📧 {office.email}</p>
                       <p className="text-[11px] font-mono text-sial-gold">{office.contact}</p>
                     </div>
