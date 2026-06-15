@@ -7,17 +7,8 @@ import HoverCard from "@/components/HoverCard";
 export default function Home() {
   return (
     <div className="relative overflow-hidden bg-sial-slate-dark text-white">
-      {/* Hero Background Image */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <Image
-          src="/shipping_port.png"
-          alt="SIAL Group Global Cargo Shipping Port at Sunset - Multi-Jurisdictional Industrial Trading"
-          fill
-          priority
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-sial-slate-dark/95 via-sial-slate-dark/70 to-sial-slate-dark"></div>
-      </div>
+      {/* Background radial highlight */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#1e293b,transparent_60%)] opacity-35 z-0"></div>
 
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 z-10 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25"></div>
@@ -25,37 +16,55 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative z-20 pt-20 pb-24 md:pt-32 md:pb-40 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
         <ScrollReveal delay={0.1} duration={0.8}>
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-sial-gold/30 bg-sial-gold/5 text-xs font-bold uppercase tracking-widest text-sial-gold">
-              <span>🛡️ 18-Year Global Governance Legacy</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Text & CTAs */}
+            <div className="lg:col-span-7 text-left space-y-6">
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-sial-gold/30 bg-sial-gold/5 text-xs font-bold uppercase tracking-widest text-sial-gold">
+                <span>🛡️ 18-Year Global Governance Legacy</span>
+              </div>
+
+              {/* Heading */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-white uppercase font-sans">
+                Multi-Jurisdictional Industrial Trading &{" "}
+                <span className="gold-gradient-text block mt-2">Infrastructure Procurement</span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-sm md:text-base text-sial-gray-light font-light leading-relaxed text-justify">
+                As an elite multinational enterprise, SIAL Group drives industrial trade excellence across global corridors. Our capabilities combine heavy construction machinery sales and crane rentals with wholesale genuine automotive parts export and A-to-Z construction site hardware procurement. By connecting direct East Asian production lines with high-demand markets in the GCC and Africa, we guarantee tier-1 quality control, supply chain resilience, and global logistics efficiency.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-0.5 gold-glow text-center"
+                >
+                  Route B2B Inquiry
+                </Link>
+                <Link
+                  href="/about"
+                  className="w-full sm:w-auto px-8 py-4 border border-sial-gray-industrial hover:border-white text-white font-bold uppercase tracking-wider text-sm rounded-md transition duration-300 text-center"
+                >
+                  CEO Biography
+                </Link>
+              </div>
             </div>
 
-            {/* Heading */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none text-white">
-              Multi-Jurisdictional Industrial Trading &{" "}
-              <span className="gold-gradient-text block mt-2">Infrastructure Procurement</span>
-            </h1>
-
-            {/* Description */}
-            <p className="text-lg md:text-xl text-sial-gray-light max-w-3xl mx-auto font-light leading-relaxed">
-              As an elite multinational enterprise, SIAL Group drives industrial trade excellence across global corridors. Our capabilities combine heavy construction machinery sales and crane rentals with wholesale genuine automotive parts export and A-to-Z construction site hardware procurement. By connecting direct East Asian production lines with high-demand markets in the GCC and Africa, we guarantee tier-1 quality control, supply chain resilience, and global logistics efficiency.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-0.5 gold-glow"
-              >
-                Route B2B Inquiry
-              </Link>
-              <Link
-                href="/about"
-                className="w-full sm:w-auto px-8 py-4 border border-sial-gray-industrial hover:border-white text-white font-bold uppercase tracking-wider text-sm rounded-md transition duration-300"
-              >
-                CEO Biography
-              </Link>
+            {/* Right Column: Hero Image */}
+            <div className="lg:col-span-5 flex justify-center w-full">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl gold-glow-hover transition-all duration-300">
+                <Image
+                  src="/shipping_port.png"
+                  alt="SIAL Group Global Cargo Shipping Port at Sunset - Multi-Jurisdictional Industrial Trading"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-w-768px) 100vw, 500px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sial-slate-dark/80 via-transparent to-transparent"></div>
+              </div>
             </div>
           </div>
         </ScrollReveal>
