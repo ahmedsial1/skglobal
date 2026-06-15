@@ -56,24 +56,32 @@ export default function Home() {
               <div className="space-y-6">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                   Our Competitive Edge:{" "}
-                  <span className="text-sial-gold">Direct Sourcing, Zero Margins</span>
+                  <span className="text-sial-gold">Factory-Direct Sourcing & Zero Broker Margins</span>
                 </h2>
                 <p className="text-base text-sial-gray-light leading-relaxed">
-                  Unlike traditional trading brokers who add layer upon layer of intermediary markup, SIAL Group operates direct, proprietary sourcing hubs located at key economic crossroads.
+                  Unlike traditional trading brokers who inflate costs with layers of intermediary markups, SIAL Group operates proprietary, factory-direct sourcing hubs at key global economic crossroads. By controlling our own international procurement networks, we guarantee direct factory pricing, absolute supply chain visibility, and premium quality assurance for global enterprises.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6">
+                  {/* South Korea */}
                   <div className="flex items-start space-x-3">
-                    <span className="text-sial-gold text-xl">🇰🇷</span>
-                    <div>
-                      <h4 className="text-white font-bold text-sm">Seoul, South Korea HQ Node</h4>
-                      <p className="text-xs text-sial-gray-light">Direct integration with automotive and heavy spare parts manufacturers, operating via SIAL & Young A Trading Co.</p>
+                    <span className="text-2xl mt-1">🇰🇷</span>
+                    <div className="space-y-1">
+                      <h4 className="text-white font-bold text-base leading-snug">Strategic Automotive Procurement Hub – Seoul, South Korea</h4>
+                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">Entity: SIAL & Young A Trading Co.</span>
+                      <p className="text-xs text-sial-gray-light leading-relaxed">
+                        Operating a direct B2B integration node with top-tier automotive and heavy machinery component manufacturers. We specialize in the high-volume export of wholesale genuine automotive spare parts (Hyundai, Kia, and commercial fleets) directly from Korean production lines to global markets, eliminating middleman fees.
+                      </p>
                     </div>
                   </div>
+                  {/* China */}
                   <div className="flex items-start space-x-3">
-                    <span className="text-sial-gold text-xl">🇨🇳</span>
-                    <div>
-                      <h4 className="text-white font-bold text-sm">Yiwu, China Sourcing Node</h4>
-                      <p className="text-xs text-sial-gray-light">Specialized industrial hardware and infrastructure logistics procurement network running via Yiwu SIAL International Trading Co. Ltd.</p>
+                    <span className="text-2xl mt-1">🇨🇳</span>
+                    <div className="space-y-1">
+                      <h4 className="text-white font-bold text-base leading-snug">Premier Industrial Hardware Sourcing Node – Yiwu, China</h4>
+                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">Entity: Yiwu SIAL International Trading Co. Ltd.</span>
+                      <p className="text-xs text-sial-gray-light leading-relaxed">
+                        Managing an elite, large-scale industrial procurement and infrastructure logistics network. This hub drives the direct sourcing of A-to-Z industrial hardware, heavy-duty power tools, and high-volume construction site equipment, optimized for direct bulk shipping and seamless distribution into Africa and the GCC.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -82,24 +90,36 @@ export default function Home() {
               <div className="glassmorphism p-8 rounded-xl shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-gold/5 rounded-full blur-3xl"></div>
                 <h3 className="text-xl font-bold text-white mb-6 border-b border-white/5 pb-4">
-                  Why Global Partners Choose SIAL
+                  Why Global Partners Choose SIAL Group
                 </h3>
-                <ul className="space-y-5 text-sm">
-                  <li className="flex items-center space-x-3">
-                    <span className="text-sial-gold text-lg">✓</span>
-                    <span>Elimination of third-party trading broker margins</span>
+                <ul className="space-y-6 text-xs text-sial-gray-light">
+                  <li className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sial-gold text-base">✓</span>
+                      <span className="text-white font-bold">Direct Factory Pricing</span>
+                    </div>
+                    <p className="pl-6">100% elimination of third-party trading broker margins and hidden intermediary fees.</p>
                   </li>
-                  <li className="flex items-center space-x-3">
-                    <span className="text-sial-gold text-lg">✓</span>
-                    <span>End-to-end quality control directly at the manufacturer level</span>
+                  <li className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sial-gold text-base">✓</span>
+                      <span className="text-white font-bold">Strict Quality Assurance</span>
+                    </div>
+                    <p className="pl-6">End-to-end quality control and pre-shipment inspections performed directly at the manufacturer level.</p>
                   </li>
-                  <li className="flex items-center space-x-3">
-                    <span className="text-sial-gold text-lg">✓</span>
-                    <span>Guaranteed supply chain resilience under multi-jurisdictional governance</span>
+                  <li className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sial-gold text-base">✓</span>
+                      <span className="text-white font-bold">Unmatched Supply Chain Resilience</span>
+                    </div>
+                    <p className="pl-6">Seamless multi-jurisdictional logistics and secure global distribution networks operating under robust corporate governance.</p>
                   </li>
-                  <li className="flex items-center space-x-3">
-                    <span className="text-sial-gold text-lg">✓</span>
-                    <span>18 years of cross-border trade negotiation expertise</span>
+                  <li className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sial-gold text-base">✓</span>
+                      <span className="text-white font-bold">18+ Years of B2B Trade Expertise</span>
+                    </div>
+                    <p className="pl-6">Decades of cross-border trade negotiation, international procurement excellence, and multinational supply chain management.</p>
                   </li>
                 </ul>
               </div>
