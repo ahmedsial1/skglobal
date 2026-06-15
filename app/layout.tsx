@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const outfit = Outfit({
+const spaceGrotesque = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-outfit",
+  variable: "--font-space-grotesque",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-plus-jakarta-sans",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} h-full`}>
+    <html lang="en" className={`${spaceGrotesque.variable} ${plusJakartaSans.variable} h-full`}>
       <body className="font-sans antialiased flex flex-col min-h-full bg-sial-slate-dark text-slate-100 selection:bg-sial-gold selection:text-sial-slate-dark">
         <Navbar />
         {/* Main layout container with top padding to prevent fixed navbar overlap */}

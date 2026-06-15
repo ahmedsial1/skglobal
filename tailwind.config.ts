@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-plus-jakarta-sans)", "sans-serif"],
+        heading: ["var(--font-space-grotesque)", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,9 +20,9 @@ const config: Config = {
       colors: {
         sial: {
           slate: {
-            dark: "#0B0F19",
-            DEFAULT: "#0F172A",
-            light: "#1E293B",
+            dark: "#030712", // Matte Obsidian Background
+            DEFAULT: "#0B0F19", // Dark Obsidian Card
+            light: "#111827", // Slightly lighter for highlights
           },
           navy: {
             DEFAULT: "#0A192F",
@@ -32,10 +36,10 @@ const config: Config = {
             industrial: "#475569",
           },
           gold: {
-            light: "#FCD34D",
-            DEFAULT: "#F59E0B",
-            dark: "#D97706",
-            accent: "#B45309",
+            light: "#FDE047",
+            DEFAULT: "#FACC15", // Electric Industrial Gold
+            dark: "#EAB308",
+            accent: "#CA8A04",
           }
         }
       }

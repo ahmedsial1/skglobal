@@ -91,7 +91,7 @@ export default function ContactForm() {
             placeholder="John Doe"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200"
+            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200"
           />
         </div>
         <div className="space-y-1.5">
@@ -102,7 +102,7 @@ export default function ContactForm() {
             placeholder="j.doe@company.com"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200"
+            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200"
           />
         </div>
       </div>
@@ -115,7 +115,7 @@ export default function ContactForm() {
           placeholder="Enterprise Logistics Ltd"
           value={formData.company}
           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-          className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200"
+          className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200"
         />
       </div>
 
@@ -125,7 +125,7 @@ export default function ContactForm() {
           <select
             value={formData.region}
             onChange={(e) => setFormData({ ...formData, region: e.target.value })}
-            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200"
+            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200"
           >
             {REGIONS.map((region) => (
               <option key={region.id} value={region.id} className="bg-sial-slate-light">
@@ -139,7 +139,7 @@ export default function ContactForm() {
           <select
             value={formData.division}
             onChange={(e) => setFormData({ ...formData, division: e.target.value })}
-            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200"
+            className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200"
           >
             {DIVISIONS.map((div) => (
               <option key={div.id} value={div.id} className="bg-sial-slate-light">
@@ -158,7 +158,7 @@ export default function ContactForm() {
           placeholder="Please describe your heavy machinery, spare parts, or hardware material specifications..."
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold transition duration-200 resize-none"
+          className="w-full bg-sial-slate-dark border border-white/10 rounded px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sial-gold focus:ring-1 focus:ring-sial-gold/30 transition duration-200 resize-none"
         ></textarea>
       </div>
 
