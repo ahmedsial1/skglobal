@@ -53,14 +53,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <img src="/logo.png" alt="SIAL Group Logo" className="h-9 w-auto object-contain bg-white p-0.5 rounded shadow-sm" />
-            <span className="text-xl font-black tracking-wider text-white flex items-center">
-              SIAL
-              <span className="text-sial-gold font-light ml-1 text-xs border-l border-sial-gray-dark/50 pl-2 uppercase tracking-widest">
-                Group
-              </span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <img src="/logo.png" alt="SIAL Group Logo" className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" />
           </Link>
 
           {/* Desktop Nav */}

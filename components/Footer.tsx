@@ -8,15 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Profile */}
           <div className="space-y-4">
-            <h3 className="text-xl font-black text-white tracking-wider flex items-center space-x-3">
-              <img src="/logo.png" alt="SIAL Group Logo" className="h-8 w-auto object-contain bg-white p-0.5 rounded shadow-sm" />
-              <span>
-                SIAL
-                <span className="text-sial-gold font-light ml-1 text-xs border-l border-sial-gray-dark/50 pl-2 uppercase tracking-widest">
-                  Group
-                </span>
-              </span>
-            </h3>
+            <div className="flex items-center">
+              <img src="/logo.png" alt="SIAL Group Logo" className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+            </div>
             <p className="text-sm text-sial-gray-light leading-relaxed">
               An 18-year legacy of global excellence in heavy industries, automotive parts distribution, and industrial hardware. Operating proprietary sourcing hubs in South Korea and China to deliver uncompromised quality.
             </p>
