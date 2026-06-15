@@ -34,9 +34,14 @@ export default function About() {
         <ScrollReveal delay={0.15}>
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 flex justify-center">
-              {/* Elegant avatar border representing leadership */}
-              <div className="relative p-1 bg-gradient-to-tr from-sial-gold to-sial-gray-dark rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
-                <div className="absolute inset-0 bg-sial-slate-dark/95 flex flex-col justify-end p-8 space-y-4">
+              <div className="relative p-[1px] bg-gradient-to-tr from-sial-gold to-sial-gray-dark rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+                {/* Background CEO Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  style={{ backgroundImage: `url('/ceo.jpg')` }}
+                ></div>
+                {/* Overlay with dark gradient to make text readable */}
+                <div className="absolute inset-0 bg-gradient-to-t from-sial-slate-dark via-sial-slate-dark/40 to-transparent flex flex-col justify-end p-8 space-y-4">
                   <div className="space-y-1">
                     <span className="text-xs uppercase tracking-widest text-sial-gold font-bold">Group CEO & Founder</span>
                     <h3 className="text-2xl font-black text-white">Muhammad Amjad</h3>
