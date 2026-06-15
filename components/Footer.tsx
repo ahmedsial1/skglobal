@@ -8,10 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Profile */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-black text-white tracking-wider flex items-center">
-              SIAL
-              <span className="text-sial-gold font-light ml-1 text-sm border-l border-sial-gray-dark pl-2 uppercase tracking-widest">
-                Group
+            <h3 className="text-xl font-black text-white tracking-wider flex items-center space-x-3">
+              <img src="/logo.png" alt="SIAL Group Logo" className="h-8 w-auto object-contain bg-white p-0.5 rounded shadow-sm" />
+              <span>
+                SIAL
+                <span className="text-sial-gold font-light ml-1 text-xs border-l border-sial-gray-dark/50 pl-2 uppercase tracking-widest">
+                  Group
+                </span>
               </span>
             </h3>
             <p className="text-sm text-sial-gray-light leading-relaxed">
