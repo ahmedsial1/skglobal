@@ -80,6 +80,7 @@ export default function Navbar() {
 
   return (
     <nav
+      dir="ltr"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-sial-slate-dark/85 backdrop-blur-md border-b border-sial-gold/10 py-4 shadow-lg"
@@ -87,22 +88,24 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <img src="/logo.png" alt="SIAL Group Logo" className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" />
-          </Link>
+        <div className="flex items-center justify-between w-full">
+          {/* Logo (Left side) */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <img src="/logo.png" alt="SIAL Group Logo" className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+            </Link>
+          </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <div className="flex items-center space-x-6">
+          {/* Desktop Nav Links (Centered) */}
+          <div className="hidden lg:flex flex-grow justify-center px-4">
+            <div className="flex items-center space-x-6 xl:space-x-8">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-sial-gold ${
+                    className={`text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-sial-gold whitespace-nowrap ${
                       isActive ? "text-sial-gold border-b-2 border-sial-gold pb-1" : "text-sial-gray-light"
                     }`}
                   >
@@ -111,7 +114,10 @@ export default function Navbar() {
                 );
               })}
             </div>
+          </div>
 
+          {/* Desktop Actions (Right side) */}
+          <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
             {/* Language Dropdown */}
             <div className="relative">
               <button
