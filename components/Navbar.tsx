@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const LANGUAGES = [
@@ -92,7 +93,7 @@ export default function Navbar() {
           {/* Logo (Left side) */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img src="/logo.png" alt="SIAL Group Logo" className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+              <Image src="/logo.png" alt="SIAL Group Logo" width={200} height={128} className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
             </Link>
           </div>
 

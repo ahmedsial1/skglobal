@@ -1,15 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-sial-slate-dark border-t border-sial-gold/10 pt-16 pb-8 text-sial-gray-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Profile */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src="/logo.png" alt="SIAL Group Logo" className="h-28 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+              <Image src="/logo.png" alt="SIAL Group Logo" width={180} height={112} className="h-28 w-auto object-contain transition-transform duration-300 hover:scale-105" />
             </div>
             <p className="text-sm text-sial-gray-light leading-relaxed">
               An 18-year legacy of global excellence in heavy industries, automotive parts distribution, and industrial hardware. Operating proprietary sourcing hubs in South Korea and China to deliver uncompromised quality.
