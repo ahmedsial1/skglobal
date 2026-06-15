@@ -96,7 +96,7 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} SIAL Group. All Rights Reserved. Multi-jurisdictional governance assured.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/about" className="hover:text-white transition duration-200">
-              Chairman&apos;s Message
+              CEO&apos;s Message
             </Link>
             <Link href="/contact" className="hover:text-white transition duration-200">
               B2B Inquiry routing

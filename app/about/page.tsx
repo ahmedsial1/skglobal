@@ -6,7 +6,7 @@ import HoverCard from "@/components/HoverCard";
 export const metadata: Metadata = {
   title: "About Us & Leadership Profile",
   description:
-    "Discover SIAL Group's 18-year legacy of multi-jurisdictional governance, global supply chain resilience, and international trade negotiation expertise under the leadership of Chairman Muhammad Amjad.",
+    "Discover SIAL Group's 18-year legacy of multi-jurisdictional governance, global supply chain resilience, and international trade negotiation expertise under the leadership of CEO Muhammad Amjad.",
 };
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
           </div>
         </ScrollReveal>
 
-        {/* Chairman & Founder Profile */}
+        {/* CEO & Founder Profile */}
         <ScrollReveal delay={0.15}>
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 flex justify-center">
@@ -38,7 +38,7 @@ export default function About() {
               <div className="relative p-1 bg-gradient-to-tr from-sial-gold to-sial-gray-dark rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <div className="absolute inset-0 bg-sial-slate-dark/95 flex flex-col justify-end p-8 space-y-4">
                   <div className="space-y-1">
-                    <span className="text-xs uppercase tracking-widest text-sial-gold font-bold">Group Chairman & Founder</span>
+                    <span className="text-xs uppercase tracking-widest text-sial-gold font-bold">Group CEO & Founder</span>
                     <h3 className="text-2xl font-black text-white">Muhammad Amjad</h3>
                   </div>
                   <p className="text-xs text-sial-gray-light leading-relaxed">
@@ -57,7 +57,7 @@ export default function About() {
                 Muhammad Amjad: A Legacy of Supply Chain Vision
               </h2>
               <p className="text-sm text-sial-gray-light leading-relaxed">
-                Muhammad Amjad, the Group Chairman and Founder, established SIAL Group with the target of building direct, high-trust cross-border relationships. Recognizing early on that middleman margins eroded supply chain efficiency, he spent nearly two decades creating direct sourcing networks.
+                Muhammad Amjad, the Group CEO and Founder, established SIAL Group with the target of building direct, high-trust cross-border relationships. Recognizing early on that middleman margins eroded supply chain efficiency, he spent nearly two decades creating direct sourcing networks.
               </p>
               <p className="text-sm text-sial-gray-light leading-relaxed">
                 His international trade negotiation expertise is backed by a robust legal and governance framework. His operations span multiple jurisdictions, allowing SIAL Group to seamlessly navigate trade compliance, import duties, and customs protocols across South Korea, China, the GCC (Oman and Saudi Arabia), and Africa (Mozambique).

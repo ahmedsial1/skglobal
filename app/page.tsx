@@ -20,13 +20,13 @@ export default function Home() {
 
             {/* Heading */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none text-white">
-              Global Infrastructure &{" "}
-              <span className="gold-gradient-text block mt-2">Industrial Trade Excellence</span>
+              Multi-Jurisdictional Industrial Trading &{" "}
+              <span className="gold-gradient-text block mt-2">Infrastructure Procurement</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-sial-gray-light max-w-2xl mx-auto font-light leading-relaxed">
-              SIAL Group coordinates multi-jurisdictional supply chains, combining heavy machinery sales, automotive spare parts distribution, and infrastructure hardware procurement.
+            <p className="text-lg md:text-xl text-sial-gray-light max-w-3xl mx-auto font-light leading-relaxed">
+              As an elite multinational enterprise, SIAL Group drives industrial trade excellence across global corridors. Our capabilities combine heavy construction machinery sales and crane rentals with wholesale genuine automotive parts export and A-to-Z construction site hardware procurement. By connecting direct East Asian production lines with high-demand markets in the GCC and Africa, we guarantee tier-1 quality control, supply chain resilience, and global logistics efficiency.
             </p>
 
             {/* Buttons */}
@@ -41,7 +41,7 @@ export default function Home() {
                 href="/about"
                 className="w-full sm:w-auto px-8 py-4 border border-sial-gray-industrial hover:border-white text-white font-bold uppercase tracking-wider text-sm rounded-md transition duration-300"
               >
-                Chairman&apos;s Biography
+                CEO Biography
               </Link>
             </div>
           </div>
