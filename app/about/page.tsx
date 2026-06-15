@@ -119,70 +119,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Legacy Timeline */}
-        <section className="space-y-12 pt-10 border-t border-white/5">
-          <ScrollReveal>
-            <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white uppercase tracking-wider">
-                18-Year Legacy Timeline
-              </h2>
-            </div>
-          </ScrollReveal>
 
-          <div className="space-y-8 max-w-4xl mx-auto relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-white/10">
-            {/* Timeline Item 1 */}
-            <ScrollReveal direction="right" delay={0.1}>
-              <div className="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-sial-gold rounded-full -translate-x-1.5 border-4 border-sial-slate-dark"></div>
-                <div className="md:w-5/12 ml-10 md:ml-0 md:text-right p-4 bg-sial-slate-light/40 rounded-lg border border-white/5">
-                  <span className="text-xs font-bold text-sial-gold">2008 - Foundation</span>
-                  <h4 className="text-sm font-bold text-white mt-1">East Asia Sourcing Node</h4>
-                  <p className="text-xs text-sial-gray-light mt-1">Muhammad Amjad sets up direct sourcing arrangements in Seoul, South Korea, building SIAL & Young A Trading Co.</p>
-                </div>
-                <div className="hidden md:block md:w-5/12"></div>
-              </div>
-            </ScrollReveal>
-
-            {/* Timeline Item 2 */}
-            <ScrollReveal direction="left" delay={0.2}>
-              <div className="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-white/40 rounded-full -translate-x-1.5 border-4 border-sial-slate-dark"></div>
-                <div className="hidden md:block md:w-5/12"></div>
-                <div className="md:w-5/12 ml-10 md:ml-0 p-4 bg-sial-slate-light/40 rounded-lg border border-white/5">
-                  <span className="text-xs font-bold text-sial-gray-light">2014 - Middle East Entry</span>
-                  <h4 className="text-sm font-bold text-white mt-1">Oman Logistics & Cranes</h4>
-                  <p className="text-xs text-sial-gray-light mt-1">Establishment of SK Transports Oman, capturing leadership in crane rentals and heavy transport logistics in the GCC region.</p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Timeline Item 3 */}
-            <ScrollReveal direction="right" delay={0.3}>
-              <div className="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-white/40 rounded-full -translate-x-1.5 border-4 border-sial-slate-dark"></div>
-                <div className="md:w-5/12 ml-10 md:ml-0 md:text-right p-4 bg-sial-slate-light/40 rounded-lg border border-white/5">
-                  <span className="text-xs font-bold text-sial-gray-light">2020 - China Node & Africa</span>
-                  <h4 className="text-sm font-bold text-white mt-1">Yiwu Hub & Mozambique</h4>
-                  <p className="text-xs text-sial-gray-light mt-1">Launching Yiwu SIAL International Trading Co. Ltd. to coordinate industrial hardware exports targeting Mozambique&apos;s development pipelines.</p>
-                </div>
-                <div className="hidden md:block md:w-5/12"></div>
-              </div>
-            </ScrollReveal>
-
-            {/* Timeline Item 4 */}
-            <ScrollReveal direction="left" delay={0.4}>
-              <div className="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-sial-gold rounded-full -translate-x-1.5 border-4 border-sial-slate-dark"></div>
-                <div className="hidden md:block md:w-5/12"></div>
-                <div className="md:w-5/12 ml-10 md:ml-0 p-4 bg-sial-slate-light/40 rounded-lg border border-white/5">
-                  <span className="text-xs font-bold text-sial-gold">Present - Saudi Expansion</span>
-                  <h4 className="text-sm font-bold text-white mt-1">Riyadh Logistics Center</h4>
-                  <p className="text-xs text-sial-gray-light mt-1">Opening SIAL International Company in Saudi Arabia for fleet rentals, cranes, and heavy spare parts, completing the global loop.</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
 
         {/* Global Network Directory Section */}
         <section id="network" className="space-y-12 pt-16 border-t border-white/5">
