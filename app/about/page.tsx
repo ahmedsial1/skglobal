@@ -1,16 +1,14 @@
+"use client";
+
 import React from "react";
-import { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
 import NetworkDirectory from "@/components/NetworkDirectory";
-
-export const metadata: Metadata = {
-  title: "About Us & Leadership Profile",
-  description:
-    "Discover SIAL Group's 18-year legacy of multi-jurisdictional governance, global supply chain resilience, and international trade negotiation expertise under the leadership of CEO Muhammad Amjad.",
-};
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-sial-slate-dark text-white min-h-screen py-16 md:py-24">
       {/* Background radial accent */}
@@ -20,13 +18,13 @@ export default function About() {
         {/* Header Block */}
         <ScrollReveal>
           <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Who We Are</span>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">{t("about.whoWeAre")}</span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#FACC15] uppercase font-heading text-center">
-              18 Years of Multi-Jurisdictional Governance
+              {t("about.title")}
             </h1>
             <div className="h-0.5 w-24 bg-[#FACC15] mx-auto mt-4"></div>
             <p className="text-sm sm:text-base text-[#F9FAFB] font-sans leading-relaxed pt-2 max-w-4xl mx-auto text-center md:text-justify text-balance">
-              For nearly two decades, SIAL Group has stood as a pioneer of multi-jurisdictional governance and cross-border supply chain optimization. Strategically headquartered with active hubs in South Korea, China, Oman, Saudi Arabia, and East Africa, our operations bridge major global industrial centers with emerging markets. Guided by CEO Muhammad Amjad’s rigorous commitment to trade compliance, high-level diplomatic negotiation, and factory-direct procurement, the Group ensures unparalleled supply chain resilience in heavy lifting machinery sales, genuine Kia and Hyundai automotive parts, and bulk industrial hardware. Our transparent corporate governance framework guarantees seamless international compliance, securing trusted partnerships with regional distributors, state-owned enterprises, and private commercial fleets worldwide.
+              {t("about.desc")}
             </p>
           </div>
         </ScrollReveal>
@@ -35,9 +33,9 @@ export default function About() {
         <ScrollReveal delay={0.15}>
           <section className="space-y-12">
             <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold">Executive Leadership Profile</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold">{t("about.ceoProfileTitle")}</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight uppercase">
-                Muhammad Amjad: A Legacy of Supply Chain Vision
+                {t("about.ceoProfileHeading")}
               </h2>
               <div className="h-1 w-20 bg-sial-gold mx-auto mt-2"></div>
             </div>
@@ -57,10 +55,10 @@ export default function About() {
                       <h3 className="text-2xl font-black text-white">Muhammad Amjad</h3>
                     </div>
                     <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                      &ldquo;Resilience is not merely surviving supply chain blockades; it is building proprietary pipelines that ensure our partners never fail.&rdquo;
+                      &ldquo;{t("about.ceoQuote")}&rdquo;
                     </p>
                     <div className="pt-2 border-t border-white/10 flex items-center space-x-2 text-xs text-sial-gray-medium">
-                      <span>🏛️ GCC & East Asia Trade Delegate</span>
+                      <span>{t("about.ceoDelegate")}</span>
                     </div>
                   </div>
                 </div>
@@ -68,22 +66,22 @@ export default function About() {
 
               <div className="lg:col-span-7 space-y-6">
                 <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
-                  Muhammad Amjad, the Group CEO and Founder, established SIAL Group with the target of building direct, high-trust cross-border relationships. Recognizing early on that middleman margins eroded supply chain efficiency, he spent nearly two decades creating direct sourcing networks.
+                  {t("about.ceoDesc1")}
                 </p>
                 <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
-                  His international trade negotiation expertise is backed by a robust legal and governance framework. His operations span multiple jurisdictions, allowing SIAL Group to seamlessly navigate trade compliance, import duties, and customs protocols across South Korea, China, the GCC (Oman and Saudi Arabia), and Africa (Mozambique).
+                  {t("about.ceoDesc2")}
                 </p>
                 <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
-                  To support these operations and optimize client-facing delivery, SIAL Group hosts specialized online platforms, including <a href="https://www.sktransportsoman.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">SK Transports Oman</a> for heavy machinery fleet operations, and both <a href="https://www.sialkingdom.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">Sial Kingdom</a> and <a href="https://www.yahyaautoparts.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">Yahya Auto Parts</a> for automotive spare parts sourcing and mechanical services.
+                  {t("about.ceoDesc3")}
                 </p>
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/5">
                   <div>
-                    <span className="text-xs text-sial-gray-medium uppercase block">Focus Areas</span>
-                    <span className="text-sm font-semibold text-white mt-1 block">Cross-Border Tariffs & Compliance</span>
+                    <span className="text-xs text-sial-gray-medium uppercase block">{t("about.focusAreas")}</span>
+                    <span className="text-sm font-semibold text-white mt-1 block">{t("about.focusValue")}</span>
                   </div>
                   <div>
-                    <span className="text-xs text-sial-gray-medium uppercase block">Strategic Hubs</span>
-                    <span className="text-sm font-semibold text-white mt-1 block">Seoul, Yiwu, Muscat, Riyadh</span>
+                    <span className="text-xs text-sial-gray-medium uppercase block">{t("about.strategicHubs")}</span>
+                    <span className="text-sm font-semibold text-white mt-1 block">{t("about.strategicValue")}</span>
                   </div>
                 </div>
               </div>
@@ -95,9 +93,9 @@ export default function About() {
         <section className="space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Enterprise Core</span>
+              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">{t("about.pillarsTitle")}</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-wider">
-                Corporate Capabilities
+                {t("about.pillarsHeading")}
               </h2>
             </div>
           </ScrollReveal>
@@ -105,41 +103,42 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <HoverCard className="glassmorphism p-8 rounded-xl space-y-4">
               <span className="text-3xl">⛓️</span>
-              <h3 className="text-lg font-bold text-white">Global Supply Chain Resilience</h3>
+              <h3 className="text-lg font-bold text-white">{t("about.pillar1Title")}</h3>
               <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                By maintaining ownership of procurement hubs in China and Korea, SIAL Group guarantees stock availability and shields customers from sudden maritime logjams and geopolitical supply shocks.
+                {t("about.pillar1Desc")}
               </p>
             </HoverCard>
 
             <HoverCard className="glassmorphism p-8 rounded-xl space-y-4 border-t-2 border-t-sial-gold">
               <span className="text-3xl">🤝</span>
-              <h3 className="text-lg font-bold text-white">Trade Negotiation Expertise</h3>
+              <h3 className="text-lg font-bold text-white">{t("about.pillar2Title")}</h3>
               <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                Our CEO&apos;s direct relationships with international port authorities and shipping lines allow for expedited clearance and highly favorable freight arrangements.
+                {t("about.pillar2Desc")}
               </p>
             </HoverCard>
 
             <HoverCard className="glassmorphism p-8 rounded-xl space-y-4">
               <span className="text-3xl">⚖️</span>
-              <h3 className="text-lg font-bold text-white">Multi-Jurisdictional Governance</h3>
+              <h3 className="text-lg font-bold text-white">{t("about.pillar3Title")}</h3>
               <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                Strict adherence to regional corporate compliance laws, including SASO in Saudi Arabia, OPAL in Oman, and customs clearing protocols in Mozambique and South Asia.
+                {t("about.pillar3Desc")}
               </p>
             </HoverCard>
           </div>
         </section>
+
         {/* Global Network Directory Section */}
         <section id="network" className="space-y-12 pt-16 border-t border-white/5">
           <ScrollReveal>
             <div className="text-center space-y-4 max-w-3xl mx-auto">
               <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
-                Enterprise Footprint
+                {t("about.networkTitle")}
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white uppercase tracking-wider">
-                Our Global Corporate Network
+                {t("about.networkHeading")}
               </h2>
               <p className="text-xs sm:text-sm text-sial-gray-light font-light max-w-2xl mx-auto">
-                SIAL Group operates across multiple international jurisdictions. Filter our 10 registered subsidiaries, logistics pipelines, and direct sourcing hubs.
+                {t("about.networkDesc")}
               </p>
             </div>
           </ScrollReveal>

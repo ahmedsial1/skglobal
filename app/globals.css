@@ -8,10 +8,14 @@
   --background-end-rgb: 3, 7, 18;
 }
 
+html, body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-  min-height: 100vh;
   overflow-x: hidden;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
@@ -70,32 +74,69 @@ body {
 }
 
 /* ==========================================
-   Google Translate Styling Cleanups
+   RTL (Right-to-Left) Layout Adjustments
    ========================================== */
-.goog-te-banner-frame,
-.goog-te-banner,
-.goog-te-popup,
-iframe.goog-te-menu-frame {
-  display: none !important;
-  visibility: hidden !important;
+[dir="rtl"] {
+  text-align: right;
 }
 
-body {
-  top: 0 !important;
+[dir="rtl"] .text-left {
+  text-align: right !important;
 }
 
-/* Disable Google Translate highlight effect */
-.goog-text-highlight {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  box-shadow: 0 0 0 transparent !important;
+[dir="rtl"] .text-right {
+  text-align: left !important;
 }
 
-/* Hide translate tooltips */
-.goog-tooltip,
-.goog-tooltip-container,
-#goog-gt-tt {
-  display: none !important;
-  visibility: hidden !important;
+[dir="rtl"] .text-justify {
+  text-align: justify !important;
 }
 
+/* Reverse horizontal spaces */
+[dir="rtl"] .space-x-reverse {
+  --tw-space-x-reverse: 1 !important;
+}
+
+[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+
+/* Reverse absolute alignments and margins where needed */
+[dir="rtl"] .right-0 {
+  right: auto !important;
+  left: 0 !important;
+}
+[dir="rtl"] .left-0 {
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+[dir="rtl"] .mr-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+/* Custom font styles for Urdu and Arabic script */
+[lang="ur"], [lang="ar"] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+}

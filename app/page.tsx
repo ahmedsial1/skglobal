@@ -1,10 +1,15 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="relative overflow-hidden bg-sial-slate-dark text-white">
       {/* Background radial highlight */}
@@ -18,21 +23,21 @@ export default function Home() {
         <ScrollReveal delay={0.1} duration={0.8}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Text & CTAs */}
-            <div className="lg:col-span-7 text-left space-y-6">
+            <div className="lg:col-span-7 text-start space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-sial-gold/30 bg-sial-gold/5 text-xs font-bold uppercase tracking-widest text-sial-gold">
-                <span>🛡️ 18-Year Global Governance Legacy</span>
+                <span>{t("home.legacyBadge")}</span>
               </div>
 
               {/* Heading */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-white uppercase font-sans">
-                Multi-Jurisdictional Industrial Trading &{" "}
-                <span className="gold-gradient-text block mt-2">Infrastructure Procurement</span>
+                {t("home.heroTitle")}{" "}
+                <span className="gold-gradient-text block mt-2">{t("home.heroHighlight")}</span>
               </h1>
 
               {/* Description */}
               <p className="text-sm md:text-base text-sial-gray-light font-light leading-relaxed text-justify">
-                As an elite multinational enterprise, SIAL Group drives industrial trade excellence across global corridors. Our capabilities combine heavy construction machinery sales and crane rentals with wholesale genuine automotive parts export and A-to-Z construction site hardware procurement. By connecting direct East Asian production lines with high-demand markets in the GCC and Africa, we guarantee tier-1 quality control, supply chain resilience, and global logistics efficiency.
+                {t("home.heroDesc")}
               </p>
 
               {/* Buttons */}
@@ -41,13 +46,13 @@ export default function Home() {
                   href="/contact"
                   className="w-full sm:w-auto px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-0.5 gold-glow text-center"
                 >
-                  Route B2B Inquiry
+                  {t("home.routeInquiry")}
                 </Link>
                 <Link
                   href="/about"
                   className="w-full sm:w-auto px-8 py-4 border border-sial-gray-industrial hover:border-white text-white font-bold uppercase tracking-wider text-sm rounded-md transition duration-300 text-center"
                 >
-                  CEO Biography
+                  {t("home.ceoBio")}
                 </Link>
               </div>
             </div>
@@ -76,11 +81,11 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                Our Competitive Edge:{" "}
-                <span className="text-sial-gold">Factory-Direct Sourcing & Zero Broker Margins</span>
+                {t("home.edgeTitle")}{" "}
+                <span className="text-sial-gold">{t("home.edgeHighlight")}</span>
               </h2>
               <p className="text-base text-sial-gray-light leading-relaxed">
-                Unlike traditional trading brokers who inflate costs with layers of intermediary markups, SIAL Group operates proprietary, factory-direct sourcing hubs at key global economic crossroads. By controlling our own international procurement networks, we guarantee direct factory pricing, absolute supply chain visibility, and premium quality assurance for global enterprises.
+                {t("home.edgeDesc")}
               </p>
             </div>
           </ScrollReveal>
@@ -103,11 +108,11 @@ export default function Home() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <span className="text-xl">🇰🇷</span>
-                        <h4 className="text-white font-bold text-base leading-snug">Strategic Automotive Sourcing HQ</h4>
+                        <h4 className="text-white font-bold text-base leading-snug">{t("home.koreaTitle")}</h4>
                       </div>
-                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">Entity: SIAL & Young A Trading Co.</span>
+                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">{t("home.koreaEntity")}</span>
                       <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                        Operating a B2B integration node with top-tier automotive and heavy machinery component manufacturers. We specialize in the high-volume export of wholesale genuine automotive spare parts (Hyundai, Kia, and commercial fleets) directly from Korean production lines to global markets, eliminating middleman fees.
+                        {t("home.koreaDesc")}
                       </p>
                     </div>
                   </HoverCard>
@@ -126,11 +131,11 @@ export default function Home() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <span className="text-xl">🇨🇳</span>
-                        <h4 className="text-white font-bold text-base leading-snug">Premier Industrial Hardware Node</h4>
+                        <h4 className="text-white font-bold text-base leading-snug">{t("home.chinaTitle")}</h4>
                       </div>
-                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">Entity: Yiwu SIAL International Trading Co. Ltd.</span>
+                      <span className="text-[11px] font-bold text-sial-gold block uppercase tracking-wider">{t("home.chinaEntity")}</span>
                       <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
-                        Managing an elite, large-scale industrial procurement and infrastructure logistics network. This hub drives the direct sourcing of A-to-Z industrial hardware, heavy-duty power tools, and high-volume construction site equipment, optimized for direct bulk shipping and seamless distribution into Africa and the GCC.
+                        {t("home.chinaDesc")}
                       </p>
                     </div>
                   </HoverCard>
@@ -140,36 +145,36 @@ export default function Home() {
               <div className="glassmorphism p-8 rounded-xl shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-gold/5 rounded-full blur-3xl"></div>
                 <h3 className="text-xl font-bold text-white mb-6 border-b border-white/5 pb-4">
-                  Why Global Partners Choose SIAL Group
+                  {t("home.whyChooseTitle")}
                 </h3>
                 <ul className="space-y-6 text-xs text-sial-gray-light">
                   <li className="space-y-1">
                     <div className="flex items-center space-x-2">
                       <span className="text-sial-gold text-base">✓</span>
-                      <span className="text-white font-bold">Direct Factory Pricing</span>
+                      <span className="text-white font-bold">{t("home.whyChoose1Title")}</span>
                     </div>
-                    <p className="pl-6">100% elimination of third-party trading broker margins and hidden intermediary fees.</p>
+                    <p className="pl-6">{t("home.whyChoose1Desc")}</p>
                   </li>
                   <li className="space-y-1">
                     <div className="flex items-center space-x-2">
                       <span className="text-sial-gold text-base">✓</span>
-                      <span className="text-white font-bold">Strict Quality Assurance</span>
+                      <span className="text-white font-bold">{t("home.whyChoose2Title")}</span>
                     </div>
-                    <p className="pl-6">End-to-end quality control and pre-shipment inspections performed directly at the manufacturer level.</p>
+                    <p className="pl-6">{t("home.whyChoose2Desc")}</p>
                   </li>
                   <li className="space-y-1">
                     <div className="flex items-center space-x-2">
                       <span className="text-sial-gold text-base">✓</span>
-                      <span className="text-white font-bold">Unmatched Supply Chain Resilience</span>
+                      <span className="text-white font-bold">{t("home.whyChoose3Title")}</span>
                     </div>
-                    <p className="pl-6">Seamless multi-jurisdictional logistics and secure global distribution networks operating under robust corporate governance.</p>
+                    <p className="pl-6">{t("home.whyChoose3Desc")}</p>
                   </li>
                   <li className="space-y-1">
                     <div className="flex items-center space-x-2">
                       <span className="text-sial-gold text-base">✓</span>
-                      <span className="text-white font-bold">18+ Years of B2B Trade Expertise</span>
+                      <span className="text-white font-bold">{t("home.whyChoose4Title")}</span>
                     </div>
-                    <p className="pl-6">Decades of cross-border trade negotiation, international procurement excellence, and multinational supply chain management.</p>
+                    <p className="pl-6">{t("home.whyChoose4Desc")}</p>
                   </li>
                 </ul>
               </div>
@@ -182,9 +187,9 @@ export default function Home() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 border-t border-white/5">
         <ScrollReveal>
           <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Executive Leadership</span>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">{t("home.whyChoose4Desc").split(" ")[0]}</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
-              Message from our Group CEO
+              {t("home.ceoMessageTitle")}
             </h2>
             <div className="h-1 w-20 bg-sial-gold mx-auto mt-4"></div>
           </div>
@@ -217,28 +222,28 @@ export default function Home() {
 
             {/* CEO Message Column */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold">Corporate Vision & Governance</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-sial-gold">{t("footer.governance")}</span>
               <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                Muhammad Amjad: A Legacy of Supply Chain Resilience
+                {t("home.ceoSubtitle")}
               </h3>
               <p className="text-sm text-sial-gray-light leading-relaxed text-justify font-light">
-                Under the leadership of Muhammad Amjad, SIAL Group has spent nearly two decades transforming from a localized trading agent into a multi-jurisdictional industrial force. By establishing direct factory pipelines and shipping routes from South Korea and China to the GCC and Africa, he has set a new benchmark for supply chain independence.
+                {t("home.ceoDesc1")}
               </p>
               <p className="text-sm text-sial-gray-light leading-relaxed text-justify font-light">
-                His strategic focus combines strict adherence to regional compliance protocols (such as SASO in Saudi Arabia, OPAL in Oman, and Maputo port customs operations) with B2B logistics negotiation, guaranteeing direct pricing benefits for our enterprise partners.
+                {t("home.ceoDesc2")}
               </p>
               <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center gap-4">
                 <Link
                   href="/about"
                   className="w-full sm:w-auto px-6 py-3 bg-sial-slate-light border border-white/10 hover:border-sial-gold text-white font-bold uppercase tracking-wider text-xs rounded transition duration-300 text-center"
                 >
-                  Read CEO Biography
+                  {t("home.ceoBio")}
                 </Link>
                 <Link
                   href="/contact"
                   className="w-full sm:w-auto px-6 py-3 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 text-center shadow-md gold-glow-hover"
                 >
-                  Schedule B2B Consultation
+                  {t("home.ceoConsultation")}
                 </Link>
               </div>
             </div>
@@ -251,10 +256,10 @@ export default function Home() {
         <ScrollReveal>
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-              Our Enterprise Divisions
+              {t("home.divisionsTitle")}
             </h2>
             <p className="text-sial-gray-light max-w-2xl mx-auto">
-              Explore our integrated divisions driving growth and resilience across the GCC, Africa, and East Asia.
+              {t("home.divisionsSubtitle")}
             </p>
           </div>
         </ScrollReveal>
@@ -265,17 +270,17 @@ export default function Home() {
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">🏗️</span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sial-gold transition duration-200">
-                Heavy Machinery Division
+                {t("home.machineryTitle")}
               </h3>
               <p className="text-xs text-sial-gray-light leading-relaxed">
-                Sales, crane fleet rentals, and spare parts distribution across Oman (SK Transports), Saudi Arabia (SIAL International Company), and Pakistan imports.
+                {t("home.machineryDesc")}
               </p>
             </div>
             <Link
               href="/machinery"
               className="text-xs font-bold text-sial-gold uppercase tracking-wider flex items-center space-x-1 hover:text-white"
             >
-              <span>Explore Division</span>
+              <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
           </HoverCard>
@@ -285,17 +290,17 @@ export default function Home() {
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⚙️</span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sial-gold transition duration-200">
-                Automotive Spare Parts
+                {t("home.partsTitle")}
               </h3>
               <p className="text-xs text-sial-gray-light leading-relaxed">
-                High-volume replacement spare parts for Hyundai and Kia models, sourced directly from South Korea and Yiwu, China networks.
+                {t("home.partsDesc")}
               </p>
             </div>
             <Link
               href="/spare-parts"
               className="text-xs font-bold text-sial-gold uppercase tracking-wider flex items-center space-x-1 hover:text-white"
             >
-              <span>Explore Division</span>
+              <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
           </HoverCard>
@@ -305,17 +310,17 @@ export default function Home() {
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⛓️</span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sial-gold transition duration-200">
-                Industrial Hardware
+                {t("home.hardwareTitle")}
               </h3>
               <p className="text-xs text-sial-gray-light leading-relaxed">
-                Infrastructure development distribution in Mozambique, providing high-quality construction materials sourced directly from our China nodes.
+                {t("home.hardwareDesc")}
               </p>
             </div>
             <Link
               href="/hardware"
               className="text-xs font-bold text-sial-gold uppercase tracking-wider flex items-center space-x-1 hover:text-white"
             >
-              <span>Explore Division</span>
+              <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
           </HoverCard>
@@ -329,19 +334,19 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <span className="block text-4xl sm:text-5xl font-extrabold text-sial-gold">18+</span>
-                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">Years Legacy</span>
+                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">{t("home.stats1")}</span>
               </div>
               <div>
                 <span className="block text-4xl sm:text-5xl font-extrabold text-white">6+</span>
-                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">Global Hubs</span>
+                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">{t("home.stats2")}</span>
               </div>
               <div>
                 <span className="block text-4xl sm:text-5xl font-extrabold text-white">0</span>
-                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">Middleman Margins</span>
+                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">{t("home.stats3")}</span>
               </div>
               <div>
                 <span className="block text-4xl sm:text-5xl font-extrabold text-sial-gold">100%</span>
-                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">Quality Inspected</span>
+                <span className="text-xs text-sial-gray-light uppercase tracking-widest font-semibold mt-2 block">{t("home.stats4")}</span>
               </div>
             </div>
           </ScrollReveal>

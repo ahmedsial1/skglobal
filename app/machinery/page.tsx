@@ -1,30 +1,30 @@
+"use client";
+
 import React from "react";
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
-
-export const metadata: Metadata = {
-  title: "Heavy Machinery Division | Crane Sales & Rentals",
-  description:
-    "Explore SIAL Group's Heavy Machinery capabilities, featuring crane rental leaders SK Transports Oman, SIAL International Company in Saudi Arabia, and SIAL International Pakistan's machinery imports.",
-};
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Machinery() {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-sial-slate-dark text-white min-h-screen py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
         {/* Header Block */}
         <ScrollReveal>
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Division Profiling</span>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
+              {t("machinery.titleBadge")}
+            </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase">
-              Heavy Machinery & Fleet Logistics
+              {t("machinery.heading")}
             </h1>
             <div className="h-1 w-20 bg-sial-gold mx-auto mt-4"></div>
             <p className="text-sm sm:text-base text-sial-gray-light font-light leading-relaxed pt-2 text-center max-w-2xl mx-auto">
-              Providing heavy lift mobile cranes, construction vehicles, and heavy-duty spare parts. Our division operates across three key regional hubs under strict quality assurance.
+              {t("machinery.subtitle")}
             </p>
           </div>
         </ScrollReveal>
@@ -39,7 +39,9 @@ export default function Machinery() {
                 <div className="lg:col-span-7 space-y-6 text-left">
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center space-x-2">
-                      <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">🇴🇲 Oman Operations</span>
+                      <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">
+                        {t("machinery.omanBadge")}
+                      </span>
                       <span className="text-xs text-sial-gray-light font-semibold">SK Transports Oman</span>
                     </div>
                     {/* Logo */}
@@ -48,15 +50,21 @@ export default function Machinery() {
                     </div>
                   </div>
                   <h2 className="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight">
-                    GCC Leadership in Mobile Crane Sales & Rentals
+                    {t("machinery.omanTitle")}
                   </h2>
                   <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
-                    For over a decade, SK Transports Oman has been the gold standard for heavy lifting solutions in the Sultanate of Oman. Specializing in high-capacity truck-mounted cranes, mobile telescopic cranes, and crawler cranes, we serve major oil & gas pipelines, marine cargo projects, and urban infrastructure developments.
+                    {t("machinery.omanDesc")}
                   </p>
                   <div className="flex flex-wrap gap-3 text-[11px] font-semibold text-sial-gray-light">
-                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 25 to 500 Ton Lift Capacity</span>
-                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ OPAL Certified Operators</span>
-                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 24/7 Site Support</span>
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">
+                      {t("machinery.omanFeature1")}
+                    </span>
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">
+                      {t("machinery.omanFeature2")}
+                    </span>
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">
+                      {t("machinery.omanFeature3")}
+                    </span>
                   </div>
                   <div className="pt-2">
                     <a
@@ -65,7 +73,7 @@ export default function Machinery() {
                       rel="noopener noreferrer"
                       className="inline-block px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-1 gold-glow"
                     >
-                      Visit SK Transports Oman Site ↗
+                      {t("machinery.omanCta")}
                     </a>
                   </div>
                 </div>
@@ -87,9 +95,11 @@ export default function Machinery() {
               <div className="border-t border-white/5 pt-8 space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
-                    Active Fleet Portfolio Showcase
+                    {t("machinery.fleetTitle")}
                   </h3>
-                  <span className="text-[10px] text-sial-gray-medium font-semibold">PDO Approved Fleet</span>
+                  <span className="text-[10px] text-sial-gray-medium font-semibold">
+                    {t("machinery.fleetBadge")}
+                  </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <HoverCard className="p-4 bg-sial-slate-light/30 rounded-xl border border-white/5 space-y-3">
@@ -151,27 +161,29 @@ export default function Machinery() {
           <HoverCard className="slate-gradient p-8 rounded-xl space-y-6 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">🇸🇦 Saudi Arabia Expansion</span>
+                <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">
+                  {t("machinery.saBadge")}
+                </span>
                 <span className="text-xs text-sial-gray-light font-semibold">SIAL International Company</span>
               </div>
               <h3 className="text-xl font-bold text-white">
-                Newly Launched Rental Fleet & Heavy Spare Parts
+                {t("machinery.saTitle")}
               </h3>
               <p className="text-xs sm:text-sm text-sial-gray-light leading-relaxed text-justify">
-                Expanding SIAL&apos;s footprint into Riyadh and the Eastern Province to support the massive Vision 2030 development pipelines. SIAL International Company offers truck mobile cranes sales, long-term fleet rentals, and high-quality heavy spare parts distribution.
+                {t("machinery.saDesc")}
               </p>
               <ul className="text-xs text-sial-gray-light space-y-2 pt-2">
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Direct parts replacement from South Korea networks</span>
+                  <span>{t("machinery.saFeature1")}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Mobile crane maintenance and rigging services</span>
+                  <span>{t("machinery.saFeature2")}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Compliance with SASO & Saudi oil-field safety standards</span>
+                  <span>{t("machinery.saFeature3")}</span>
                 </li>
               </ul>
             </div>
@@ -179,7 +191,7 @@ export default function Machinery() {
               href="/contact?region=saudi"
               className="text-xs font-bold text-sial-gold uppercase tracking-wider hover:text-white flex items-center space-x-1 mt-6"
             >
-              <span>Request Quote for Saudi</span>
+              <span>{t("machinery.saCta")}</span>
               <span>→</span>
             </Link>
           </HoverCard>
@@ -197,27 +209,29 @@ export default function Machinery() {
                 />
               </div>
               <div className="flex items-center space-x-2 font-sans">
-                <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">🇵🇰 Pakistan Operations</span>
+                <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">
+                  {t("machinery.pkBadge")}
+                </span>
                 <span className="text-xs text-sial-gray-light font-semibold">SIAL International Pakistan Pvt Ltd</span>
               </div>
               <h3 className="text-xl font-bold text-white">
-                East Asian Procurement Node & Regional Import
+                {t("machinery.pkTitle")}
               </h3>
               <p className="text-xs sm:text-sm text-sial-gray-light leading-relaxed text-justify">
-                Large-scale import and regional distribution of high-performance construction machinery and specialized agricultural equipment. Sourced directly from our East Asian networks, we eliminate third-party margins to supply heavy machinery directly to Pakistani contractors and farming enterprises.
+                {t("machinery.pkDesc")}
               </p>
               <ul className="text-xs text-sial-gray-light space-y-2 pt-2">
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Crawler tractors and harvest loaders</span>
+                  <span>{t("machinery.pkFeature1")}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Specialized agricultural seeding machinery</span>
+                  <span>{t("machinery.pkFeature2")}</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-sial-gold">▪</span>
-                  <span>Direct import from South Korea and Yiwu procurement hubs</span>
+                  <span>{t("machinery.pkFeature3")}</span>
                 </li>
               </ul>
             </div>
@@ -225,7 +239,7 @@ export default function Machinery() {
               href="/contact?region=pakistan"
               className="text-xs font-bold text-sial-gold uppercase tracking-wider hover:text-white flex items-center space-x-1 mt-6"
             >
-              <span>Inquire Pakistan Imports</span>
+              <span>{t("machinery.pkCta")}</span>
               <span>→</span>
             </Link>
           </HoverCard>

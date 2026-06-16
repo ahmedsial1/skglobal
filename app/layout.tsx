@@ -3,6 +3,7 @@ import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const spaceGrotesque = Space_Grotesk({
   subsets: ["latin"],
@@ -48,33 +49,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesque.variable} ${plusJakartaSans.variable} h-full`}>
-      <body className="font-sans antialiased flex flex-col min-h-full bg-sial-slate-dark text-slate-100 selection:bg-sial-gold selection:text-sial-slate-dark">
-        <Navbar />
-        {/* Main layout container with top padding to prevent fixed navbar overlap */}
-        <main className="flex-grow pt-20">
-          {children}
-        </main>
-        <Footer />
-        {/* Hidden Google Translate container and init script */}
-        <div id="google_translate_element" className="hidden" style={{ display: "none" }}></div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                  pageLanguage: 'en',
-                  autoDisplay: false
-                }, 'google_translate_element');
-              }
-            `
-          }}
-        />
-        <script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          async
-          defer
-        />
+    <html lang="en" className={`${spaceGrotesque.variable} ${plusJakartaSans.variable} min-h-screen`}>
+      <body className="font-sans antialiased flex flex-col min-h-screen bg-sial-slate-dark text-slate-100 selection:bg-sial-gold selection:text-sial-slate-dark">
+        <LanguageProvider>
+          <Navbar />
+          {/* Main layout container with top padding to prevent fixed navbar overlap */}
+          <main className="flex-grow pt-20">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

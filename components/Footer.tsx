@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-sial-slate-dark border-t border-sial-gold/10 pt-16 pb-8 text-sial-gray-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
@@ -12,33 +17,33 @@ export default function Footer() {
             <div className="flex items-center">
               <Image src="/logo.png" alt="SIAL Group Logo" width={180} height={112} className="h-28 w-auto object-contain transition-transform duration-300 hover:scale-105" />
             </div>
-            <p className="text-sm text-sial-gray-light leading-relaxed">
-              An 18-year legacy of global excellence in heavy industries, automotive parts distribution, and industrial hardware. Operating proprietary sourcing hubs in South Korea and China to deliver uncompromised quality.
+            <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
+              {t("home.heroDesc")}
             </p>
           </div>
 
           {/* Business Divisions */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Divisions</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">{t("footer.divisions")}</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/machinery" className="hover:text-sial-gold transition duration-200">
-                  Heavy Machinery Division
+                  {t("home.machineryTitle")}
                 </Link>
               </li>
               <li>
                 <Link href="/spare-parts" className="hover:text-sial-gold transition duration-200">
-                  Automotive Spare Parts
+                  {t("home.partsTitle")}
                 </Link>
               </li>
               <li>
                 <Link href="/hardware" className="hover:text-sial-gold transition duration-200">
-                  Industrial Hardware
+                  {t("home.hardwareTitle")}
                 </Link>
               </li>
             </ul>
             <div className="pt-4 border-t border-white/5">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">Our Platforms</h4>
+              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">{t("footer.platforms")}</h4>
               <ul className="space-y-2 text-xs">
                 <li>
                   <a
@@ -79,7 +84,7 @@ export default function Footer() {
 
           {/* Global Operations */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Global Operations</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">{t("footer.operations")}</h4>
             <ul className="space-y-2.5 text-sm">
               <li className="flex flex-col">
                 <span className="text-white font-medium">GCC Network</span>
@@ -102,12 +107,12 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Corporate Contacts</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">{t("footer.contacts")}</h4>
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start space-x-2">
                 <span className="text-sial-gold text-base">📧</span>
                 <div>
-                  <span className="block text-xs text-sial-gray-medium uppercase">Central Email</span>
+                  <span className="block text-xs text-sial-gray-medium uppercase">{t("footer.centralEmail")}</span>
                   <a
                     href="mailto:sialautotraders@gmail.com"
                     className="text-white font-semibold hover:text-sial-gold transition duration-200"
@@ -119,7 +124,7 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <span className="text-sial-gold text-base">💬</span>
                 <div>
-                  <span className="block text-xs text-sial-gray-medium uppercase">WeChat Enterprise ID</span>
+                  <span className="block text-xs text-sial-gray-medium uppercase">{t("footer.wechat")}</span>
                   <span className="text-white font-mono font-semibold">SIALautoparts</span>
                 </div>
               </li>
@@ -129,13 +134,13 @@ export default function Footer() {
 
         {/* Bottom border and copyright */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-sial-gray-medium">
-          <p>&copy; {new Date().getFullYear()} SIAL Group. All Rights Reserved. Multi-jurisdictional governance assured.</p>
+          <p>&copy; {new Date().getFullYear()} SIAL Group. {t("footer.governance")}</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/about" className="hover:text-white transition duration-200">
-              CEO&apos;s Message
+              {t("footer.ceoMessage")}
             </Link>
             <Link href="/contact" className="hover:text-white transition duration-200">
-              B2B Inquiry routing
+              {t("footer.b2bInquiry")}
             </Link>
           </div>
         </div>

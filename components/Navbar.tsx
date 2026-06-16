@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useLanguage, Language } from "@/context/LanguageContext";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
@@ -16,30 +17,9 @@ const LANGUAGES = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("en");
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    // Check translation cookie
-    const getCookie = (name: string) => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop()?.split(";").shift();
-      return null;
-    };
-
-    const transCookie = getCookie("googtrans");
-    if (transCookie) {
-      const lang = transCookie.split("/").pop();
-      if (lang) {
-        const matched = LANGUAGES.find((l) => l.code === lang || (l.code === "zh" && lang === "zh-CN"));
-        if (matched) {
-          setSelectedLang(matched.code);
-        }
-      }
-    }
-  }, []);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,34 +34,23 @@ export default function Navbar() {
   }, []);
 
   const handleLangChange = (lang: string) => {
-    const domain = window.location.hostname;
-    if (lang === "en") {
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain}`;
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-    } else {
-      const target = lang === "zh" ? "zh-CN" : lang;
-      document.cookie = `googtrans=/en/${target}; path=/; domain=${domain}`;
-      document.cookie = `googtrans=/en/${target}; path=/`;
-    }
-    setSelectedLang(lang);
+    setLanguage(lang as Language);
     setLangOpen(false);
-    window.location.reload();
   };
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/machinery", label: "Heavy Machinery" },
-    { href: "/spare-parts", label: "Spare Parts" },
-    { href: "/hardware", label: "Industrial Hardware" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: t("navbar.home") },
+    { href: "/about", label: t("navbar.about") },
+    { href: "/machinery", label: t("navbar.machinery") },
+    { href: "/spare-parts", label: t("navbar.parts") },
+    { href: "/hardware", label: t("navbar.hardware") },
+    { href: "/contact", label: t("navbar.contact") },
   ];
 
-  const currentLangLabel = LANGUAGES.find((l) => l.code === selectedLang)?.label || "English";
+  const currentLangLabel = LANGUAGES.find((l) => l.code === language)?.label || "English";
 
   return (
     <nav
-      dir="ltr"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-sial-slate-dark/85 backdrop-blur-md border-b border-sial-gold/10 py-4 shadow-lg"
@@ -90,14 +59,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between w-full">
-          {/* Logo (Left side) */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image src="/logo.png" alt="SIAL Group Logo" width={200} height={128} className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
             </Link>
           </div>
 
-          {/* Desktop Nav Links (Centered) */}
+          {/* Desktop Nav Links */}
           <div className="hidden lg:flex flex-grow justify-center px-4">
             <div className="flex items-center space-x-6 xl:space-x-8">
               {navLinks.map((link) => {
@@ -117,7 +86,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Desktop Actions (Right side) */}
+          {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
             {/* Language Dropdown */}
             <div className="relative">
@@ -143,7 +112,7 @@ export default function Navbar() {
                       key={lang.code}
                       onClick={() => handleLangChange(lang.code)}
                       className={`w-full text-left px-4 py-2 text-xs font-medium hover:bg-sial-slate-dark transition duration-150 ${
-                        selectedLang === lang.code ? "text-sial-gold bg-sial-slate-dark/50" : "text-sial-gray-light hover:text-white"
+                        language === lang.code ? "text-sial-gold bg-sial-slate-dark/50" : "text-sial-gray-light hover:text-white"
                       }`}
                     >
                       {lang.label}
@@ -158,18 +127,18 @@ export default function Navbar() {
               href="/contact"
               className="text-xs uppercase tracking-wider font-bold text-sial-slate-dark bg-sial-gold hover:bg-sial-gold-dark px-5 py-2.5 rounded-md transition duration-300 shadow-md gold-glow-hover"
             >
-              Get In Touch
+              {t("navbar.getInTouch")}
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-4">
-            {/* Language Selector for Mobile (inline simplified) */}
+            {/* Language Selector for Mobile */}
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center space-x-1 text-xs text-sial-gray-light hover:text-white px-2 py-1 rounded border border-sial-gray-dark bg-sial-slate-light/50"
             >
-              <span>🌐 {selectedLang.toUpperCase()}</span>
+              <span>🌐 {language.toUpperCase()}</span>
             </button>
 
             <button
@@ -221,7 +190,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="block w-full text-center text-sm uppercase tracking-wider font-bold text-sial-slate-dark bg-sial-gold hover:bg-sial-gold-dark py-3 rounded-md transition duration-300 shadow-md"
             >
-              Get In Touch
+              {t("navbar.getInTouch")}
             </Link>
           </div>
         </div>
