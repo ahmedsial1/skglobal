@@ -33,45 +33,112 @@ export default function Machinery() {
         <ScrollReveal delay={0.15}>
           <section className="glassmorphism p-8 md:p-12 rounded-2xl border border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-sial-gold/5 rounded-full blur-3xl -z-10"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center font-sans">
-              {/* Info Column */}
-              <div className="lg:col-span-7 space-y-6 text-left">
-                <div className="flex items-center space-x-2">
-                  <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">🇴🇲 Oman Operations</span>
-                  <span className="text-xs text-sial-gray-light font-semibold">SK Transports Oman</span>
+            <div className="space-y-12">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center font-sans">
+                {/* Info Column */}
+                <div className="lg:col-span-7 space-y-6 text-left">
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div className="flex items-center space-x-2">
+                      <span className="px-2.5 py-1 rounded bg-sial-slate-light border border-white/10 text-xs font-bold text-sial-gold">🇴🇲 Oman Operations</span>
+                      <span className="text-xs text-sial-gray-light font-semibold">SK Transports Oman</span>
+                    </div>
+                    {/* Logo */}
+                    <div className="bg-white/95 px-3 py-1 rounded border border-white/10 flex items-center justify-center max-w-[140px]">
+                      <img src="/sktransportsoman_logo.png" alt="SK Transports Logo" className="object-contain h-6" />
+                    </div>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight">
+                    GCC Leadership in Mobile Crane Sales & Rentals
+                  </h2>
+                  <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
+                    For over a decade, SK Transports Oman has been the gold standard for heavy lifting solutions in the Sultanate of Oman. Specializing in high-capacity truck-mounted cranes, mobile telescopic cranes, and crawler cranes, we serve major oil & gas pipelines, marine cargo projects, and urban infrastructure developments.
+                  </p>
+                  <div className="flex flex-wrap gap-3 text-[11px] font-semibold text-sial-gray-light">
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 25 to 500 Ton Lift Capacity</span>
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ OPAL Certified Operators</span>
+                    <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 24/7 Site Support</span>
+                  </div>
+                  <div className="pt-2">
+                    <a
+                      href="https://www.sktransportsoman.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-1 gold-glow"
+                    >
+                      Visit SK Transports Oman Site ↗
+                    </a>
+                  </div>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight">
-                  GCC Leadership in Mobile Crane Sales & Rentals
-                </h2>
-                <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
-                  For over a decade, SK Transports Oman has been the gold standard for heavy lifting solutions in the Sultanate of Oman. Specializing in high-capacity truck-mounted cranes, mobile telescopic cranes, and crawler cranes, we serve major oil & gas pipelines, marine cargo projects, and urban infrastructure developments.
-                </p>
-                <div className="flex flex-wrap gap-3 text-[11px] font-semibold text-sial-gray-light">
-                  <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 25 to 500 Ton Lift Capacity</span>
-                  <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ OPAL Certified Operators</span>
-                  <span className="px-3 py-1 bg-sial-slate-dark rounded-full border border-white/5">✓ 24/7 Site Support</span>
-                </div>
-                <div className="pt-2">
-                  <a
-                    href="https://www.sktransportsoman.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-8 py-4 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg transition duration-300 transform hover:-translate-y-1 gold-glow"
-                  >
-                    Visit SK Transports Oman Site ↗
-                  </a>
+                {/* Image Column */}
+                <div className="lg:col-span-5 flex justify-center w-full">
+                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                    <Image
+                      src="/sktransportsoman_hero.png"
+                      alt="Massive yellow mobile truck crane operating on GCC construction site - SK Transports Oman"
+                      fill
+                      className="object-cover"
+                      sizes="(max-w-768px) 100vw, 384px"
+                    />
+                  </div>
                 </div>
               </div>
-              {/* Image Column */}
-              <div className="lg:col-span-5 flex justify-center w-full">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-                  <Image
-                    src="/oman_cranes.png"
-                    alt="Massive yellow mobile truck crane operating on GCC construction site - SK Transports Oman"
-                    fill
-                    className="object-cover"
-                    sizes="(max-w-768px) 100vw, 384px"
-                  />
+
+              {/* Fleet Gallery */}
+              <div className="border-t border-white/5 pt-8 space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
+                    Active Fleet Portfolio Showcase
+                  </h3>
+                  <span className="text-[10px] text-sial-gray-medium font-semibold">PDO Approved Fleet</span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <HoverCard className="p-4 bg-sial-slate-light/30 rounded-xl border border-white/5 space-y-3">
+                    <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
+                      <Image
+                        src="/sktransportsoman_fleet_350t.png"
+                        alt="SANY SAC 3500 Mobile Crane - 350T Capacity"
+                        fill
+                        className="object-cover"
+                        sizes="(max-w-768px) 100vw, 250px"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">SANY SAC 3500</h4>
+                      <p className="text-xs text-sial-gray-light mt-0.5">350T Lift Capacity Mobile Crane</p>
+                    </div>
+                  </HoverCard>
+
+                  <HoverCard className="p-4 bg-sial-slate-light/30 rounded-xl border border-white/5 space-y-3">
+                    <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
+                      <Image
+                        src="/sktransportsoman_fleet_220t.jpg"
+                        alt="SANY SAC 2200 Mobile Crane - 220T Capacity"
+                        fill
+                        className="object-cover"
+                        sizes="(max-w-768px) 100vw, 250px"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">SANY SAC 2200</h4>
+                      <p className="text-xs text-sial-gray-light mt-0.5">220T Lift Capacity Mobile Crane</p>
+                    </div>
+                  </HoverCard>
+
+                  <HoverCard className="p-4 bg-sial-slate-light/30 rounded-xl border border-white/5 space-y-3">
+                    <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
+                      <Image
+                        src="/sktransportsoman_fleet_160t.png"
+                        alt="SANY STC 1600 Mobile Crane - 160T Capacity"
+                        fill
+                        className="object-cover"
+                        sizes="(max-w-768px) 100vw, 250px"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">SANY STC 1600</h4>
+                      <p className="text-xs text-sial-gray-light mt-0.5">160T Lift Capacity Mobile Crane</p>
+                    </div>
+                  </HoverCard>
                 </div>
               </div>
             </div>

@@ -50,6 +50,15 @@ const NETWORK_COMPANIES = [
     role: "B2B Industrial Trading & Parts Sourcing",
     email: "sialautotraders@gmail.com",
     contact: "Muscat B2B Desk",
+    isEnhanced: true,
+    enhancedDetails: {
+      branches: "3 Active Branches (Seeb, Suwaiq, Sohar)",
+      erp: "Odoo ERP System Integrated",
+      logistics: "Global Parts Sourcing",
+      backbone: "Kia & Hyundai Specialist"
+    },
+    logo: "/sialkingdom_logo.png",
+    website: "https://www.sialkingdom.com"
   },
   {
     id: "sial-intl-om",
@@ -74,7 +83,27 @@ const NETWORK_COMPANIES = [
       erp: "Odoo ERP System Integrated",
       logistics: "SK Transports Affiliated Fleet",
       backbone: "Hyundai & Kia Genuine Spares"
-    }
+    },
+    logo: "/yahyaautoparts_logo.png",
+    website: "https://www.yahyaautoparts.com"
+  },
+  {
+    id: "sk-transports-om",
+    name: "SK Transports Oman",
+    country: "Oman",
+    address: "Muscat, Sultanate of Oman",
+    role: "PDO Approved Heavy Lifting & Crane Rental",
+    email: "sialautotraders@gmail.com",
+    contact: "Heavy Lift Desk",
+    isEnhanced: true,
+    enhancedDetails: {
+      branches: "Muscat, Sohar, Duqm, Salalah Operations",
+      erp: "SANY Fleet Procurement ERP",
+      logistics: "25T to 500T Mobile Cranes",
+      backbone: "PDO Safety Compliance"
+    },
+    logo: "/sktransportsoman_logo.png",
+    website: "https://www.sktransportsoman.com"
   },
   {
     id: "sial-young-a-kr",
@@ -200,15 +229,28 @@ export default function NetworkDirectory() {
                         </span>
                       )}
                     </div>
-                    <h3 className="text-lg font-bold text-white tracking-tight leading-snug">
-                      {company.name}
-                    </h3>
-                    <p className="text-[11px] text-sial-gray-medium font-semibold uppercase tracking-wider">
-                      {company.role}
-                    </p>
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-white tracking-tight leading-snug">
+                          {company.name}
+                        </h3>
+                        <p className="text-[11px] text-sial-gray-medium font-semibold uppercase tracking-wider">
+                          {company.role}
+                        </p>
+                      </div>
+                      {(company as any).logo && (
+                        <div className="relative w-12 h-12 bg-white/5 rounded-lg border border-white/10 flex items-center justify-center p-1.5 flex-shrink-0">
+                          <img
+                            src={(company as any).logo}
+                            alt={`${company.name} Logo`}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  {/* Enhanced Interactive Operation Dashboard for Yahya Bin Khalfan */}
+                  {/* Enhanced Interactive Operation Dashboard for Yahya Bin Khalfan / Sial Kingdom / SK Transports */}
                   {company.isEnhanced && company.enhancedDetails && (
                     <div className="p-3.5 rounded-lg bg-sial-gold/5 border border-sial-gold/15 space-y-3 shadow-inner">
                       <div className="flex items-center justify-between border-b border-sial-gold/10 pb-1.5">
@@ -231,7 +273,19 @@ export default function NetworkDirectory() {
                         </div>
                         <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
                           <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">Logistics Link</span>
-                          <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.logistics}</span>
+                          {company.id === "yahya-bin-khalfan-om" ? (
+                            <a
+                              href="https://www.sktransportsoman.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sial-gold hover:text-white font-bold block mt-0.5 transition duration-150 flex items-center space-x-0.5"
+                            >
+                              <span>SK Transports Fleet</span>
+                              <span className="text-[8px]">↗</span>
+                            </a>
+                          ) : (
+                            <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.logistics}</span>
+                          )}
                         </div>
                         <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
                           <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">Trading Focus</span>
@@ -246,6 +300,19 @@ export default function NetworkDirectory() {
                   <p className="line-clamp-2">📍 {company.address}</p>
                   <p>📧 {company.email}</p>
                   <p className="text-[11px] font-mono text-sial-gold pt-1">{company.contact}</p>
+                  {(company as any).website && (
+                    <div className="pt-2">
+                      <a
+                        href={(company as any).website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold text-sial-gold hover:text-white uppercase tracking-widest border border-sial-gold/20 hover:border-white px-2.5 py-1.5 rounded transition duration-200"
+                      >
+                        <span>Visit Website</span>
+                        <span className="text-[9px]">↗</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </HoverCard>
             </motion.div>

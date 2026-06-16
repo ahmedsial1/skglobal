@@ -37,6 +37,44 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            <div className="pt-4 border-t border-white/5">
+              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">Our Platforms</h4>
+              <ul className="space-y-2 text-xs">
+                <li>
+                  <a
+                    href="https://www.sktransportsoman.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sial-gold transition duration-200 flex items-center space-x-1"
+                  >
+                    <span>SK Transports Oman</span>
+                    <span className="text-[9px]">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.sialkingdom.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sial-gold transition duration-200 flex items-center space-x-1"
+                  >
+                    <span>Sial Kingdom Seeb</span>
+                    <span className="text-[9px]">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.yahyaautoparts.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sial-gold transition duration-200 flex items-center space-x-1"
+                  >
+                    <span>Yahya Auto Parts</span>
+                    <span className="text-[9px]">↗</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Global Operations */}

@@ -73,6 +73,9 @@ export default function About() {
                 <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
                   His international trade negotiation expertise is backed by a robust legal and governance framework. His operations span multiple jurisdictions, allowing SIAL Group to seamlessly navigate trade compliance, import duties, and customs protocols across South Korea, China, the GCC (Oman and Saudi Arabia), and Africa (Mozambique).
                 </p>
+                <p className="text-sm text-sial-gray-light leading-relaxed text-justify">
+                  To support these operations and optimize client-facing delivery, SIAL Group hosts specialized online platforms, including <a href="https://www.sktransportsoman.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">SK Transports Oman</a> for heavy machinery fleet operations, and both <a href="https://www.sialkingdom.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">Sial Kingdom</a> and <a href="https://www.yahyaautoparts.com" target="_blank" rel="noopener noreferrer" className="text-sial-gold hover:underline font-semibold">Yahya Auto Parts</a> for automotive spare parts sourcing and mechanical services.
+                </p>
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/5">
                   <div>
                     <span className="text-xs text-sial-gray-medium uppercase block">Focus Areas</span>

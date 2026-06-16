@@ -99,6 +99,108 @@ export default function SpareParts() {
           </section>
         </ScrollReveal>
 
+        {/* Active Subsidiary Platforms */}
+        <ScrollReveal delay={0.1}>
+          <section className="space-y-12">
+            <div className="text-center space-y-4 max-w-3xl mx-auto">
+              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Active Customer Platforms</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight uppercase tracking-tight">
+                Our Automotive Spare Parts & Service Hubs
+              </h2>
+              <div className="h-1 w-20 bg-sial-gold mx-auto mt-2"></div>
+              <p className="text-xs sm:text-sm text-sial-gray-light max-w-2xl mx-auto">
+                SIAL Group operates two prominent customer-facing brands in the Sultanate of Oman, providing factory-direct parts and expert repair services.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 font-sans">
+              {/* Sial Kingdom */}
+              <HoverCard className="glassmorphism p-6 rounded-2xl border border-white/5 space-y-6 flex flex-col justify-between relative overflow-hidden">
+                <div className="space-y-4">
+                  <div className="relative w-full h-56 rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <Image
+                      src="/sialkingdom_workshop.png"
+                      alt="Sial Kingdom Auto Workshop & Parts Service - Seeb, Muscat"
+                      fill
+                      className="object-cover"
+                      sizes="(max-w-768px) 100vw, 500px"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-bold text-sial-gold uppercase tracking-wider">Oman Seeb Division</span>
+                      <h3 className="text-xl font-bold text-white">Sial Kingdom Trading LLC</h3>
+                    </div>
+                    {/* Logo */}
+                    <div className="bg-white px-2 py-1 rounded max-w-[120px] flex items-center justify-center border border-white/10">
+                      <img src="/sialkingdom_logo.png" alt="Sial Kingdom Logo" className="object-contain h-8" />
+                    </div>
+                  </div>
+                  <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
+                    Sial Kingdom is a trusted auto services workshop and genuine spare parts dealer located in the Ma’abilah Industrial Area (Sanaiya), Seeb, Oman. Specializing in Kia and Hyundai vehicles, they offer everything from routine diagnostics to advanced mechanical and body repairs with direct-factory replacement components.
+                  </p>
+                  <ul className="text-[11px] text-sial-gray-medium space-y-1.5">
+                    <li>📍 Near Abu Zaki Tile Store, Road 6, Way No 7749, Mabila&apos;h Sanaiya</li>
+                    <li>📞 Call Support: +968 9192 9398</li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-white/5">
+                  <a
+                    href="https://www.sialkingdom.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-center block px-6 py-3 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-md gold-glow-hover"
+                  >
+                    Explore Sial Kingdom Site ↗
+                  </a>
+                </div>
+              </HoverCard>
+
+              {/* Yahya Auto Parts */}
+              <HoverCard className="glassmorphism p-6 rounded-2xl border border-white/5 space-y-6 flex flex-col justify-between relative overflow-hidden">
+                <div className="space-y-4">
+                  <div className="relative w-full h-56 rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <Image
+                      src="/yahyaautoparts_banner.webp"
+                      alt="Yahya Auto Parts Genuine Hyundai Kia & Genesis Spare Parts"
+                      fill
+                      className="object-cover"
+                      sizes="(max-w-768px) 100vw, 500px"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-bold text-sial-gold uppercase tracking-wider">Global Logistics Hub</span>
+                      <h3 className="text-xl font-bold text-white">Yahya Auto Parts</h3>
+                    </div>
+                    {/* Logo */}
+                    <div className="bg-white/95 px-2.5 py-1 rounded max-w-[120px] flex items-center justify-center border border-white/10">
+                      <img src="/yahyaautoparts_logo.png" alt="Yahya Auto Parts Logo" className="object-contain h-8" />
+                    </div>
+                  </div>
+                  <p className="text-xs text-sial-gray-light leading-relaxed text-justify">
+                    Founded in 2006, Yahya Auto Parts (Yahya Bin Khalfan LLC) has grown into a leading wholesale and retail distributor of genuine Hyundai, Kia, and Genesis spare parts in Oman, with shipping and procurement operations spanning South Korea, China, and Pakistan.
+                  </p>
+                  <ul className="text-[11px] text-sial-gray-medium space-y-1.5">
+                    <li>📍 Al Mabela Al Janubiyya, Block 377, Way 7749, Al Seeb, Muscat</li>
+                    <li>📞 Call Support: +968 9796 9786</li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-white/5">
+                  <a
+                    href="https://www.yahyaautoparts.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-center block px-6 py-3 bg-sial-gold hover:bg-sial-gold-dark text-sial-slate-dark font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-md gold-glow-hover"
+                  >
+                    Explore Yahya Auto Parts Site ↗
+                  </a>
+                </div>
+              </HoverCard>
+            </div>
+          </section>
+        </ScrollReveal>
+
         {/* Sourcing Integrity Node Section */}
         <section className="bg-sial-slate-light/40 border-y border-white/5 py-12 -mx-4 px-4 sm:-mx-8 sm:px-8 lg:-mx-16 lg:px-16">
           <div className="max-w-7xl mx-auto space-y-8">
