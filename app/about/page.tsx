@@ -19,14 +19,14 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-20">
         {/* Header Block */}
         <ScrollReveal>
-          <div className="text-center space-y-4 max-w-3xl mx-auto">
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
             <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">Who We Are</span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#FACC15] uppercase font-heading text-center">
               18 Years of Multi-Jurisdictional Governance
             </h1>
-            <div className="h-1 w-20 bg-sial-gold mx-auto mt-4"></div>
-            <p className="text-sm sm:text-base text-sial-gray-light font-light leading-relaxed pt-2 max-w-2xl mx-auto text-center">
-              Established on the principles of transparency, high-level diplomatic negotiation, and absolute quality control, SIAL Group has grown from an East Asian trade node into a global enterprise.
+            <div className="h-0.5 w-24 bg-[#FACC15] mx-auto mt-4"></div>
+            <p className="text-sm sm:text-base text-[#F9FAFB] font-sans leading-relaxed pt-2 max-w-4xl mx-auto text-center md:text-justify text-balance">
+              For nearly two decades, SIAL Group has stood as a pioneer of multi-jurisdictional governance and cross-border supply chain optimization. Strategically headquartered with active hubs in South Korea, China, Oman, Saudi Arabia, and East Africa, our operations bridge major global industrial centers with emerging markets. Guided by CEO Muhammad Amjad’s rigorous commitment to trade compliance, high-level diplomatic negotiation, and factory-direct procurement, the Group ensures unparalleled supply chain resilience in heavy lifting machinery sales, genuine Kia and Hyundai automotive parts, and bulk industrial hardware. Our transparent corporate governance framework guarantees seamless international compliance, securing trusted partnerships with regional distributors, state-owned enterprises, and private commercial fleets worldwide.
             </p>
           </div>
         </ScrollReveal>
