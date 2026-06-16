@@ -146,11 +146,17 @@ const OFFICES_DATA: Record<Language, Array<{
     {
       country: "Mozambique",
       countryEn: "Mozambique",
-      entity: "Sial Kingdom LLC",
+      entity: "SIAL KINGDOM TRADING CO, LDA",
       role: "Logistics Node & Industrial Importation",
-      address: "Nampula, Maputo, Mozambique",
+      address: "Main AV. Nacala Road, Nampula 3100, Mozambique",
       email: "sialautotraders@gmail.com",
-      contact: "East Africa Hub Desk",
+      contact: "📞 +258 86 990 0800",
+      details: [
+        "Storefront: Premier industrial hardware storefront in Nampula.",
+        "Clearance: Strategic Nacala port shipping and clearing pipeline.",
+        "Inventory: Complete selection of genuine tools, construction steel, and hardware.",
+        "Contact: +258 86 990 0800 / sialautotraders@gmail.com"
+      ]
     },
     {
       country: "Pakistan",
@@ -244,11 +250,17 @@ const OFFICES_DATA: Record<Language, Array<{
     {
       country: "موزمبيق",
       countryEn: "Mozambique",
-      entity: "شركة سيال كينجدوم ش.م.م",
+      entity: "SIAL KINGDOM TRADING CO, LDA",
       role: "مركز اللوجستيات والاستيراد الصناعي",
-      address: "نامبولا، مابوتو، موزمبيق",
+      address: "شارع ناكالا الرئيسي، نامبولا 3100، موزمبيق",
       email: "sialautotraders@gmail.com",
-      contact: "مكتب شرق أفريقيا",
+      contact: "📞 +258 86 990 0800",
+      details: [
+        "الواجهة: متجر الأدوات الصناعية الرئيسي في نامبولا.",
+        "التخليص: خط شحن وتخليص جمركي استراتيجي عبر ميناء ناكالا.",
+        "المخزون: تشكيلة كاملة من الأدوات الأصلية، فولاذ البناء، والمعدات.",
+        "الاتصال: +258 86 990 0800 / sialautotraders@gmail.com"
+      ]
     },
     {
       country: "باكستان",
@@ -342,11 +354,17 @@ const OFFICES_DATA: Record<Language, Array<{
     {
       country: "莫桑比克",
       countryEn: "Mozambique",
-      entity: "Sial Kingdom LLC",
+      entity: "SIAL KINGDOM TRADING CO, LDA",
       role: "物流枢纽及工业物资进口",
-      address: "莫桑比克马普托、楠普拉",
+      address: "莫桑比克楠普拉市主干道纳卡拉路3100号",
       email: "sialautotraders@gmail.com",
-      contact: "东非枢纽部",
+      contact: "📞 +258 86 990 0800",
+      details: [
+        "门店: 位于楠普拉的优质工业五金与建材展示门店。",
+        "清关: 依托纳卡拉港的战略航运与高效清关通道。",
+        "库存: 备有齐全的正品工具、建筑钢材及工业五金零配件。",
+        "联系方式: +258 86 990 0800 / sialautotraders@gmail.com"
+      ]
     },
     {
       country: "巴基斯坦",
@@ -440,11 +458,17 @@ const OFFICES_DATA: Record<Language, Array<{
     {
       country: "모잠비크",
       countryEn: "Mozambique",
-      entity: "Sial Kingdom LLC",
+      entity: "SIAL KINGDOM TRADING CO, LDA",
       role: "아프리카 물류 거점 및 산업 자재 수입",
-      address: "모잠비크 마푸토, 남풀라",
+      address: "모잠비크 남풀라 메인 Nacala Road 3100",
       email: "sialautotraders@gmail.com",
-      contact: "동아프리카 허브 데스크",
+      contact: "📞 +258 86 990 0800",
+      details: [
+        "오프라인 매장: 남풀라 소재 프리미엄 산업 하드웨어 및 건자재 전시장.",
+        "통관: 나칼라 항구를 통한 전략적 해상 운송 및 고속 통관 파이프라인.",
+        "재고: 정품 수공구, 건설용 구조강 및 오프라인 하드웨어 자재 완비.",
+        "연락처: +258 86 990 0800 / sialautotraders@gmail.com"
+      ]
     },
     {
       country: "파키스탄",
@@ -538,11 +562,17 @@ const OFFICES_DATA: Record<Language, Array<{
     {
       country: "موزمبیق",
       countryEn: "Mozambique",
-      entity: "سیال کنگڈم کمپنی",
+      entity: "SIAL KINGDOM TRADING CO, LDA",
       role: "لاجسٹکس اور صنعتی درآمد کا مرکز",
-      address: "نامپولا، ماپوتو، موزمبیق",
+      address: "مین اے وی۔ ناکالا روڈ، نامپولا 3100، موزمبیق",
       email: "sialautotraders@gmail.com",
-      contact: "مشرقی افریقہ ہب ڈیسک",
+      contact: "📞 +258 86 990 0800",
+      details: [
+        "سٹور فرنٹ: نامپولا میں پریمیئر صنعتی ہارڈویئر اور تعمیراتی مواد کا سٹور۔",
+        "کلیئرنس: ناکالا بندرگاہ کے ذریعے اسٹریٹجک شپنگ اور کسٹمز کلیئرنس پائپ لائن۔",
+        "انونٹری: حقیقی ٹولز، تعمیراتی اسٹیل اور ہارڈویئر کا مکمل اسٹاک۔",
+        "رابطہ: +258 86 990 0800 / sialautotraders@gmail.com"
+      ]
     },
     {
       country: "پاکستان",

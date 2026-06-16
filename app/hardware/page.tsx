@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -9,6 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hardware() {
   const { t } = useLanguage();
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <div className="bg-sial-slate-dark text-white min-h-screen py-16 md:py-24">
@@ -69,15 +70,47 @@ export default function Hardware() {
                 </div>
               </div>
 
-              {/* Image Column */}
-              <div className="lg:col-span-4 flex justify-center w-full">
-                <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-                  <Image
-                    src="/mozambique_hardware.png"
-                    alt="Bulk industrial hardware shipments unloading in Maputo port, Mozambique - SIAL Group"
-                    fill
-                    className="object-cover"
-                    sizes="(max-w-768px) 100vw, 300px"
+              {/* Image Carousel Column */}
+              <div className="lg:col-span-4 flex flex-col items-center w-full space-y-3">
+                <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-sial-slate-dark">
+                  {currentSlide === 0 ? (
+                    <Image
+                      src="/mozambique_storefront.png"
+                      alt="SIAL Kingdom Trading storefront in Nampula, Mozambique"
+                      fill
+                      className="object-cover transition-all duration-500"
+                      sizes="(max-w-768px) 100vw, 300px"
+                      priority
+                    />
+                  ) : (
+                    <Image
+                      src="/mozambique_product.png"
+                      alt="SIAL Kingdom Trading showroom and products in Mozambique"
+                      fill
+                      className="object-cover transition-all duration-500"
+                      sizes="(max-w-768px) 100vw, 300px"
+                      priority
+                    />
+                  )}
+                  {/* Subtle caption overlay */}
+                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-xs p-3 text-center text-[10px] text-sial-gray-light border-t border-white/5 font-sans">
+                    {currentSlide === 0 
+                      ? "SIAL Kingdom Trading Storefront - Nampula, Mozambique" 
+                      : "SIAL Kingdom Trading Showroom & Stock - Mozambique"}
+                  </div>
+                </div>
+                
+                {/* Carousel Indicators */}
+                <div className="flex space-x-2">
+                  <button 
+                    onClick={() => setCurrentSlide(0)}
+                    className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === 0 ? "bg-sial-gold w-5" : "bg-white/20 hover:bg-white/40"}`}
+                    aria-label="View Storefront Photo"
+                  />
+                  <button 
+                    onClick={() => setCurrentSlide(1)}
+                    className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === 1 ? "bg-sial-gold w-5" : "bg-white/20 hover:bg-white/40"}`}
+                    aria-label="View Product Photo"
                   />
                 </div>
               </div>

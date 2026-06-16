@@ -254,12 +254,20 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
     },
     {
       id: "sial-kingdom-mz",
-      name: "Sial Kingdom LLC",
+      name: "SIAL KINGDOM TRADING CO, LDA",
       country: "Mozambique",
-      address: "Nampula, Maputo, Mozambique",
+      address: "Main AV. Nacala Road, Nampula 3100, Mozambique",
       role: "Logistics Node & Industrial Importation",
       email: "sialautotraders@gmail.com",
-      contact: "East Africa Hub Desk",
+      contact: "📞 +258 86 990 0800",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Nampula Storefront & Warehouse",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Nacala Port Clearing Pipeline",
+        backbone: "Industrial Hardware & Steel"
+      },
+      logo: "/mozambique_storefront.png"
     }
   ],
   ar: [
@@ -382,12 +390,20 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
     },
     {
       id: "sial-kingdom-mz",
-      name: "شركة سيال كينجدوم ش.م.م",
+      name: "SIAL KINGDOM TRADING CO, LDA",
       country: "Mozambique",
-      address: "نامبولا، مابوتو، موزمبيق",
+      address: "شارع ناكالا الرئيسي، نامبولا 3100، موزمبيق",
       role: "مركز اللوجستيات والاستيراد الصناعي",
       email: "sialautotraders@gmail.com",
-      contact: "مكتب شرق أفريقيا",
+      contact: "📞 +258 86 990 0800",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "متجر ومستودع نامبولا",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "ممر تخليص ميناء ناكالا",
+        backbone: "المعدات الصناعية والحديد"
+      },
+      logo: "/mozambique_storefront.png"
     }
   ],
   zh: [
@@ -510,12 +526,20 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
     },
     {
       id: "sial-kingdom-mz",
-      name: "Sial Kingdom LLC",
+      name: "SIAL KINGDOM TRADING CO, LDA",
       country: "Mozambique",
-      address: "莫桑比克马普托、楠普拉",
+      address: "莫桑比克楠普拉市主干道纳卡拉路3100号",
       role: "物流枢纽及工业物资进口",
       email: "sialautotraders@gmail.com",
-      contact: "东非枢纽部",
+      contact: "📞 +258 86 990 0800",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "楠普拉门店与大型仓库",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "纳卡拉港口清关通道",
+        backbone: "工业五金与建筑钢材"
+      },
+      logo: "/mozambique_storefront.png"
     }
   ],
   ko: [
@@ -638,12 +662,20 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
     },
     {
       id: "sial-kingdom-mz",
-      name: "Sial Kingdom LLC",
+      name: "SIAL KINGDOM TRADING CO, LDA",
       country: "Mozambique",
-      address: "모잠비크 마푸토, 남풀라",
+      address: "모잠비크 남풀라 메인 Nacala Road 3100",
       role: "아프리카 물류 거점 및 산업 자재 수입",
       email: "sialautotraders@gmail.com",
-      contact: "동아프리카 허브 데스크",
+      contact: "📞 +258 86 990 0800",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "남풀라 전시장 및 보관창고",
+        erp: "Odoo ERP 통합 물류 관리 적용",
+        logistics: "나칼라 항구 통관 파이프라인",
+        backbone: "산업 하드웨어 및 건설용 강재"
+      },
+      logo: "/mozambique_storefront.png"
     }
   ],
   ur: [
@@ -766,12 +798,20 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
     },
     {
       id: "sial-kingdom-mz",
-      name: "سیال کنگڈم کمپنی",
+      name: "SIAL KINGDOM TRADING CO, LDA",
       country: "Mozambique",
-      address: "نامپولا، ماپوتو، موزمبیق",
+      address: "مین اے وی۔ ناکالا روڈ، نامپولا 3100، موزمبیق",
       role: "لاجسٹکس اور صنعتی درآمد کا مرکز",
       email: "sialautotraders@gmail.com",
-      contact: "مشرقی افریقہ ہب ڈیسک",
+      contact: "📞 +258 86 990 0800",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "نامپولا اسٹور اور گودام",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "ناکالا پورٹ کلیئرنس پائپ لائن",
+        backbone: "صنعتی ہارڈویئر اور اسٹیل"
+      },
+      logo: "/mozambique_storefront.png"
     }
   ]
 };
