@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -9,7 +9,6 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hardware() {
   const { t } = useLanguage();
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24">
@@ -70,48 +69,21 @@ export default function Hardware() {
                 </div>
               </div>
 
-              {/* Image Carousel Column */}
+              {/* Image Column */}
               <div className="lg:col-span-4 flex flex-col items-center w-full space-y-3">
                 <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-xl bg-slate-100">
-                  {currentSlide === 0 ? (
-                    <Image
-                      src="/mozambique_storefront.png"
-                      alt="SIAL Kingdom Trading storefront in Nampula, Mozambique"
-                      fill
-                      className="object-cover transition-all duration-500"
-                      sizes="(max-w-768px) 100vw, 300px"
-                      priority
-                    />
-                  ) : (
-                    <Image
-                      src="/mozambique_product.png"
-                      alt="SIAL Kingdom Trading showroom and products in Mozambique"
-                      fill
-                      className="object-cover transition-all duration-500"
-                      sizes="(max-w-768px) 100vw, 300px"
-                      priority
-                    />
-                  )}
+                  <Image
+                    src="/mozambique_storefront.png"
+                    alt="SIAL Kingdom Trading storefront in Nampula, Mozambique"
+                    fill
+                    className="object-cover"
+                    sizes="(max-w-768px) 100vw, 300px"
+                    priority
+                  />
                   {/* Subtle caption overlay */}
                   <div className="absolute bottom-0 inset-x-0 bg-white/90 backdrop-blur-xs p-3 text-center text-[10px] text-slate-700 border-t border-slate-200 font-sans">
-                    {currentSlide === 0 
-                      ? "SIAL Kingdom Trading Storefront - Nampula, Mozambique" 
-                      : "SIAL Kingdom Trading Showroom & Stock - Mozambique"}
+                    SIAL Kingdom Trading Storefront - Nampula, Mozambique
                   </div>
-                </div>
-                
-                {/* Carousel Indicators */}
-                <div className="flex space-x-2">
-                  <button 
-                    onClick={() => setCurrentSlide(0)}
-                    className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === 0 ? "bg-sial-blue w-5" : "bg-slate-300 hover:bg-slate-400"}`}
-                    aria-label="View Storefront Photo"
-                  />
-                  <button 
-                    onClick={() => setCurrentSlide(1)}
-                    className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === 1 ? "bg-sial-blue w-5" : "bg-slate-300 hover:bg-slate-400"}`}
-                    aria-label="View Product Photo"
-                  />
                 </div>
               </div>
 
