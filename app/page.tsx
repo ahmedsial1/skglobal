@@ -61,7 +61,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center items-stretch w-full">
               <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-auto lg:h-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50 transition-all duration-300">
                 <Image
-                  src="/hero_storefront.jpg"
+                  src="/hero_storefront.png"
                   alt="SIAL Group Storefront - Multi-Jurisdictional Industrial Trading and Spare Parts"
                   fill
                   priority
