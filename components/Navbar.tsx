@@ -53,8 +53,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/75 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm"
-          : "bg-transparent py-6"
+          ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-800 py-4 shadow-lg"
+          : "bg-slate-900 border-b border-slate-800 py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,8 +75,8 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-sial-blue whitespace-nowrap ${
-                      isActive ? "text-sial-blue border-b-2 border-sial-blue pb-1" : "text-slate-600"
+                    className={`text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-blue-400 whitespace-nowrap ${
+                      isActive ? "text-blue-400 border-b-2 border-blue-400 pb-1" : "text-slate-300"
                     }`}
                   >
                     {link.label}
@@ -92,7 +92,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center space-x-1 text-xs font-semibold text-slate-600 hover:text-sial-blue px-3 py-1.5 rounded-full border border-slate-300 bg-slate-100/80 hover:bg-slate-200 transition duration-200"
+                className="flex items-center space-x-1 text-xs font-semibold text-slate-300 hover:text-blue-400 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-800/80 hover:bg-slate-700 transition duration-200"
               >
                 <span>🌐 {currentLangLabel.split(" ")[0]}</span>
                 <svg
@@ -106,13 +106,13 @@ export default function Navbar() {
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-lg bg-white border border-slate-200 shadow-xl overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-48 rounded-lg bg-slate-800 border border-slate-700 shadow-xl overflow-hidden z-50">
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => handleLangChange(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-xs font-medium hover:bg-slate-50 transition duration-150 ${
-                        language === lang.code ? "text-sial-blue bg-blue-50/50" : "text-slate-600 hover:text-sial-blue"
+                      className={`w-full text-left px-4 py-2 text-xs font-medium hover:bg-slate-700 transition duration-150 ${
+                        language === lang.code ? "text-blue-400 bg-slate-700/50" : "text-slate-200 hover:text-blue-400"
                       }`}
                     >
                       {lang.label}
@@ -136,14 +136,14 @@ export default function Navbar() {
             {/* Language Selector for Mobile */}
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center space-x-1 text-xs text-slate-600 hover:text-sial-blue px-2 py-1 rounded border border-slate-300 bg-slate-100"
+              className="flex items-center space-x-1 text-xs text-slate-300 hover:text-blue-400 px-2 py-1 rounded border border-slate-700 bg-slate-800"
             >
               <span>🌐 {language.toUpperCase()}</span>
             </button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-sial-blue focus:outline-none"
+              className="text-slate-300 hover:text-blue-400 focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -166,7 +166,7 @@ export default function Navbar() {
           isOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible overflow-hidden"
         }`}
       >
-        <div className="px-4 pt-2 pb-6 bg-white/95 backdrop-blur-lg border-b border-slate-200 space-y-3">
+        <div className="px-4 pt-2 pb-6 bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 space-y-3">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -176,15 +176,15 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2.5 rounded-md text-base font-semibold tracking-wide transition duration-150 ${
                   isActive
-                    ? "text-sial-blue bg-blue-50"
-                    : "text-slate-600 hover:text-sial-blue hover:bg-slate-50"
+                    ? "text-blue-400 bg-slate-800"
+                    : "text-slate-300 hover:text-blue-400 hover:bg-slate-800"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <div className="pt-4 border-t border-slate-200">
+          <div className="pt-4 border-t border-slate-800">
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
@@ -200,12 +200,12 @@ export default function Navbar() {
 
   function lgHiddenLangSelector() {
     return (
-      <div className="lg:hidden absolute right-4 mt-1 w-40 rounded-md bg-white border border-slate-200 shadow-xl overflow-hidden z-50">
+      <div className="lg:hidden absolute right-4 mt-1 w-40 rounded-md bg-slate-800 border border-slate-700 shadow-xl overflow-hidden z-50">
         {LANGUAGES.map((lang) => (
           <button
             key={lang.code}
             onClick={() => handleLangChange(lang.code)}
-            className="block w-full text-left px-3 py-2 text-xs font-semibold text-slate-600 hover:text-sial-blue hover:bg-slate-50"
+            className="block w-full text-left px-3 py-2 text-xs font-semibold text-slate-300 hover:text-blue-400 hover:bg-slate-700"
           >
             {lang.label}
           </button>
