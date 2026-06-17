@@ -14,8 +14,8 @@ export default function HoverCard({ children, className = "" }: HoverCardProps) 
       whileHover={{
         y: -6,
         scale: 1.015,
-        borderColor: "rgba(250, 204, 21, 0.25)",
-        boxShadow: "0 20px 40px -15px rgba(250, 204, 21, 0.12)",
+        borderColor: "rgba(30, 64, 175, 0.2)",
+        boxShadow: "0 10px 30px -10px rgba(15, 23, 42, 0.08)",
       }}
       transition={{
         duration: 0.4,

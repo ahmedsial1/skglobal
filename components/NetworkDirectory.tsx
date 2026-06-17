@@ -855,7 +855,7 @@ export default function NetworkDirectory() {
   return (
     <div className="space-y-12">
       {/* Country Filters / Tabs */}
-      <div className="flex flex-wrap justify-center gap-2 border-b border-white/5 pb-6">
+      <div className="flex flex-wrap justify-center gap-2 border-b border-slate-200 pb-6">
         {COUNTRIES.map((country) => {
           const isActive = selectedCountry === country;
           return (
@@ -864,8 +864,8 @@ export default function NetworkDirectory() {
               onClick={() => setSelectedCountry(country)}
               className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 ${
                 isActive
-                  ? "bg-sial-gold text-sial-slate-dark shadow-lg shadow-sial-gold/20"
-                  : "bg-sial-slate-light/40 text-sial-gray-light hover:text-white border border-white/5 hover:bg-sial-slate-light/60"
+                  ? "bg-sial-blue text-white shadow-lg shadow-blue-500/10"
+                  : "bg-slate-100 text-slate-600 hover:text-sial-blue border border-slate-200 hover:bg-slate-200"
               }`}
             >
               {getCountryName(country)}
@@ -893,39 +893,39 @@ export default function NetworkDirectory() {
               key={company.id}
             >
               <HoverCard
-                className={`slate-gradient p-6 rounded-xl flex flex-col justify-between h-full border ${
+                className={`bg-slate-50 p-6 rounded-xl flex flex-col justify-between h-full border shadow-sm ${
                   company.isEnhanced
-                    ? "border-sial-gold/20 relative overflow-hidden"
-                    : "border-white/5"
+                    ? "border-sial-blue/30 relative overflow-hidden"
+                    : "border-slate-200"
                 }`}
               >
                 {company.isEnhanced && (
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-sial-gold/5 rounded-full blur-2xl"></div>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-sial-blue/5 rounded-full blur-2xl"></div>
                 )}
                 
                 <div className="space-y-4">
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-black text-sial-gold uppercase tracking-widest">
+                      <span className="text-xs font-black text-sial-blue uppercase tracking-widest">
                         {getCountryName(company.country)}
                       </span>
                       {company.isEnhanced && (
-                        <span className="text-[9px] font-bold text-sial-gold bg-sial-gold/10 px-2 py-0.5 rounded border border-sial-gold/20 uppercase tracking-wider">
+                        <span className="text-[9px] font-bold text-sial-blue bg-sial-blue/10 px-2 py-0.5 rounded border border-sial-blue/20 uppercase tracking-wider">
                           {getLabel("eliteHub")}
                         </span>
                       )}
                     </div>
                     <div className="flex items-start justify-between gap-4">
                       <div className="space-y-1">
-                        <h3 className="text-lg font-bold text-white tracking-tight leading-snug">
+                        <h3 className="text-lg font-bold text-slate-900 tracking-tight leading-snug">
                           {company.name}
                         </h3>
-                        <p className="text-[11px] text-sial-gray-medium font-semibold uppercase tracking-wider">
+                        <p className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">
                           {company.role}
                         </p>
                       </div>
                       {(company as any).logo && (
-                        <div className="relative w-12 h-12 bg-white/5 rounded-lg border border-white/10 flex items-center justify-center p-1.5 flex-shrink-0">
+                        <div className="relative w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center p-1.5 flex-shrink-0 shadow-sm">
                           <img
                             src={(company as any).logo}
                             alt={`${company.name} Logo`}
@@ -938,61 +938,61 @@ export default function NetworkDirectory() {
 
                   {/* Enhanced Interactive Operation Dashboard for Yahya Bin Khalfan / Sial Kingdom / SK Transports */}
                   {company.isEnhanced && company.enhancedDetails && (
-                    <div className="p-3.5 rounded-lg bg-sial-gold/5 border border-sial-gold/15 space-y-3 shadow-inner">
-                      <div className="flex items-center justify-between border-b border-sial-gold/10 pb-1.5">
-                        <span className="text-[9px] uppercase tracking-widest text-sial-gold font-black">
+                    <div className="p-3.5 rounded-lg bg-blue-50/40 border border-sial-blue/15 space-y-3 shadow-inner">
+                      <div className="flex items-center justify-between border-b border-sial-blue/10 pb-1.5">
+                        <span className="text-[9px] uppercase tracking-widest text-sial-blue font-black">
                           {getLabel("opsDashboard")}
                         </span>
                         <span className="flex h-1.5 w-1.5 relative">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sial-gold opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sial-gold"></span>
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sial-blue opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sial-blue"></span>
                         </span>
                       </div>
                       <div className="grid grid-cols-2 gap-2 text-[10px]">
-                        <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
-                          <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">{getLabel("branchFootprint")}</span>
-                          <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.branches}</span>
+                        <div className="bg-white p-2 rounded border border-slate-200/60 shadow-sm">
+                          <span className="text-slate-500 text-[8px] uppercase tracking-wider block">{getLabel("branchFootprint")}</span>
+                          <span className="text-slate-900 font-bold block mt-0.5">{company.enhancedDetails.branches}</span>
                         </div>
-                        <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
-                          <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">{getLabel("erpSystem")}</span>
-                          <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.erp}</span>
+                        <div className="bg-white p-2 rounded border border-slate-200/60 shadow-sm">
+                          <span className="text-slate-500 text-[8px] uppercase tracking-wider block">{getLabel("erpSystem")}</span>
+                          <span className="text-slate-900 font-bold block mt-0.5">{company.enhancedDetails.erp}</span>
                         </div>
-                        <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
-                          <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">{getLabel("logisticsLink")}</span>
+                        <div className="bg-white p-2 rounded border border-slate-200/60 shadow-sm">
+                          <span className="text-slate-500 text-[8px] uppercase tracking-wider block">{getLabel("logisticsLink")}</span>
                           {company.id === "yahya-bin-khalfan-om" ? (
                             <a
                               href="https://www.sktransportsoman.com"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-sial-gold hover:text-white font-bold block mt-0.5 transition duration-150 flex items-center space-x-0.5"
+                              className="text-sial-blue hover:text-sial-blue-dark hover:underline font-bold block mt-0.5 transition duration-150 flex items-center space-x-0.5"
                             >
                               <span>{getLabel("fleetFleet")}</span>
                               <span className="text-[8px]">↗</span>
                             </a>
                           ) : (
-                            <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.logistics}</span>
+                            <span className="text-slate-900 font-bold block mt-0.5">{company.enhancedDetails.logistics}</span>
                           )}
                         </div>
-                        <div className="bg-sial-slate-dark/50 p-2 rounded border border-white/5">
-                          <span className="text-sial-gray-medium text-[8px] uppercase tracking-wider block">{getLabel("tradingFocus")}</span>
-                          <span className="text-white font-bold block mt-0.5">{company.enhancedDetails.backbone}</span>
+                        <div className="bg-white p-2 rounded border border-slate-200/60 shadow-sm">
+                          <span className="text-slate-500 text-[8px] uppercase tracking-wider block">{getLabel("tradingFocus")}</span>
+                          <span className="text-slate-900 font-bold block mt-0.5">{company.enhancedDetails.backbone}</span>
                         </div>
                       </div>
                     </div>
                   )}
                 </div>
 
-                <div className="space-y-1.5 text-xs text-sial-gray-light pt-4 border-t border-white/5 mt-4">
+                <div className="space-y-1.5 text-xs text-slate-600 pt-4 border-t border-slate-200 mt-4">
                   <p className="line-clamp-2">📍 {company.address}</p>
                   <p>📧 {company.email}</p>
-                  <p className="text-[11px] font-mono text-sial-gold pt-1">{company.contact}</p>
+                  <p className="text-[11px] font-mono text-sial-blue font-semibold pt-1">{company.contact}</p>
                   {(company as any).website && (
                     <div className="pt-2">
                       <a
                         href={(company as any).website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold text-sial-gold hover:text-white uppercase tracking-widest border border-sial-gold/20 hover:border-white px-2.5 py-1.5 rounded transition duration-200"
+                        className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold text-sial-blue hover:text-white uppercase tracking-widest border border-sial-blue/20 hover:bg-sial-blue px-2.5 py-1.5 rounded transition duration-200"
                       >
                         <span>{getLabel("visitWebsite")}</span>
                         <span className="text-[9px]">↗</span>

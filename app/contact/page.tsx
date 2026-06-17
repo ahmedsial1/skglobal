@@ -728,33 +728,33 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-sial-slate-dark text-white min-h-screen py-16 md:py-24">
+    <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
         
         {/* Header Block */}
         <ScrollReveal>
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">
               {t("contact.badge")}
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase text-center leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 uppercase text-center leading-tight">
               {t("contact.heading")}
             </h1>
-            <div className="h-1 w-20 bg-sial-gold mx-auto mt-4"></div>
-            <p className="text-sm sm:text-base text-sial-gray-light font-light leading-relaxed pt-2 text-center max-w-2xl mx-auto">
+            <div className="h-1 w-20 bg-sial-blue mx-auto mt-4"></div>
+            <p className="text-sm sm:text-base text-slate-600 font-light leading-relaxed pt-2 text-center max-w-2xl mx-auto">
               {t("contact.desc")}
             </p>
           </div>
         </ScrollReveal>
 
         {/* Tab Switcher Controls */}
-        <div className="flex justify-center max-w-md mx-auto p-1 bg-sial-slate-light border border-white/5 rounded-lg">
+        <div className="flex justify-center max-w-md mx-auto p-1 bg-slate-100 border border-slate-200 rounded-lg">
           <button
             onClick={() => setActiveTab("form")}
             className={`w-1/2 py-3 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 ${
               activeTab === "form"
-                ? "bg-sial-gold text-sial-slate-dark shadow-md"
-                : "text-sial-gray-light hover:text-white"
+                ? "bg-sial-blue text-white shadow-md"
+                : "text-slate-500 hover:text-slate-900"
             }`}
           >
             {label.inquiryRouter}
@@ -763,8 +763,8 @@ export default function Contact() {
             onClick={() => setActiveTab("directory")}
             className={`w-1/2 py-3 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 ${
               activeTab === "directory"
-                ? "bg-sial-gold text-sial-slate-dark shadow-md"
-                : "text-sial-gray-light hover:text-white"
+                ? "bg-sial-blue text-white shadow-md"
+                : "text-slate-500 hover:text-slate-900"
             }`}
           >
             {label.officesDir} ({officesList.length})
@@ -782,19 +782,19 @@ export default function Contact() {
               
               {/* Directory Filter Controls */}
               <ScrollReveal>
-                <div className="bg-sial-slate-light p-6 rounded-xl border border-white/5 space-y-4">
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-4 shadow-sm">
                   <div className="relative">
                     <input
                       type="text"
                       placeholder={label.searchPlaceholder}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full bg-sial-slate-dark border border-white/10 rounded px-4 py-3 text-xs text-white placeholder-sial-gray-medium focus:outline-none focus:border-sial-gold transition duration-200"
+                      className="w-full bg-white border border-slate-200 rounded px-4 py-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sial-blue transition duration-200"
                     />
                     {searchQuery && (
                       <button
                         onClick={() => setSearchQuery("")}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-sial-gray-light hover:text-white"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-500 hover:text-slate-900"
                       >
                         {label.clear}
                       </button>
@@ -802,7 +802,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 pt-2 items-center">
-                    <span className="text-[10px] uppercase tracking-wider font-extrabold text-sial-gray-light mr-2">
+                    <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500 mr-2">
                       {label.filterCountry}
                     </span>
                     {COUNTRIES.map((country) => (
@@ -811,8 +811,8 @@ export default function Contact() {
                         onClick={() => setSelectedCountry(country)}
                         className={`px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wide border transition duration-200 ${
                           selectedCountry === country
-                            ? "bg-sial-gold border-sial-gold text-sial-slate-dark"
-                            : "bg-sial-slate-dark border-white/10 text-sial-gray-light hover:border-white/20 hover:text-white"
+                            ? "bg-sial-blue border-sial-blue text-white"
+                            : "bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:text-slate-900"
                         }`}
                       >
                         {getCountryName(country)}
@@ -826,11 +826,11 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredOffices.map((office, idx) => (
                   <ScrollReveal key={idx} delay={0.05 * idx}>
-                    <HoverCard className="slate-gradient p-6 rounded-xl space-y-4 flex flex-col justify-between border border-white/5 min-h-[300px] h-full">
+                    <HoverCard className="bg-white border border-slate-200 p-6 rounded-xl space-y-4 flex flex-col justify-between shadow-sm min-h-[300px] h-full">
                       <div className="space-y-3">
                         <div className="space-y-1">
                           <div className="flex items-center justify-between">
-                            <span className="text-[11px] font-bold text-sial-gold uppercase tracking-wider">
+                            <span className="text-[11px] font-bold text-sial-blue uppercase tracking-wider">
                               {office.country}
                             </span>
                             <span className="text-lg">
@@ -842,19 +842,19 @@ export default function Contact() {
                               {office.countryEn.includes("Pakistan") && "🇵🇰"}
                             </span>
                           </div>
-                          <h4 className="text-base font-extrabold text-white leading-snug">{office.entity}</h4>
-                          <span className="text-[10px] text-sial-gray-medium font-bold uppercase tracking-wider block">
+                          <h4 className="text-base font-extrabold text-slate-900 leading-snug">{office.entity}</h4>
+                          <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block">
                             {office.role}
                           </span>
                         </div>
 
                         {office.details && (
-                          <ul className="text-[10px] text-sial-gray-light space-y-1 pt-2 border-t border-white/5 list-disc list-inside">
+                          <ul className="text-[10px] text-slate-600 space-y-1 pt-2 border-t border-slate-100 list-disc list-inside">
                             {office.details.map((detail, dIdx) => {
                               const [title, desc] = detail.split(":");
                               return (
                                 <li key={dIdx} className="leading-relaxed list-none pl-1 text-justify">
-                                  <span className="text-sial-gold font-bold mr-1">• {title}:</span>
+                                  <span className="text-sial-blue font-bold mr-1">• {title}:</span>
                                   <span>{desc}</span>
                                 </li>
                               );
@@ -863,11 +863,11 @@ export default function Contact() {
                         )}
                       </div>
 
-                      <div className="space-y-2 text-xs text-sial-gray-light pt-2 border-t border-white/5 font-sans mt-auto">
+                      <div className="space-y-2 text-xs text-slate-600 pt-2 border-t border-slate-100 font-sans mt-auto">
                         <p className="text-justify text-[11px] leading-relaxed">📍 {office.address}</p>
-                        <div className="flex flex-col space-y-1 pt-1 text-[11px] font-mono text-sial-gray-medium">
+                        <div className="flex flex-col space-y-1 pt-1 text-[11px] font-mono text-slate-500">
                           <span>📧 {office.email}</span>
-                          <span className="text-sial-gold">{office.contact}</span>
+                          <span className="text-sial-blue">{office.contact}</span>
                         </div>
                       </div>
                     </HoverCard>
@@ -876,7 +876,7 @@ export default function Contact() {
               </div>
 
               {filteredOffices.length === 0 && (
-                <div className="text-center py-12 text-sial-gray-light text-sm">
+                <div className="text-center py-12 text-slate-500 text-sm">
                   {label.noOffices}
                 </div>
               )}
@@ -886,34 +886,34 @@ export default function Contact() {
 
         {/* Collapsible FAQ Accordion Section */}
         <ScrollReveal>
-          <section className="max-w-4xl mx-auto space-y-6 pt-12 border-t border-white/5">
+          <section className="max-w-4xl mx-auto space-y-6 pt-12 border-t border-slate-200">
             <div className="text-center space-y-2">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-gold">
+              <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">
                 {label.faqBadge}
               </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight leading-tight">
                 {label.faqHeading}
               </h3>
-              <p className="text-xs text-sial-gray-light">{label.faqSub}</p>
+              <p className="text-xs text-slate-600">{label.faqSub}</p>
             </div>
 
             <div className="space-y-4 pt-4">
               {faqsList.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-sial-slate-light border border-white/5 rounded-lg overflow-hidden transition-all duration-300"
+                  className="bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full p-5 flex justify-between items-center text-left hover:bg-sial-slate-dark/30 transition duration-200"
+                    className="w-full p-5 flex justify-between items-center text-left hover:bg-slate-100/55 transition duration-200"
                   >
-                    <span className="text-sm font-bold text-white tracking-wide">{faq.question}</span>
-                    <span className="text-sial-gold font-bold text-lg leading-none select-none ml-4">
+                    <span className="text-sm font-bold text-slate-900 tracking-wide">{faq.question}</span>
+                    <span className="text-sial-blue font-bold text-lg leading-none select-none ml-4">
                       {openFaq === idx ? "−" : "+"}
                     </span>
                   </button>
                   {openFaq === idx && (
-                    <div className="p-5 pt-0 text-xs sm:text-sm text-sial-gray-light leading-relaxed border-t border-white/5 bg-sial-slate-dark/20 text-justify">
+                    <div className="p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-white/50 text-justify">
                       {faq.answer}
                     </div>
                   )}

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 249, 250, 251; /* Titanium White (#F9FAFB) */
-  --background-start-rgb: 3, 7, 18; /* Matte Obsidian (#030712) */
-  --background-end-rgb: 3, 7, 18;
+  --foreground-rgb: 15, 23, 42; /* Deep Charcoal (#0F172A) */
+  --background-start-rgb: 255, 255, 255; /* Pure White (#FFFFFF) */
+  --background-end-rgb: 255, 255, 255;
 }
 
 html, body {
@@ -25,14 +25,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f2937;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FACC15; /* Electric Industrial Gold */
+  background: #1e40af; /* Industrial Steel Blue */
 }
 
 @layer base {
@@ -50,25 +50,25 @@ body {
     text-wrap: balance;
   }
   .glassmorphism {
-    background: rgba(11, 15, 25, 0.65);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(30, 64, 175, 0.08);
   }
   .gold-gradient-text {
-    background: linear-gradient(135deg, #fde047 0%, #FACC15 50%, #eab308 100%);
+    background: linear-gradient(135deg, #1E40AF 0%, #B45309 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .slate-gradient {
-    background: linear-gradient(135deg, #0b0f19 0%, #030712 100%);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
   }
   .gold-glow {
-    box-shadow: 0 0 25px rgba(250, 204, 21, 0.12);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
   }
   .gold-glow-hover:hover {
-    box-shadow: 0 0 35px rgba(250, 204, 21, 0.25);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.08);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }

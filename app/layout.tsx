@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesque.variable} ${plusJakartaSans.variable} min-h-screen`}>
-      <body className="font-sans antialiased flex flex-col min-h-screen bg-sial-slate-dark text-slate-100 selection:bg-sial-gold selection:text-sial-slate-dark">
+      <body className="font-sans antialiased flex flex-col min-h-screen bg-white text-slate-900 selection:bg-sial-blue/10 selection:text-sial-blue">
         <LanguageProvider>
           <Navbar />
           {/* Main layout container with top padding to prevent fixed navbar overlap */}

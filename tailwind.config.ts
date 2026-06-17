@@ -20,26 +20,32 @@ const config: Config = {
       colors: {
         sial: {
           slate: {
-            dark: "#030712", // Matte Obsidian Background
-            DEFAULT: "#0B0F19", // Dark Obsidian Card
-            light: "#111827", // Slightly lighter for highlights
+            dark: "#FFFFFF", // Pure White global background
+            DEFAULT: "#F1F5F9", // Ultra-light Slate Card Background
+            light: "#E2E8F0", // Slightly darker slate for alternate sections/borders
           },
           navy: {
-            DEFAULT: "#0A192F",
-            deep: "#020C1B",
-            light: "#172A45",
+            DEFAULT: "#1E40AF", // Industrial Steel Blue
+            deep: "#0F172A", // Deep Charcoal/Navy
+            light: "#3B82F6",
           },
           gray: {
-            light: "#94A3B8",
-            DEFAULT: "#64748B",
-            dark: "#334155",
+            light: "#475569", // Steel Gray secondary text
+            DEFAULT: "#334155",
+            dark: "#0F172A", // Deep Charcoal primary text
             industrial: "#475569",
+            medium: "#64748B",
           },
           gold: {
-            light: "#FDE047",
-            DEFAULT: "#FACC15", // Electric Industrial Gold
-            dark: "#EAB308",
-            accent: "#CA8A04",
+            light: "#D97706",
+            DEFAULT: "#B45309", // Rich Amber-Gold
+            dark: "#92400E",
+            accent: "#78350F",
+          },
+          blue: {
+            DEFAULT: "#1E40AF", // Industrial Steel Blue
+            dark: "#1E3A8A",
+            light: "#3B82F6",
           }
         }
       }
