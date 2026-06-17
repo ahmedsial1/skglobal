@@ -7,8 +7,80 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
 import { useLanguage } from "@/context/LanguageContext";
 
+// Local translation data for Chairman and Executive Leadership
+const chairmanData = {
+  en: {
+    title: "Group Chairman",
+    name: "CH Munawar Hussain Sial",
+    quote: "Integrity and trust form the foundation of global commerce. We build enduring bridges.",
+    desc1: "CH Munawar Hussain Sial, our Group Chairman, oversees the governance, trust-building, and long-term joint ventures of SIAL Group. Under his guidance, the Group has maintained an impeccable compliance record and solid relationships with international trade ministries and logistics authorities.",
+    desc2: "His leadership ensures that SIAL Group operates with high corporate responsibility, upholding regional standards and prioritizing community development alongside global trading activities.",
+    badge: "🏛️ Global Governance & Joint Ventures"
+  },
+  ar: {
+    title: "رئيس المجموعة",
+    name: "ش. منور حسين سيال",
+    quote: "النزاهة والثقة تشكلان أساس التجارة العالمية. نحن نبني جسوراً متينة.",
+    desc1: "ش. منور حسين سيال، رئيس مجموعتنا، يشرف على الحوكمة وبناء الثقة والمشاريع المشتركة طويلة الأجل لمجموعة SIAL. تحت توجيهه، حافظت المجموعة على سجل امتثال لا تشوبه شائبة وعلاقات متينة مع وزارات التجارة الدولية وسلطات الخدمات اللوجستية.",
+    desc2: "تضمن قيادته أن تعمل مجموعة SIAL بمسؤولية مؤسسية عالية، ودعم المعايير الإقليمية وإعطاء الأولوية لتنمية المجتمع جنباً إلى جنب مع أنشطة التجارة العالمية.",
+    badge: "🏛️ الحوكمة العالمية والمشاريع المشتركة"
+  },
+  zh: {
+    title: "集团董事长",
+    name: "CH Munawar Hussain Sial",
+    quote: "诚信与信任是全球贸易的基石。我们建立持久的桥梁。",
+    desc1: "集团董事长 CH Munawar Hussain Sial 监督 SIAL 集团的治理、信任建立和长期合资企业。在他的指导下，集团保持了无可挑剔的合规记录，并与国际贸易部 and 物流 authorities 建立了稳固的关系。",
+    desc2: "他的领导确保 SIAL 集团以高度的企业责任开展业务，维护地区标准，并在开展全球贸易活动的同时优先考虑社区发展。",
+    badge: "🏛️ 全球治理与合资企业"
+  },
+  ko: {
+    title: "그룹 회장",
+    name: "CH Munawar Hussain Sial",
+    quote: "정직과 신뢰는 글로벌 상거래의 기초입니다. 우리는 지속 가능한 다리를 건설합니다.",
+    desc1: "그룹 회장인 CH Munawar Hussain Sial은 SIAL 그룹의 지배 구조, 신뢰 구축 및 장기 합작 투자를 감독합니다. 그의 지도하에 그룹은 무결점 준수 기록을 유지하고 국제 무역 부처 및 물류 당국과 견고한 관계를 유지해 왔습니다.",
+    desc2: "그의 리더십은 SIAL 그룹이 높은 기업 책임감을 가지고 운영되도록 보장하며, 글로벌 무역 활동과 함께 지역 표준을 준수하고 지역 사회 개발을 우선시합니다.",
+    badge: "🏛️ 글로벌 거버넌스 및 합작 투자"
+  },
+  ur: {
+    title: "گروپ چیئرمین",
+    name: "چوہدری منور حسین سیال",
+    quote: "دیانت اور اعتماد عالمی تجارت کی بنیاد ہیں۔ ہم پائیدار روابط استوار کرتے ہیں۔",
+    desc1: "چوہدری منور حسین سیال، ہمارے گروپ چیئرمین، SIAL گروپ کے گورننس، اعتماد سازی اور طویل مدتی مشترکہ منصوبوں کی نگرانی کرتے ہیں۔ ان کی رہنمائی میں، گروپ نے ایک بے داغ تعمیل کا ریکارڈ اور بین الاقوامی تجارتی وزارتوں اور لاجسٹکس حکام کے ساتھ مضبوط تعلقات برقرار رکھے ہیں۔",
+    desc2: "ان کی قیادت اس بات کو یقینی بناتی ہے کہ SIAL گروپ اعلیٰ کارپوریٹ ذمہ داری کے ساتھ کام کرے، علاقائی معیارات کو برقرار رکھے اور عالمی تجارتی سرگرمیوں کے ساتھ ساتھ کمیونٹی کی ترقی کو ترجیح دے۔",
+    badge: "🏛️ گلوبل گورننس اور مشترکہ منصوبے"
+  }
+};
+
+const sectionTranslations = {
+  en: {
+    leadershipTitle: "Executive Leadership Message",
+    leadershipHeading: "Our Group Leadership"
+  },
+  ar: {
+    leadershipTitle: "رسالة القيادة التنفيذية",
+    leadershipHeading: "قيادتنا للمجموعة"
+  },
+  zh: {
+    leadershipTitle: "行政领导层致辞",
+    leadershipHeading: "我们的集团领导层"
+  },
+  ko: {
+    leadershipTitle: "경영진 메시지",
+    leadershipHeading: "그룹 경영진"
+  },
+  ur: {
+    leadershipTitle: "ایگزیکٹو لیڈرشپ پیغام",
+    leadershipHeading: "ہماری گروپ لیڈرشپ"
+  }
+};
+
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Resolve localization
+  const currentLang = (language && chairmanData[language as keyof typeof chairmanData] ? language : "en") as keyof typeof chairmanData;
+  const chair = chairmanData[currentLang];
+  const sectionTrans = sectionTranslations[currentLang];
 
   return (
     <div className="relative overflow-hidden bg-white text-slate-900">
@@ -187,18 +259,51 @@ export default function Home() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 border-t border-slate-200">
         <ScrollReveal>
           <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">{t("home.whyChoose4Desc").split(" ")[0]}</span>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">{sectionTrans.leadershipTitle}</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
-              {t("home.ceoMessageTitle")}
+              {sectionTrans.leadershipHeading}
             </h2>
             <div className="h-1 w-20 bg-sial-blue mx-auto mt-4"></div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* CEO Image Column */}
-            <div className="lg:col-span-5 flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Chairman Column */}
+            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50/50 p-6 md:p-8 rounded-2xl border border-slate-100 shadow-xs">
+              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+                <Image
+                  src="/chairman.jpg"
+                  alt={`${chair.name} - SIAL Group Chairman`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-w-768px) 100vw, 384px"
+                />
+                {/* Overlay details */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-bold font-sans">{chair.title}</span>
+                    <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">{chair.name}</h3>
+                  </div>
+                  <p className="text-[11px] text-slate-700 leading-relaxed italic text-justify font-sans">
+                    &ldquo;{chair.quote}&rdquo;
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-left w-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{chair.badge}</span>
+                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                  {chair.desc1}
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                  {chair.desc2}
+                </p>
+              </div>
+            </div>
+
+            {/* CEO Column */}
+            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50/50 p-6 md:p-8 rounded-2xl border border-slate-100 shadow-xs">
               <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <Image
                   src="/ceo.jpg"
@@ -208,7 +313,7 @@ export default function Home() {
                   sizes="(max-w-768px) 100vw, 384px"
                 />
                 {/* Overlay details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-sial-blue font-bold font-sans">Group CEO & Founder</span>
                     <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">Muhammad Amjad</h3>
@@ -218,35 +323,32 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
 
-            {/* CEO Message Column */}
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{t("footer.governance")}</span>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
-                {t("home.ceoSubtitle")}
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
-                {t("home.ceoDesc1")}
-              </p>
-              <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
-                {t("home.ceoDesc2")}
-              </p>
-              <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center gap-4">
-                <Link
-                  href="/about"
-                  className="w-full sm:w-auto px-6 py-3 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-bold uppercase tracking-wider text-xs rounded transition duration-300 text-center"
-                >
-                  {t("home.ceoBio")}
-                </Link>
-                <Link
-                  href="/contact"
-                  className="w-full sm:w-auto px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 text-center shadow-md shadow-blue-500/10"
-                >
-                  {t("home.ceoConsultation")}
-                </Link>
+              <div className="space-y-4 text-left w-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{t("footer.governance")}</span>
+                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                  {t("home.ceoDesc1")}
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                  {t("home.ceoDesc2")}
+                </p>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 pt-6 border-t border-slate-200 flex justify-center gap-4">
+            <Link
+              href="/about"
+              className="px-6 py-3 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-bold uppercase tracking-wider text-xs rounded transition duration-300 text-center"
+            >
+              {t("home.ceoBio")}
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 text-center shadow-md shadow-blue-500/10"
+            >
+              {t("home.ceoConsultation")}
+            </Link>
           </div>
         </ScrollReveal>
       </section>
