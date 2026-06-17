@@ -21,9 +21,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative z-20 pt-20 pb-24 md:pt-32 md:pb-40 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
         <ScrollReveal delay={0.1} duration={0.8}>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             {/* Left Column: Text & CTAs */}
-            <div className="lg:col-span-7 text-start space-y-6">
+            <div className="lg:col-span-7 text-start space-y-6 flex flex-col justify-center">
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-sial-blue/20 bg-sial-blue/5 text-xs font-bold uppercase tracking-widest text-sial-blue">
                 <span>{t("home.legacyBadge")}</span>
@@ -58,17 +58,17 @@ export default function Home() {
             </div>
 
             {/* Right Column: Hero Image */}
-            <div className="lg:col-span-5 flex justify-center w-full">
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50 transition-all duration-300">
+            <div className="lg:col-span-5 flex justify-center items-stretch w-full">
+              <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-auto lg:h-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50 transition-all duration-300">
                 <Image
-                  src="/shipping_port.png"
-                  alt="SIAL Group Global Cargo Shipping Port at Sunset - Multi-Jurisdictional Industrial Trading"
+                  src="/hero_storefront.jpg"
+                  alt="SIAL Group Storefront - Multi-Jurisdictional Industrial Trading and Spare Parts"
                   fill
                   priority
                   className="object-cover"
                   sizes="(max-w-768px) 100vw, 500px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>
