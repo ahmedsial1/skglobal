@@ -279,7 +279,7 @@ export default function Home() {
         <ScrollReveal delay={0.15}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Chairman Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/80 shadow-xs">
+            <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
               <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <Image
                   src="/chairman.jpg"
@@ -312,7 +312,7 @@ export default function Home() {
             </div>
 
             {/* CEO Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/80 shadow-xs">
+            <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
               <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <Image
                   src="/ceo.jpg"
@@ -376,7 +376,7 @@ export default function Home() {
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Heavy Machinery */}
-          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
+          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">🏗️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
@@ -396,7 +396,7 @@ export default function Home() {
           </HoverCard>
 
           {/* Spare Parts */}
-          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
+          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⚙️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
@@ -416,7 +416,7 @@ export default function Home() {
           </HoverCard>
 
           {/* Hardware */}
-          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
+          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⛓️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
