@@ -280,12 +280,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Chairman Column */}
             <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
-              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl">
                 <Image
                   src="/chairman.jpg"
                   alt={`${chair.name} - SIAL Group Chairman`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
                 {/* Overlay details */}
@@ -313,12 +313,12 @@ export default function Home() {
 
             {/* CEO Column */}
             <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
-              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl">
                 <Image
                   src="/ceo.jpg"
                   alt="Muhammad Amjad - SIAL Group CEO"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
                 {/* Overlay details */}
@@ -376,10 +376,10 @@ export default function Home() {
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Heavy Machinery */}
-          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
+          <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">🏗️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
+              <span className="text-4xl mb-6 block origin-left">🏗️</span>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {t("home.machineryTitle")}
               </h3>
               <p className="text-xs text-slate-700 leading-relaxed font-normal">
@@ -393,13 +393,13 @@ export default function Home() {
               <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
-          </HoverCard>
+          </div>
 
           {/* Spare Parts */}
-          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
+          <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⚙️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
+              <span className="text-4xl mb-6 block origin-left">⚙️</span>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {t("home.partsTitle")}
               </h3>
               <p className="text-xs text-slate-700 leading-relaxed font-normal">
@@ -413,13 +413,13 @@ export default function Home() {
               <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
-          </HoverCard>
+          </div>
 
           {/* Hardware */}
-          <HoverCard className="bg-white border border-slate-200/60 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80 hover:border-sial-blue/30 transition duration-300">
+          <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⛓️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
+              <span className="text-4xl mb-6 block origin-left">⛓️</span>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {t("home.hardwareTitle")}
               </h3>
               <p className="text-xs text-slate-700 leading-relaxed font-normal">
@@ -433,7 +433,7 @@ export default function Home() {
               <span>{t("home.ceoBio").split(" ")[0]}</span>
               <span>→</span>
             </Link>
-          </HoverCard>
+          </div>
         </div>
       </section>
 
