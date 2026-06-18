@@ -10,8 +10,16 @@ export default function SpareParts() {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
+    <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24 relative overflow-hidden">
+      {/* Floating Animated Mesh Blobs */}
+      <div className="absolute top-[10%] left-[-15%] w-[40rem] h-[40rem] rounded-full bg-sial-blue/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[50%] right-[-15%] w-[35rem] h-[35rem] rounded-full bg-sial-gold/5 blur-[120px] z-0 animate-blob-2 pointer-events-none"></div>
+      <div className="absolute bottom-[10%] left-[-10%] w-[35rem] h-[35rem] rounded-full bg-blue-400/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+
+      {/* Subtle Warehouse Background Image watermark on the entire page */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.04] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/parts_warehouse.png')" }}></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
         {/* Header Block */}
         <ScrollReveal>
           <div className="text-center space-y-4 max-w-3xl mx-auto">
@@ -47,26 +55,26 @@ export default function SpareParts() {
                   {t("parts.specDesc")}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <HoverCard className="p-4 bg-slate-50 border border-slate-200 rounded shadow-sm">
+                  <HoverCard className="glass-card p-4 rounded shadow-sm">
                     <h4 className="text-slate-900 font-bold text-sm">{t("parts.cat1Title")}</h4>
                     <p className="text-xs text-slate-600 mt-1">{t("parts.cat1Desc")}</p>
                   </HoverCard>
-                  <HoverCard className="p-4 bg-slate-50 border border-slate-200 rounded shadow-sm">
+                  <HoverCard className="glass-card p-4 rounded shadow-sm">
                     <h4 className="text-slate-900 font-bold text-sm">{t("parts.cat2Title")}</h4>
                     <p className="text-xs text-slate-600 mt-1">{t("parts.cat2Desc")}</p>
                   </HoverCard>
-                  <HoverCard className="p-4 bg-slate-50 border border-slate-200 rounded shadow-sm">
+                  <HoverCard className="glass-card p-4 rounded shadow-sm">
                     <h4 className="text-slate-900 font-bold text-sm">{t("parts.cat3Title")}</h4>
                     <p className="text-xs text-slate-600 mt-1">{t("parts.cat3Desc")}</p>
                   </HoverCard>
-                  <HoverCard className="p-4 bg-slate-50 border border-slate-200 rounded shadow-sm">
+                  <HoverCard className="glass-card p-4 rounded shadow-sm">
                     <h4 className="text-slate-900 font-bold text-sm">{t("parts.cat4Title")}</h4>
                     <p className="text-xs text-slate-600 mt-1">{t("parts.cat4Desc")}</p>
                   </HoverCard>
                 </div>
               </div>
 
-              <HoverCard className="bg-slate-50 border border-slate-200 p-8 rounded-xl shadow-sm space-y-6 relative overflow-hidden">
+              <HoverCard className="glass-card p-8 rounded-xl shadow-sm space-y-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-blue/5 rounded-full blur-3xl"></div>
                 <div className="relative w-full h-48 rounded-lg overflow-hidden border border-slate-200 shadow-md mb-4">
                   <Image
@@ -119,92 +127,92 @@ export default function SpareParts() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 font-sans">
               {/* Sial Kingdom */}
-              <HoverCard className="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between relative overflow-hidden">
+              <HoverCard className="glass-card p-6 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="space-y-4">
                   <div className="relative w-full h-56 rounded-xl overflow-hidden border border-slate-200 shadow-md">
-                    <Image
-                      src="/sialkingdom_workshop.png"
-                      alt="Sial Kingdom Auto Workshop & Parts Service - Seeb, Muscat"
-                      fill
-                      className="object-cover"
-                      sizes="(max-w-768px) 100vw, 500px"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-bold text-sial-blue uppercase tracking-wider">
-                        {t("parts.skBadge")}
-                      </span>
-                      <h3 className="text-xl font-bold text-slate-900">Sial Kingdom Trading LLC</h3>
-                    </div>
-                    {/* Logo */}
-                    <div className="bg-white px-2 py-1 rounded max-w-[120px] flex items-center justify-center border border-slate-200 shadow-sm">
-                      <img src="/sialkingdom_logo.png" alt="Sial Kingdom Logo" className="object-contain h-8" />
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-600 leading-relaxed text-justify">
-                    {t("parts.skDesc")}
-                  </p>
-                  <ul className="text-[11px] text-slate-500 space-y-1.5">
-                    <li>📍 Near Abu Zaki Tile Store, Road 6, Way No 7749, Mabila&apos;h Sanaiya</li>
-                    <li>📞 Call Support: +968 9192 9398</li>
-                  </ul>
-                </div>
-                <div className="pt-4 border-t border-slate-200">
-                  <a
-                    href="https://www.sialkingdom.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center block px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-lg shadow-blue-500/10"
-                  >
-                    {t("parts.skCta")}
-                  </a>
-                </div>
-              </HoverCard>
-
-              {/* Yahya Auto Parts */}
-              <HoverCard className="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between relative overflow-hidden">
-                <div className="space-y-4">
-                  <div className="relative w-full h-56 rounded-xl overflow-hidden border border-slate-200 shadow-md">
-                    <Image
-                      src="/yahyaautoparts_banner.webp"
-                      alt="Yahya Auto Parts Genuine Hyundai Kia & Genesis Spare Parts"
-                      fill
-                      className="object-cover"
-                      sizes="(max-w-768px) 100vw, 500px"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-bold text-sial-blue uppercase tracking-wider">
-                        {t("parts.yahyaBadge")}
-                      </span>
-                      <h3 className="text-xl font-bold text-slate-900">Yahya Auto Parts</h3>
-                    </div>
-                    {/* Logo */}
-                    <div className="bg-white px-2.5 py-1 rounded max-w-[120px] flex items-center justify-center border border-slate-200 shadow-sm">
-                      <img src="/yahyaautoparts_logo.png" alt="Yahya Auto Parts Logo" className="object-contain h-8" />
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-600 leading-relaxed text-justify">
-                    {t("parts.yahyaDesc")}
-                  </p>
-                  <ul className="text-[11px] text-slate-500 space-y-1.5">
-                    <li>📍 Al Mabela Al Janubiyya, Block 377, Way 7749, Al Seeb, Muscat</li>
-                    <li>📞 Call Support: +968 9796 9786</li>
-                  </ul>
-                </div>
-                <div className="pt-4 border-t border-slate-200">
-                  <a
-                    href="https://www.yahyaautoparts.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center block px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-lg shadow-blue-500/10"
-                  >
-                    {t("parts.yahyaCta")}
-                  </a>
-                </div>
-              </HoverCard>
+                     <Image
+                       src="/sialkingdom_workshop.png"
+                       alt="Sial Kingdom Auto Workshop & Parts Service - Seeb, Muscat"
+                       fill
+                       className="object-cover"
+                       sizes="(max-w-768px) 100vw, 500px"
+                     />
+                   </div>
+                   <div className="flex items-center justify-between flex-wrap gap-4">
+                     <div className="space-y-1">
+                       <span className="text-[10px] font-bold text-sial-blue uppercase tracking-wider">
+                         {t("parts.skBadge")}
+                       </span>
+                       <h3 className="text-xl font-bold text-slate-900">Sial Kingdom Trading LLC</h3>
+                     </div>
+                     {/* Logo */}
+                     <div className="bg-white px-2 py-1 rounded max-w-[120px] flex items-center justify-center border border-slate-200 shadow-sm">
+                       <img src="/sialkingdom_logo.png" alt="Sial Kingdom Logo" className="object-contain h-8" />
+                     </div>
+                   </div>
+                   <p className="text-xs text-slate-600 leading-relaxed text-justify">
+                     {t("parts.skDesc")}
+                   </p>
+                   <ul className="text-[11px] text-slate-500 space-y-1.5">
+                     <li>📍 Near Abu Zaki Tile Store, Road 6, Way No 7749, Mabila&apos;h Sanaiya</li>
+                     <li>📞 Call Support: +968 9192 9398</li>
+                   </ul>
+                 </div>
+                 <div className="pt-4 border-t border-slate-200">
+                   <a
+                     href="https://www.sialkingdom.com"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="btn-shine w-full text-center block px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-lg shadow-blue-500/10"
+                   >
+                     {t("parts.skCta")}
+                   </a>
+                 </div>
+               </HoverCard>
+ 
+               {/* Yahya Auto Parts */}
+               <HoverCard className="glass-card p-6 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between relative overflow-hidden">
+                 <div className="space-y-4">
+                   <div className="relative w-full h-56 rounded-xl overflow-hidden border border-slate-200 shadow-md">
+                     <Image
+                       src="/yahyaautoparts_banner.webp"
+                       alt="Yahya Auto Parts Genuine Hyundai Kia & Genesis Spare Parts"
+                       fill
+                       className="object-cover"
+                       sizes="(max-w-768px) 100vw, 500px"
+                     />
+                   </div>
+                   <div className="flex items-center justify-between flex-wrap gap-4">
+                     <div className="space-y-1">
+                       <span className="text-[10px] font-bold text-sial-blue uppercase tracking-wider">
+                         {t("parts.yahyaBadge")}
+                       </span>
+                       <h3 className="text-xl font-bold text-slate-900">Yahya Auto Parts</h3>
+                     </div>
+                     {/* Logo */}
+                     <div className="bg-white px-2.5 py-1 rounded max-w-[120px] flex items-center justify-center border border-slate-200 shadow-sm">
+                       <img src="/yahyaautoparts_logo.png" alt="Yahya Auto Parts Logo" className="object-contain h-8" />
+                     </div>
+                   </div>
+                   <p className="text-xs text-slate-600 leading-relaxed text-justify">
+                     {t("parts.yahyaDesc")}
+                   </p>
+                   <ul className="text-[11px] text-slate-500 space-y-1.5">
+                     <li>📍 Al Mabela Al Janubiyya, Block 377, Way 7749, Al Seeb, Muscat</li>
+                     <li>📞 Call Support: +968 9796 9786</li>
+                   </ul>
+                 </div>
+                 <div className="pt-4 border-t border-slate-200">
+                   <a
+                     href="https://www.yahyaautoparts.com"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="btn-shine w-full text-center block px-6 py-3 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-xs rounded transition duration-300 shadow-lg shadow-blue-500/10"
+                   >
+                     {t("parts.yahyaCta")}
+                   </a>
+                 </div>
+               </HoverCard>
             </div>
           </section>
         </ScrollReveal>
@@ -225,7 +233,7 @@ export default function SpareParts() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* South Korea */}
-              <HoverCard className="bg-white border border-slate-200 p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
+              <HoverCard className="glass-card p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-3xl">
                     <span>🇰🇷</span>
@@ -239,7 +247,7 @@ export default function SpareParts() {
               </HoverCard>
 
               {/* Yiwu China */}
-              <HoverCard className="bg-white border border-slate-200 p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
+              <HoverCard className="glass-card p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-3xl">
                     <span>🇨🇳</span>
@@ -253,7 +261,7 @@ export default function SpareParts() {
               </HoverCard>
 
               {/* Real-Time ERP Authority */}
-              <HoverCard className="bg-white border border-slate-200 p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
+              <HoverCard className="glass-card p-6 rounded-xl flex flex-col justify-between space-y-4 shadow-sm">
                 <div className="space-y-4 font-sans">
                   <div className="relative w-full h-24 rounded-lg overflow-hidden border border-slate-200 shadow-md">
                     <Image

@@ -728,8 +728,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
+    <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24 relative overflow-hidden">
+      {/* Floating Animated Mesh Blobs */}
+      <div className="absolute top-[10%] left-[-15%] w-[40rem] h-[40rem] rounded-full bg-sial-blue/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[50%] right-[-15%] w-[35rem] h-[35rem] rounded-full bg-sial-gold/5 blur-[120px] z-0 animate-blob-2 pointer-events-none"></div>
+
+      {/* Grid Pattern Underlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
         
         {/* Header Block */}
         <ScrollReveal>

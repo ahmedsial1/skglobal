@@ -83,8 +83,12 @@ export default function About() {
 
   return (
     <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24 relative overflow-hidden">
-      {/* Background radial accent */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-sial-blue/5 rounded-full blur-3xl -z-10"></div>
+      {/* Floating Animated Mesh Blobs */}
+      <div className="absolute top-[10%] left-[-10%] w-[30rem] h-[30rem] rounded-full bg-sial-blue/5 blur-[100px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[50%] right-[-10%] w-[25rem] h-[25rem] rounded-full bg-sial-gold/5 blur-[100px] z-0 animate-blob-2 pointer-events-none"></div>
+
+      {/* Grid Pattern Underlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-20">
         {/* Header Block */}
@@ -207,7 +211,7 @@ export default function About() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <HoverCard className="bg-slate-50 border border-slate-200 p-8 rounded-xl space-y-4 shadow-sm">
+            <HoverCard className="glass-card p-8 rounded-xl space-y-4 shadow-sm">
               <span className="text-3xl">⛓️</span>
               <h3 className="text-lg font-bold text-slate-900">{t("about.pillar1Title")}</h3>
               <p className="text-xs text-slate-600 leading-relaxed text-justify">
@@ -215,7 +219,7 @@ export default function About() {
               </p>
             </HoverCard>
 
-            <HoverCard className="bg-slate-50 border border-slate-200 p-8 rounded-xl space-y-4 border-t-2 border-t-sial-blue shadow-sm">
+            <HoverCard className="glass-card p-8 rounded-xl space-y-4 border-t-2 border-t-sial-blue shadow-sm">
               <span className="text-3xl">🤝</span>
               <h3 className="text-lg font-bold text-slate-900">{t("about.pillar2Title")}</h3>
               <p className="text-xs text-slate-600 leading-relaxed text-justify">
@@ -223,7 +227,7 @@ export default function About() {
               </p>
             </HoverCard>
 
-            <HoverCard className="bg-slate-50 border border-slate-200 p-8 rounded-xl space-y-4 shadow-sm">
+            <HoverCard className="glass-card p-8 rounded-xl space-y-4 shadow-sm">
               <span className="text-3xl">⚖️</span>
               <h3 className="text-lg font-bold text-slate-900">{t("about.pillar3Title")}</h3>
               <p className="text-xs text-slate-600 leading-relaxed text-justify">

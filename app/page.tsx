@@ -83,12 +83,21 @@ export default function Home() {
   const sectionTrans = sectionTranslations[currentLang];
 
   return (
-    <div className="relative overflow-hidden bg-white text-slate-900">
-      {/* Background radial highlight */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#f1f5f9,transparent_60%)] opacity-80 z-0"></div>
+    <div className="relative overflow-hidden bg-white text-slate-900 min-h-screen">
+      {/* Floating Animated Mesh Blobs */}
+      <div className="absolute top-[10%] left-[-15%] w-[40rem] h-[40rem] rounded-full bg-sial-blue/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[40%] right-[-15%] w-[35rem] h-[35rem] rounded-full bg-sial-gold/5 blur-[120px] z-0 animate-blob-2 pointer-events-none"></div>
+      <div className="absolute bottom-[20%] left-[-10%] w-[40rem] h-[40rem] rounded-full bg-blue-400/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
 
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 z-10 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
+      {/* Hero Subtle Background Image & Grid Overlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Background Image: Shipping Port (Global Trade) */}
+        <div className="absolute inset-0 opacity-[0.06] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/shipping_port.png')" }}></div>
+        {/* Radial vignette overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.4),rgba(255,255,255,0.98)_85%)]"></div>
+        {/* Tech Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative z-20 pt-20 pb-24 md:pt-32 md:pb-40 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
@@ -116,7 +125,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto px-8 py-4 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg shadow-blue-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center"
+                  className="btn-shine w-full sm:w-auto px-8 py-4 bg-sial-blue hover:bg-sial-blue-dark text-white font-extrabold uppercase tracking-widest text-sm rounded-md shadow-lg shadow-blue-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center"
                 >
                   {t("home.routeInquiry")}
                 </Link>
@@ -167,7 +176,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="space-y-6">
                   {/* South Korea */}
-                  <HoverCard className="p-5 bg-white border border-slate-200 rounded-xl space-y-4 shadow-sm">
+                  <HoverCard className="glass-card p-5 rounded-xl space-y-4 shadow-sm">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/seoul_hq.png"
@@ -190,7 +199,7 @@ export default function Home() {
                   </HoverCard>
 
                   {/* China */}
-                  <HoverCard className="p-5 bg-white border border-slate-200 rounded-xl space-y-4 shadow-sm">
+                  <HoverCard className="glass-card p-5 rounded-xl space-y-4 shadow-sm">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/china_logistics.png"
@@ -214,7 +223,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-md relative overflow-hidden">
+              <div className="glass-card p-8 rounded-xl shadow-md relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-blue/5 rounded-full blur-3xl"></div>
                 <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">
                   {t("home.whyChooseTitle")}
@@ -368,7 +377,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Heavy Machinery */}
-          <HoverCard className="group bg-slate-50 border border-slate-200 p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
+          <HoverCard className="glass-card group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">🏗️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
@@ -388,7 +397,7 @@ export default function Home() {
           </HoverCard>
 
           {/* Spare Parts */}
-          <HoverCard className="group bg-slate-50 border border-slate-200 p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
+          <HoverCard className="glass-card group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⚙️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
