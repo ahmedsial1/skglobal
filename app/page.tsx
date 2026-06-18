@@ -279,7 +279,7 @@ export default function Home() {
         <ScrollReveal delay={0.15}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Chairman Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50/50 p-6 md:p-8 rounded-2xl border border-slate-100 shadow-xs">
+            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/80 shadow-xs">
               <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <Image
                   src="/chairman.jpg"
@@ -289,12 +289,12 @@ export default function Home() {
                   sizes="(max-w-768px) 100vw, 384px"
                 />
                 {/* Overlay details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-bold font-sans">{chair.title}</span>
+                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-black font-sans">{chair.title}</span>
                     <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">{chair.name}</h3>
                   </div>
-                  <p className="text-[11px] text-slate-700 leading-relaxed italic text-justify font-sans">
+                  <p className="text-[11px] text-slate-800 leading-relaxed italic text-justify font-sans font-medium">
                     &ldquo;{chair.quote}&rdquo;
                   </p>
                 </div>
@@ -302,17 +302,17 @@ export default function Home() {
 
               <div className="space-y-4 text-left w-full">
                 <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{chair.badge}</span>
-                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
                   {chair.desc1}
                 </p>
-                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
                   {chair.desc2}
                 </p>
               </div>
             </div>
 
             {/* CEO Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50/50 p-6 md:p-8 rounded-2xl border border-slate-100 shadow-xs">
+            <div className="flex flex-col items-center text-center space-y-6 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/80 shadow-xs">
               <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
                 <Image
                   src="/ceo.jpg"
@@ -322,12 +322,12 @@ export default function Home() {
                   sizes="(max-w-768px) 100vw, 384px"
                 />
                 {/* Overlay details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-bold font-sans">Group CEO & Founder</span>
+                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-black font-sans">Group CEO & Founder</span>
                     <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">Muhammad Amjad</h3>
                   </div>
-                  <p className="text-[11px] text-slate-700 leading-relaxed italic text-justify font-sans">
+                  <p className="text-[11px] text-slate-800 leading-relaxed italic text-justify font-sans font-medium">
                     &ldquo;Resilience is building proprietary pipelines that ensure our partners never fail.&rdquo;
                   </p>
                 </div>
@@ -335,10 +335,10 @@ export default function Home() {
 
               <div className="space-y-4 text-left w-full">
                 <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{t("footer.governance")}</span>
-                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
                   {t("home.ceoDesc1")}
                 </p>
-                <p className="text-sm text-slate-600 leading-relaxed text-justify font-light">
+                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
                   {t("home.ceoDesc2")}
                 </p>
               </div>
@@ -374,16 +374,15 @@ export default function Home() {
             </p>
           </div>
         </ScrollReveal>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Heavy Machinery */}
-          <HoverCard className="glass-card group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
+          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">🏗️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
                 {t("home.machineryTitle")}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-700 leading-relaxed font-normal">
                 {t("home.machineryDesc")}
               </p>
             </div>
@@ -397,13 +396,13 @@ export default function Home() {
           </HoverCard>
 
           {/* Spare Parts */}
-          <HoverCard className="glass-card group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
+          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⚙️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
                 {t("home.partsTitle")}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-700 leading-relaxed font-normal">
                 {t("home.partsDesc")}
               </p>
             </div>
@@ -417,13 +416,13 @@ export default function Home() {
           </HoverCard>
 
           {/* Hardware */}
-          <HoverCard className="group bg-slate-50 border border-slate-200 p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm">
+          <HoverCard className="bg-slate-50 border border-slate-200/80 group p-8 rounded-xl flex flex-col justify-between h-96 shadow-sm hover:border-sial-blue/30 transition duration-300">
             <div>
               <span className="text-4xl mb-6 block group-hover:scale-110 transition duration-300 origin-left">⛓️</span>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sial-blue transition duration-200">
                 {t("home.hardwareTitle")}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-700 leading-relaxed font-normal">
                 {t("home.hardwareDesc")}
               </p>
             </div>
