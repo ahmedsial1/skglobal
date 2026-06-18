@@ -84,8 +84,8 @@ export default function About() {
   return (
     <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24 relative overflow-hidden">
       {/* Floating Animated Mesh Blobs */}
-      <div className="absolute top-[10%] left-[-10%] w-[30rem] h-[30rem] rounded-full bg-sial-blue/5 blur-[100px] z-0 animate-blob-1 pointer-events-none"></div>
-      <div className="absolute top-[50%] right-[-10%] w-[25rem] h-[25rem] rounded-full bg-sial-gold/5 blur-[100px] z-0 animate-blob-2 pointer-events-none"></div>
+      <div className="absolute top-[10%] left-[-10%] w-[30rem] h-[30rem] rounded-full bg-sial-blue/15 blur-[100px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[50%] right-[-10%] w-[25rem] h-[25rem] rounded-full bg-sial-gold/15 blur-[100px] z-0 animate-blob-2 pointer-events-none"></div>
 
       {/* Grid Pattern Underlay */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>

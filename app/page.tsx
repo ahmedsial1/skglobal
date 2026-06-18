@@ -85,14 +85,14 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden bg-white text-slate-900 min-h-screen">
       {/* Floating Animated Mesh Blobs */}
-      <div className="absolute top-[10%] left-[-15%] w-[40rem] h-[40rem] rounded-full bg-sial-blue/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
-      <div className="absolute top-[40%] right-[-15%] w-[35rem] h-[35rem] rounded-full bg-sial-gold/5 blur-[120px] z-0 animate-blob-2 pointer-events-none"></div>
-      <div className="absolute bottom-[20%] left-[-10%] w-[40rem] h-[40rem] rounded-full bg-blue-400/5 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[10%] left-[-15%] w-[40rem] h-[40rem] rounded-full bg-sial-blue/15 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
+      <div className="absolute top-[40%] right-[-15%] w-[35rem] h-[35rem] rounded-full bg-sial-gold/15 blur-[120px] z-0 animate-blob-2 pointer-events-none"></div>
+      <div className="absolute bottom-[20%] left-[-10%] w-[40rem] h-[40rem] rounded-full bg-blue-400/12 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
 
       {/* Hero Subtle Background Image & Grid Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Background Image: Shipping Port (Global Trade) */}
-        <div className="absolute inset-0 opacity-[0.06] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/shipping_port.png')" }}></div>
+        <div className="absolute inset-0 opacity-[0.15] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/shipping_port.png')" }}></div>
         {/* Radial vignette overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.4),rgba(255,255,255,0.98)_85%)]"></div>
         {/* Tech Grid Pattern */}
