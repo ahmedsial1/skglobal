@@ -299,13 +299,14 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-
               <div className="space-y-4 text-left w-full">
-                <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{chair.badge}</span>
-                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
+                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200/80 text-slate-900 text-xs font-black rounded-lg uppercase tracking-wider">
+                  {chair.badge}
+                </div>
+                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
                   {chair.desc1}
                 </p>
-                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
+                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
                   {chair.desc2}
                 </p>
               </div>
@@ -334,11 +335,13 @@ export default function Home() {
               </div>
 
               <div className="space-y-4 text-left w-full">
-                <span className="text-xs font-bold uppercase tracking-wider text-sial-blue">{t("footer.governance")}</span>
-                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
+                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200/80 text-slate-900 text-xs font-black rounded-lg uppercase tracking-wider">
+                  {t("footer.governance")}
+                </div>
+                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc1")}
                 </p>
-                <p className="text-sm text-slate-700 leading-relaxed text-justify font-normal">
+                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc2")}
                 </p>
               </div>
@@ -379,10 +382,10 @@ export default function Home() {
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
               <span className="text-4xl mb-6 block origin-left">🏗️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-black text-slate-950 mb-3">
                 {t("home.machineryTitle")}
               </h3>
-              <p className="text-xs text-slate-700 leading-relaxed font-normal">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
                 {t("home.machineryDesc")}
               </p>
             </div>
@@ -399,10 +402,10 @@ export default function Home() {
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
               <span className="text-4xl mb-6 block origin-left">⚙️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-black text-slate-950 mb-3">
                 {t("home.partsTitle")}
               </h3>
-              <p className="text-xs text-slate-700 leading-relaxed font-normal">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
                 {t("home.partsDesc")}
               </p>
             </div>
@@ -419,10 +422,10 @@ export default function Home() {
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
               <span className="text-4xl mb-6 block origin-left">⛓️</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-black text-slate-950 mb-3">
                 {t("home.hardwareTitle")}
               </h3>
-              <p className="text-xs text-slate-700 leading-relaxed font-normal">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
                 {t("home.hardwareDesc")}
               </p>
             </div>
