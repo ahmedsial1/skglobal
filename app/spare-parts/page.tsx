@@ -17,7 +17,7 @@ export default function SpareParts() {
       <div className="absolute bottom-[10%] left-[-10%] w-[35rem] h-[35rem] rounded-full bg-blue-400/12 blur-[120px] z-0 animate-blob-1 pointer-events-none"></div>
 
       {/* Subtle Warehouse Background Image watermark on the entire page */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.15] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/parts_warehouse.png')" }}></div>
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.28] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/parts_warehouse.png')" }}></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16">
         {/* Header Block */}

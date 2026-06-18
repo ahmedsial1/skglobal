@@ -92,7 +92,7 @@ export default function Home() {
       {/* Hero Subtle Background Image & Grid Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Background Image: Shipping Port (Global Trade) */}
-        <div className="absolute inset-0 opacity-[0.15] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/shipping_port.png')" }}></div>
+        <div className="absolute inset-0 opacity-[0.28] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/shipping_port.png')" }}></div>
         {/* Radial vignette overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.4),rgba(255,255,255,0.98)_85%)]"></div>
         {/* Tech Grid Pattern */}
