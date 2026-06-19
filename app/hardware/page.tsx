@@ -125,6 +125,41 @@ export default function Hardware() {
             </section>
         </ScrollReveal>
 
+        {/* Proprietary Brand Highlight: SADAAN® */}
+        <section className="space-y-8">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight uppercase" style={{ fontFamily: "var(--font-space-grotesque)" }}>
+              Proprietary Brand Profile
+            </h2>
+            <div className="h-1 w-20 bg-sial-blue mx-auto mt-2"></div>
+          </div>
+
+          <div className="bg-[#F1F5F9] border border-[#E2E8F0] p-8 md:p-12 rounded-2xl max-w-4xl mx-auto shadow-sm text-justify">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+              {/* Brand Logo/Identity Display */}
+              <div className="flex-shrink-0 bg-white border border-[#E2E8F0] p-6 rounded-2xl w-full md:w-48 aspect-square flex flex-col items-center justify-center shadow-sm">
+                <span className="text-4xl font-extrabold text-[#1E40AF] tracking-widest font-sans">SADAAN®</span>
+                <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-2">Proprietary Brand</span>
+              </div>
+
+              {/* Brand Info */}
+              <div className="space-y-4 flex-grow font-sans">
+                <h3 className="text-2xl font-black text-[#1E40AF] tracking-tight">
+                  SADAAN® INDUSTRIAL HARDWARE SYSTEM
+                </h3>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium" style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}>
+                  SADAAN® is SIAL Group&apos;s signature proprietary brand of high-strength industrial hardware, heavy-duty fasteners, and structural construction materials. SADAAN® products are engineered for maximum tensile strength and extreme weather durability, certified to meet rigorous safety regulations (including SASO and OPAL). By linking production mills directly to large-scale infrastructure projects in the GCC and East Africa, SADAAN® guarantees structural integrity, zero broker overheads, and absolute supply chain resilience.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ High-Tensile Certified</span>
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ SASO & OPAL Compliant</span>
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ Direct Sourced</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sourcing Hub Section (China procurement node) */}
         <ScrollReveal delay={0.2}>
           <section className="space-y-12 pt-8">
