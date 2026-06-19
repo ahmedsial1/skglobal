@@ -55,7 +55,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Navbar />
           {/* Main layout container with top padding to prevent fixed navbar overlap */}
-          <main className="flex-grow pt-20">
+          <main className="flex-grow pt-32 md:pt-40">
             {children}
           </main>
           <Footer />
