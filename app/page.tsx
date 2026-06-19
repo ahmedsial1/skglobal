@@ -391,7 +391,7 @@ export default function Home() {
               href="/machinery"
               className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
             >
-              <span>{t("home.ceoBio").split(" ")[0]}</span>
+              <span>{t("home.explore")}</span>
               <span>→</span>
             </Link>
           </div>
@@ -411,7 +411,7 @@ export default function Home() {
               href="/spare-parts"
               className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
             >
-              <span>{t("home.ceoBio").split(" ")[0]}</span>
+              <span>{t("home.explore")}</span>
               <span>→</span>
             </Link>
           </div>
@@ -431,7 +431,7 @@ export default function Home() {
               href="/hardware"
               className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
             >
-              <span>{t("home.ceoBio").split(" ")[0]}</span>
+              <span>{t("home.explore")}</span>
               <span>→</span>
             </Link>
           </div>
