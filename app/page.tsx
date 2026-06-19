@@ -280,13 +280,13 @@ export default function Home() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* CEO Column */}
-            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
+            <div className="group flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/ceo.jpg"
                   alt="Muhammad Amjad - SIAL Group CEO"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
               </div>
@@ -313,13 +313,13 @@ export default function Home() {
             </div>
 
             {/* Chairman Column */}
-            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
+            <div className="group flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/chairman.jpg"
                   alt={`${chair.name} - SIAL Group Chairman`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
               </div>
