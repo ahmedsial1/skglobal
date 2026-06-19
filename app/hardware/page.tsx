@@ -145,15 +145,15 @@ export default function Hardware() {
               {/* Brand Info */}
               <div className="space-y-4 flex-grow font-sans">
                 <h3 className="text-2xl font-black text-[#1E40AF] tracking-tight">
-                  SADAAN® INDUSTRIAL HARDWARE SYSTEM
+                  SADAAN® PROFESSIONAL POWER TOOLS & EQUIPMENT
                 </h3>
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium" style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}>
-                  SADAAN® is SIAL Group&apos;s signature proprietary brand of high-strength industrial hardware, heavy-duty fasteners, and structural construction materials. SADAAN® products are engineered for maximum tensile strength and extreme weather durability, certified to meet rigorous safety regulations (including SASO and OPAL). By linking production mills directly to large-scale infrastructure projects in the GCC and East Africa, SADAAN® guarantees structural integrity, zero broker overheads, and absolute supply chain resilience.
+                  SADAAN® is SIAL Group&apos;s premium proprietary brand of professional power tools, high-performance hand tools, and heavy-duty industrial site equipment. Designed to compete directly with world-class brands like DEWALT and JUSTER, SADAAN® tools are engineered for maximum power, durability, and workload tolerance on demanding construction and infrastructure sites. Certified to meet rigorous regional safety standards (including SASO and OPAL), SADAAN® guarantees trade-professional reliability and factory-direct pricing by completely eliminating third-party broker margins.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ High-Tensile Certified</span>
-                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ SASO & OPAL Compliant</span>
-                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ Direct Sourced</span>
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ DEWALT & JUSTER Grade Quality</span>
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ Professional Power Tools & Gear</span>
+                  <span className="px-3 py-1 bg-white border border-[#E2E8F0] rounded-lg text-xs font-semibold text-slate-600">✓ SASO & OPAL Safety Certified</span>
                 </div>
               </div>
             </div>
