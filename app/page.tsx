@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Sourcing Hub Advantage Section */}
-      <section className="relative py-20 bg-slate-50 border-y border-slate-200">
+      <section className="relative z-10 py-20 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
           <ScrollReveal>
             <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
@@ -265,7 +265,7 @@ export default function Home() {
       </section>
 
       {/* CEO & Leadership Profile Section */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 border-t border-slate-200">
+      <section className="relative z-10 py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 border-t border-slate-200">
         <ScrollReveal>
           <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
             <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">{sectionTrans.leadershipTitle}</span>
@@ -366,7 +366,7 @@ export default function Home() {
       </section>
 
       {/* Business Divisions Grid */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
+      <section className="relative z-10 py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
         <ScrollReveal>
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
@@ -441,7 +441,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
+      <section className="relative z-10 py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">

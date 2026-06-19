@@ -90,7 +90,7 @@ export default function About() {
       {/* Grid Pattern Underlay */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-20">
         {/* Header Block */}
         <ScrollReveal>
           <div className="text-center space-y-6 max-w-4xl mx-auto">
