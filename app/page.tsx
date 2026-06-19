@@ -3,8 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ScrollReveal from "@/components/ScrollReveal";
-import HoverCard from "@/components/HoverCard";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Local translation data for Chairman and Executive Leadership
@@ -101,7 +99,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative z-20 pt-20 pb-24 md:pt-32 md:pb-40 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
-        <ScrollReveal delay={0.1} duration={0.8}>
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             {/* Left Column: Text & CTAs */}
             <div className="lg:col-span-7 text-start space-y-6 flex flex-col justify-center">
@@ -153,13 +151,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </div>
       </section>
 
       {/* Sourcing Hub Advantage Section */}
       <section className="relative z-10 py-20 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
-          <ScrollReveal>
+          <div>
             <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
                 {t("home.edgeTitle")}{" "}
@@ -169,14 +167,14 @@ export default function Home() {
                 {t("home.edgeDesc")}
               </p>
             </div>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal>
+          <div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               <div className="space-y-6">
                 <div className="space-y-6">
                   {/* South Korea */}
-                  <HoverCard className="glass-card p-5 rounded-xl space-y-4 shadow-sm">
+                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/seoul_hq.png"
@@ -196,10 +194,10 @@ export default function Home() {
                         {t("home.koreaDesc")}
                       </p>
                     </div>
-                  </HoverCard>
+                  </div>
 
                   {/* China */}
-                  <HoverCard className="glass-card p-5 rounded-xl space-y-4 shadow-sm">
+                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/china_logistics.png"
@@ -219,11 +217,11 @@ export default function Home() {
                         {t("home.chinaDesc")}
                       </p>
                     </div>
-                  </HoverCard>
+                  </div>
                 </div>
               </div>
 
-              <div className="glass-card p-8 rounded-xl shadow-md relative overflow-hidden">
+              <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-md relative overflow-hidden border border-slate-200/80">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-blue/5 rounded-full blur-3xl"></div>
                 <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">
                   {t("home.whyChooseTitle")}
@@ -260,13 +258,13 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* CEO & Leadership Profile Section */}
       <section className="relative z-10 py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 border-t border-slate-200">
-        <ScrollReveal>
+        <div>
           <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
             <span className="text-xs uppercase tracking-widest font-extrabold text-sial-blue">{sectionTrans.leadershipTitle}</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
@@ -274,74 +272,71 @@ export default function Home() {
             </h2>
             <div className="h-1 w-20 bg-sial-blue mx-auto mt-4"></div>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal delay={0.15}>
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Chairman Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
-              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl">
+            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
+              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/chairman.jpg"
                   alt={`${chair.name} - SIAL Group Chairman`}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
-                {/* Overlay details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-black font-sans">{chair.title}</span>
-                    <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">{chair.name}</h3>
-                  </div>
-                  <p className="text-[11px] text-slate-800 leading-relaxed italic text-justify font-sans font-medium">
+              </div>
+              <div className="space-y-4 w-full">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">{chair.title}</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">{chair.name}</h3>
+                </div>
+                <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
+                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
                     &ldquo;{chair.quote}&rdquo;
                   </p>
                 </div>
-              </div>
-              <div className="space-y-4 text-left w-full">
-                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200/80 text-slate-900 text-xs font-black rounded-lg uppercase tracking-wider">
+                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
                   {chair.badge}
                 </div>
-                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {chair.desc1}
                 </p>
-                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {chair.desc2}
                 </p>
               </div>
             </div>
 
             {/* CEO Column */}
-            <div className="flex flex-col items-center text-center space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
-              <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl">
+            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
+              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/ceo.jpg"
                   alt="Muhammad Amjad - SIAL Group CEO"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-w-768px) 100vw, 384px"
                 />
-                {/* Overlay details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent flex flex-col justify-end p-8 space-y-3 text-left">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-widest text-sial-blue font-black font-sans">Group CEO & Founder</span>
-                    <h3 className="text-xl font-bold text-slate-900 leading-tight font-sans">Muhammad Amjad</h3>
-                  </div>
-                  <p className="text-[11px] text-slate-800 leading-relaxed italic text-justify font-sans font-medium">
+              </div>
+              <div className="space-y-4 w-full">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">Group CEO & Founder</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">Muhammad Amjad</h3>
+                </div>
+                <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
+                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
                     &ldquo;Resilience is building proprietary pipelines that ensure our partners never fail.&rdquo;
                   </p>
                 </div>
-              </div>
-
-              <div className="space-y-4 text-left w-full">
-                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200/80 text-slate-900 text-xs font-black rounded-lg uppercase tracking-wider">
+                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
                   {t("footer.governance")}
                 </div>
-                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc1")}
                 </p>
-                <p className="text-sm sm:text-base text-slate-950 leading-relaxed text-justify font-medium">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc2")}
                 </p>
               </div>
@@ -362,12 +357,12 @@ export default function Home() {
               {t("home.ceoConsultation")}
             </Link>
           </div>
-        </ScrollReveal>
+        </div>
       </section>
 
       {/* Business Divisions Grid */}
       <section className="relative z-10 py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
-        <ScrollReveal>
+        <div>
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
               {t("home.divisionsTitle")}
@@ -376,7 +371,7 @@ export default function Home() {
               {t("home.divisionsSubtitle")}
             </p>
           </div>
-        </ScrollReveal>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Heavy Machinery */}
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
@@ -443,7 +438,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="relative z-10 py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
-          <ScrollReveal delay={0.1}>
+          <div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <span className="block text-4xl sm:text-5xl font-extrabold text-sial-blue">18+</span>
@@ -462,7 +457,7 @@ export default function Home() {
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-semibold mt-2 block">{t("home.stats4")}</span>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
     </div>
