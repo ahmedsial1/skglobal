@@ -275,42 +275,12 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Chairman Column */}
-            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
-              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-                <Image
-                  src="/chairman.jpg"
-                  alt={`${chair.name} - SIAL Group Chairman`}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-w-768px) 100vw, 384px"
-                />
-              </div>
-              <div className="space-y-4 w-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">{chair.title}</span>
-                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">{chair.name}</h3>
-                </div>
-                <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
-                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
-                    &ldquo;{chair.quote}&rdquo;
-                  </p>
-                </div>
-                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
-                  {chair.badge}
-                </div>
-                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
-                  {chair.desc1}
-                </p>
-                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
-                  {chair.desc2}
-                </p>
-              </div>
-            </div>
-
+          <div 
+            className="flex md:grid md:grid-cols-2 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 md:gap-12 max-w-6xl mx-auto pb-6 md:pb-0 scroll-smooth"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {/* CEO Column */}
-            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80">
+            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/ceo.jpg"
@@ -338,6 +308,39 @@ export default function Home() {
                 </p>
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc2")}
+                </p>
+              </div>
+            </div>
+
+            {/* Chairman Column */}
+            <div className="flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
+              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                <Image
+                  src="/chairman.jpg"
+                  alt={`${chair.name} - SIAL Group Chairman`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-w-768px) 100vw, 384px"
+                />
+              </div>
+              <div className="space-y-4 w-full">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">{chair.title}</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">{chair.name}</h3>
+                </div>
+                <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
+                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
+                    &ldquo;{chair.quote}&rdquo;
+                  </p>
+                </div>
+                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
+                  {chair.badge}
+                </div>
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
+                  {chair.desc1}
+                </p>
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
+                  {chair.desc2}
                 </p>
               </div>
             </div>
