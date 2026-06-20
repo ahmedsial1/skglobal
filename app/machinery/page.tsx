@@ -20,6 +20,9 @@ export default function Machinery() {
       {/* Tech Grid Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.22] bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
+      {/* Full-Page Background Image with Low Opacity */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.05] bg-cover bg-center md:bg-fixed bg-no-repeat" style={{ backgroundImage: "url('/oman_cranes.png')" }}></div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 space-y-16 sm:space-y-24">
         {/* Header Block */}
         <ScrollReveal>
@@ -56,10 +59,14 @@ export default function Machinery() {
                 {/* Info Column */}
                 <div className="lg:col-span-7 space-y-6 text-left">
                   <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-wrap gap-2">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[10px] sm:text-xs font-bold text-blue-300 uppercase tracking-wider">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
                         {t("machinery.omanBadge")}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-[10px] sm:text-xs font-bold text-emerald-400 uppercase tracking-wider">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        PDO Approved
                       </span>
                       <span className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider font-sans">
                         SK Transports Oman
@@ -175,8 +182,8 @@ export default function Machinery() {
                           <span className="font-extrabold text-slate-200">6</span>
                         </div>
                         <div className="flex justify-between pt-0.5">
-                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Rigging:</span>
-                          <span className="font-extrabold text-emerald-400">Certified</span>
+                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Status:</span>
+                          <span className="font-extrabold text-emerald-400">PDO Approved</span>
                         </div>
                       </div>
                     </div>
@@ -215,8 +222,8 @@ export default function Machinery() {
                           <span className="font-extrabold text-slate-200">5</span>
                         </div>
                         <div className="flex justify-between pt-0.5">
-                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Rigging:</span>
-                          <span className="font-extrabold text-emerald-400">Certified</span>
+                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Status:</span>
+                          <span className="font-extrabold text-emerald-400">PDO Approved</span>
                         </div>
                       </div>
                     </div>
@@ -255,8 +262,8 @@ export default function Machinery() {
                           <span className="font-extrabold text-slate-200">4</span>
                         </div>
                         <div className="flex justify-between pt-0.5">
-                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Rigging:</span>
-                          <span className="font-extrabold text-emerald-400">Certified</span>
+                          <span className="text-slate-500 uppercase tracking-wider font-extrabold">Status:</span>
+                          <span className="font-extrabold text-emerald-400">PDO Approved</span>
                         </div>
                       </div>
                     </div>
@@ -284,7 +291,7 @@ export default function Machinery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-50"></div>
                   <div className="absolute bottom-3 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded border border-slate-200/80 text-[10px] text-slate-700 font-extrabold uppercase tracking-widest shadow-sm">
-                    Riyadh Fleet Node
+                    Jeddah Fleet Node
                   </div>
                 </div>
 
