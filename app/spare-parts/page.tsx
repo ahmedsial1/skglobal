@@ -348,10 +348,20 @@ export default function SpareParts() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* South Korea */}
-              <HoverCard className="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-3xl">
-                    <span>🇰🇷</span>
+              <HoverCard className="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all duration-300 group">
+                <div className="space-y-4 font-sans">
+                  <div className="relative w-full h-28 rounded-xl overflow-hidden border border-slate-200 shadow-sm group">
+                    <Image
+                      src="/seoul_hq.png"
+                      alt="SIAL & Young A Trading Co. procurement headquarters in Seoul, South Korea"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-103"
+                      sizes="(max-w-768px) 100vw, 250px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-30"></div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl">🇰🇷</span>
                     <h4 className="text-slate-900 font-extrabold text-base tracking-tight font-heading">Seoul HQ</h4>
                   </div>
                   <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider font-sans">SIAL & Young A Trading Co.</span>
@@ -362,10 +372,20 @@ export default function SpareParts() {
               </HoverCard>
 
               {/* Yiwu China */}
-              <HoverCard className="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-3xl">
-                    <span>🇨🇳</span>
+              <HoverCard className="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all duration-300 group">
+                <div className="space-y-4 font-sans">
+                  <div className="relative w-full h-28 rounded-xl overflow-hidden border border-slate-200 shadow-sm group">
+                    <Image
+                      src="/china_logistics.png"
+                      alt="Yiwu SIAL International Trading Co. global logistics and wholesale hub in China"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-103"
+                      sizes="(max-w-768px) 100vw, 250px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-30"></div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl">🇨🇳</span>
                     <h4 className="text-slate-900 font-extrabold text-base tracking-tight font-heading">China Hub</h4>
                   </div>
                   <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider font-sans">Yiwu SIAL International Trading Co.</span>

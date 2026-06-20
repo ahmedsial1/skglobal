@@ -295,7 +295,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       contact: "Jeddah Regional Desk",
       isEnhanced: true,
       enhancedDetails: {
-        branches: "Riyadh Head Office & Jeddah Yards",
+        branches: "Jeddah Head Office & Yards",
         erp: "Odoo ERP System Integrated",
         logistics: "Heavy Fleet & Spare Parts Logistics",
         backbone: "Mobile Cranes & OEM Parts"
@@ -480,7 +480,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       contact: "المكتب الإقليمي بجدة",
       isEnhanced: true,
       enhancedDetails: {
-        branches: "المكتب الرئيسي بالرياض وساحات جدة",
+        branches: "المكتب الرئيسي بجدة وساحات جدة",
         erp: "نظام Odoo ERP متكامل",
         logistics: "لوجستيات الأسطول الثقيل وقطع الغيار",
         backbone: "الرافعات المتنقلة وقطع الغيار الأصلية"
@@ -665,7 +665,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       contact: "吉达区域事务部",
       isEnhanced: true,
       enhancedDetails: {
-        branches: "利雅得总部及吉达堆场",
+        branches: "吉达总部及吉达堆场",
         erp: "已集成 Odoo ERP 系统",
         logistics: "重型车队与零配件物流",
         backbone: "移动式起重机与原厂配件"
@@ -850,7 +850,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       contact: "제다 지역 본부 데스크",
       isEnhanced: true,
       enhancedDetails: {
-        branches: "리야드 본사 및 제다 야드",
+        branches: "제다 본사 및 제다 야드",
         erp: "Odoo ERP 통합 물류 관리 시스템 적용",
         logistics: "중장비 차량 및 부품 물류",
         backbone: "모바일 크레인 및 OEM 부품"
@@ -1035,7 +1035,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       contact: "جدہ علاقائی ڈیسک",
       isEnhanced: true,
       enhancedDetails: {
-        branches: "ریاض ہیڈ آفس اور جدہ یارڈز",
+        branches: "جدہ ہیڈ آفس اور جدہ یارڈز",
         erp: "Odoo ERP سسٹم مربوط ہے",
         logistics: "ہیوی بیڑے اور پرزوں کی لاجسٹکس",
         backbone: "موبائل کرینیں اور OEM پارٹس"
