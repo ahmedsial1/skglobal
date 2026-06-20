@@ -140,27 +140,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial Trader's",
       country: "Pakistan",
       address: "Sialkot, Punjab, Pakistan",
-      role: "Regional Distribution & Automotive Import",
+      role: "Import, Export & Regional Distribution",
       email: "sialautotraders@gmail.com",
       contact: "South Asia Import Desk",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Sialkot Hub (Main Showroom)",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Direct Import-Export Pipelines",
+        backbone: "Automotive & Machinery Trading"
+      }
     },
     {
       id: "sial-intl-pk",
       name: "Sial International (Pvt) Limited",
       country: "Pakistan",
       address: "Sialkot, Punjab, Pakistan",
-      role: "Corporate Head Office & Machinery Import",
+      role: "Corporate Head Office & Machinery Import-Export",
       email: "sialautotraders@gmail.com",
       contact: "Corporate Affairs Desk",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Corporate Head Office (Sialkot)",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Global Import-Export Operations",
+        backbone: "Heavy Machinery & Infrastructure"
+      }
     },
     {
       id: "sial-co-pk",
       name: "Sial & Co",
       country: "Pakistan",
       address: "Sialkot, Punjab, Pakistan",
-      role: "Logistics, Shipping & Supply Chain Operations",
+      role: "Import-Export Logistics & Supply Chain Operations",
       email: "sialautotraders@gmail.com",
       contact: "Local Logistics Desk",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Logistics Dispatch Center (Sialkot)",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Customs & Clearing Operations",
+        backbone: "Import-Export Supply Chain"
+      }
     },
     {
       id: "sial-kingdom-om",
@@ -188,6 +209,13 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       role: "Genuine & Aftermarket Auto Parts Supply",
       email: "sialautotraders@gmail.com",
       contact: "Hyundai & Kia Spares Desk",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Nationwide Branches (Muscat & Hubs)",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Hyundai & Kia Direct Import",
+        backbone: "New & Used Genuine Spares"
+      }
     },
     {
       id: "yahya-bin-khalfan-om",
@@ -230,27 +258,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial & Young A Trading Co.",
       country: "South Korea",
       address: "Seoul, Incheon, South Korea",
-      role: "Strategic Automotive Sourcing HQ",
+      role: "Automotive Export Sourcing HQ",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Seoul Procurement Center",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Direct Parts Export Channels",
+        backbone: "Korean Genuine Parts Export"
+      }
     },
     {
       id: "yiwu-sial-cn",
       name: "Yiwu Sial International Trading Co. Ltd.",
       country: "China",
       address: "Yiwu, Zhejiang, China",
-      role: "Premier Industrial Hardware Node",
+      role: "Premier Industrial Hardware Export Node",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Yiwu Main Wholesale Node",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Global Export Operations",
+        backbone: "Industrial Hardware Export"
+      }
     },
     {
       id: "sial-intl-sa",
       name: "Sial International LLC",
       country: "Saudi Arabia",
       address: "Jeddah, Saudi Arabia",
-      role: "Crane Sales, Rentals & Fleet Operations",
+      role: "Crane Sales, Rentals & Spare Parts",
       email: "sialautotraders@gmail.com",
       contact: "Jeddah Regional Desk",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "Riyadh Head Office & Jeddah Yards",
+        erp: "Odoo ERP System Integrated",
+        logistics: "Heavy Fleet & Spare Parts Logistics",
+        backbone: "Mobile Cranes & OEM Parts"
+      }
     },
     {
       id: "sial-kingdom-mz",
@@ -276,27 +325,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "سيال تريدرز",
       country: "Pakistan",
       address: "سيالكوت، البنجاب، باكستان",
-      role: "التوزيع الإقليمي واستيراد قطع غيار السيارات",
+      role: "الاستيراد والتصدير والتوزيع الإقليمي",
       email: "sialautotraders@gmail.com",
       contact: "مكتب استيراد جنوب آسيا",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "مركز سيالكوت (المعرض الرئيسي)",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "خطوط الاستيراد والتصدير المباشرة",
+        backbone: "تجارة السيارات والآليات"
+      }
     },
     {
       id: "sial-intl-pk",
       name: "سيال الدولية (الخاصة) المحدودة",
       country: "Pakistan",
       address: "سيالكوت، البنجاب، باكستان",
-      role: "المكتب الرئيسي للشركة واستيراد الآليات",
+      role: "المكتب الرئيسي للشركة واستيراد وتصدير الآليات",
       email: "sialautotraders@gmail.com",
       contact: "مكتب الشؤون المؤسسية",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "المكتب الرئيسي للشركة (سيالكوت)",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "عمليات الاستيراد والتصدير العالمية",
+        backbone: "الآليات الثقيلة والبنية التحتية"
+      }
     },
     {
       id: "sial-co-pk",
       name: "سيال وشركائه",
       country: "Pakistan",
       address: "سيالكوت، البنجاب، باكستان",
-      role: "اللوجستيات والشحن وعمليات سلسلة التوريد",
+      role: "لوجستيات الاستيراد والتصدير وعمليات سلسلة التوريد",
       email: "sialautotraders@gmail.com",
       contact: "المكتب اللوجستي المحلي",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "مركز إرسال اللوجستيات (سيالكوت)",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "عمليات الجمارك والتخليص",
+        backbone: "سلسلة توريد الاستيراد والتصدير"
+      }
     },
     {
       id: "sial-kingdom-om",
@@ -324,6 +394,13 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       role: "توريد قطع غيار السيارات الأصلية والتجارية",
       email: "sialautotraders@gmail.com",
       contact: "مكتب قطع غيار هيونداي وكيا",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "فروع تغطي كافة أنحاء البلاد (مسقط والمراكز الإقليمية)",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "الاستيراد المباشر لقطع غيار هيونداي وكيا",
+        backbone: "قطع غيار أصلية جديدة ومستعملة"
+      }
     },
     {
       id: "yahya-bin-khalfan-om",
@@ -366,27 +443,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "شركة سيال و يونغ إيه للتجارة",
       country: "South Korea",
       address: "سيول، إنتشون، كوريا الجنوبية",
-      role: "المقر الاستراتيجي لتوريد قطع غيار السيارات",
+      role: "مقر تصدير وتوريد قطع غيار السيارات",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "مركز مشتريات سيول",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "قنوات تصدير قطع الغيار المباشرة",
+        backbone: "تصدير قطع غيار السيارات الكورية الأصلية"
+      }
     },
     {
       id: "yiwu-sial-cn",
       name: "شركة إيو سيال للتجارة الدولية المحدودة",
       country: "China",
       address: "إيو، جيجيانغ، الصين",
-      role: "المركز الرئيسي للمعدات الصناعية",
+      role: "مركز تصدير المعدات الصناعية الرئيسي",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "مركز الجملة الرئيسي في إيو",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "عمليات التصدير العالمية",
+        backbone: "تصدير المعدات والأدوات الصناعية"
+      }
     },
     {
       id: "sial-intl-sa",
       name: "شركة سيال الدولية ش.م.م",
       country: "Saudi Arabia",
       address: "جدة، المملكة العربية السعودية",
-      role: "مبيعات وتأجير الرافعات وعمليات الأسطول",
+      role: "مبيعات وتأجير الرافعات وقطع الغيار",
       email: "sialautotraders@gmail.com",
       contact: "المكتب الإقليمي بجدة",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "المكتب الرئيسي بالرياض وساحات جدة",
+        erp: "نظام Odoo ERP متكامل",
+        logistics: "لوجستيات الأسطول الثقيل وقطع الغيار",
+        backbone: "الرافعات المتنقلة وقطع الغيار الأصلية"
+      }
     },
     {
       id: "sial-kingdom-mz",
@@ -412,27 +510,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial Trader's (西阿尔贸易)",
       country: "Pakistan",
       address: "巴基斯坦旁遮普省锡亚尔科特",
-      role: "区域分销与汽车配件进口",
+      role: "进口、出口与区域分销",
       email: "sialautotraders@gmail.com",
       contact: "南亚进口事务部",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "锡亚尔科特中心 (主展厅)",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "进出口直达通道",
+        backbone: "汽车与机械贸易"
+      }
     },
     {
       id: "sial-intl-pk",
       name: "Sial International (Pvt) Limited",
       country: "Pakistan",
       address: "巴基斯坦旁遮普省锡亚尔科特",
-      role: "企业总部及机械进口",
+      role: "企业总部及机械进出口",
       email: "sialautotraders@gmail.com",
       contact: "企业事务部",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "企业总部 (锡亚尔科特)",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "全球进出口业务",
+        backbone: "重型机械与基础设施"
+      }
     },
     {
       id: "sial-co-pk",
       name: "Sial & Co",
       country: "Pakistan",
       address: "巴基斯坦旁遮普省锡亚尔科特",
-      role: "物流、航运与供应链管理",
+      role: "进出口物流与供应链管理",
       email: "sialautotraders@gmail.com",
       contact: "本地物流部",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "物流调度中心 (锡亚尔科特)",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "报关与清关业务",
+        backbone: "进出口供应链"
+      }
     },
     {
       id: "sial-kingdom-om",
@@ -460,6 +579,13 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       role: "正品与售后汽车配件供应",
       email: "sialautotraders@gmail.com",
       contact: "现代与起亚配件事务部",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "全国分支机构 (马斯喀特及区域中心)",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "现代与起亚配件直接进口",
+        backbone: "全新及二手原厂配件"
+      }
     },
     {
       id: "yahya-bin-khalfan-om",
@@ -502,27 +628,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial & Young A Trading Co.",
       country: "South Korea",
       address: "韩国首尔、仁川",
-      role: "战略汽车配件采购总部",
+      role: "汽车配件出口采购总部",
       email: "sialautotraders@gmail.com",
       contact: "微信：SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "首尔采购中心",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "配件直接出口渠道",
+        backbone: "韩国原厂配件出口"
+      }
     },
     {
       id: "yiwu-sial-cn",
       name: "义乌市西阿尔国际贸易有限公司",
       country: "China",
       address: "中国浙江省义乌市",
-      role: "首要工业五金采购枢纽",
+      role: "首要工业五金出口枢纽",
       email: "sialautotraders@gmail.com",
       contact: "微信：SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "义乌主要批发节点",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "全球出口业务",
+        backbone: "工业五金出口"
+      }
     },
     {
       id: "sial-intl-sa",
       name: "Sial International LLC",
       country: "Saudi Arabia",
       address: "沙特阿拉伯吉达",
-      role: "起重机销售、租赁与车队运营",
+      role: "起重机销售、租赁与零配件业务",
       email: "sialautotraders@gmail.com",
       contact: "吉达区域事务部",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "利雅得总部及吉达堆场",
+        erp: "已集成 Odoo ERP 系统",
+        logistics: "重型车队与零配件物流",
+        backbone: "移动式起重机与原厂配件"
+      }
     },
     {
       id: "sial-kingdom-mz",
@@ -548,27 +695,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial Trader's (시알 트레이더스)",
       country: "Pakistan",
       address: "파키스탄 펀자브 주 시알코트",
-      role: "지역 유통 및 자동차 부품 수입",
+      role: "수입, 수출 및 지역 유통",
       email: "sialautotraders@gmail.com",
       contact: "남아시아 수입 전담 부서",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "시알코트 허브 (메인 전시장)",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "직영 수출입 파이프라인",
+        backbone: "자동차 및 중장비 무역"
+      }
     },
     {
       id: "sial-intl-pk",
       name: "Sial International (Pvt) Limited",
       country: "Pakistan",
       address: "파키스탄 펀자브 주 시알코트",
-      role: "법인 본사 및 건설 중장비 수입",
+      role: "법인 본사 및 건설 중장비 수출입",
       email: "sialautotraders@gmail.com",
       contact: "대관/기업 홍보 부서",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "법인 본사 (시알코트)",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "글로벌 수출입 운영",
+        backbone: "중장비 및 인프라 구축"
+      }
     },
     {
       id: "sial-co-pk",
       name: "Sial & Co",
       country: "Pakistan",
       address: "파키스탄 펀자브 주 시알코트",
-      role: "물류, 선적 및 공급망 운영",
+      role: "수출입 물류, 선적 및 공급망 운영",
       email: "sialautotraders@gmail.com",
       contact: "현지 물류 전담 부서",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "물류 배송 센터 (시알코트)",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "세관 통관 및 청산",
+        backbone: "수출입 공급망 관리"
+      }
     },
     {
       id: "sial-kingdom-om",
@@ -596,6 +764,13 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       role: "순정 및 에프터마켓 자동차 부품 공급",
       email: "sialautotraders@gmail.com",
       contact: "현대 & 기아 부품 전담 부서",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "전국 직영 지점망 (무스카트 및 지역 허브)",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "현대 & 기아 부품 다이렉트 수입",
+        backbone: "신품 및 중고 순정 부품"
+      }
     },
     {
       id: "yahya-bin-khalfan-om",
@@ -638,27 +813,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "Sial & Young A Trading Co.",
       country: "South Korea",
       address: "대한민국 서울, 인천",
-      role: "자동차 부품 글로벌 조달 거점 본부",
+      role: "자동차 부품 수출 조달 거점 본부",
       email: "sialautotraders@gmail.com",
       contact: "WeChat ID: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "서울 구매 센터",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "부품 다이렉트 수출 채널",
+        backbone: "한국 자동차 순정 부품 수출"
+      }
     },
     {
       id: "yiwu-sial-cn",
       name: "Yiwu Sial International Trading Co. Ltd.",
       country: "China",
       address: "중국 절강성 이우시",
-      role: "산업용 하드웨어 핵심 조달 거점",
+      role: "산업용 하드웨어 핵심 수출 거점",
       email: "sialautotraders@gmail.com",
       contact: "WeChat ID: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "이우 메인 도매 센터",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "글로벌 수출 운영",
+        backbone: "산업용 하드웨어 수출"
+      }
     },
     {
       id: "sial-intl-sa",
       name: "Sial International LLC",
       country: "Saudi Arabia",
       address: "사우디아라비아 제다",
-      role: "크레인 장비 판매, 임대 및 엔지니어링",
+      role: "크레인 장비 판매, 임대 및 예비 부품",
       email: "sialautotraders@gmail.com",
       contact: "제다 지역 본부 데스크",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "리야드 본사 및 제다 야드",
+        erp: "Odoo ERP 통합 물류 관리 시스템 적용",
+        logistics: "중장비 차량 및 부품 물류",
+        backbone: "모바일 크레인 및 OEM 부품"
+      }
     },
     {
       id: "sial-kingdom-mz",
@@ -684,27 +880,48 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       name: "سیال ٹریڈرز",
       country: "Pakistan",
       address: "سیالکوٹ، پنجاب، پاکستان",
-      role: "علاقائی تقسیم اور گاڑیوں کے پارٹس کی درآمد",
+      role: "درآمد، برآمد اور علاقائی تقسیم",
       email: "sialautotraders@gmail.com",
       contact: "جنوبی ایشیا امپورٹ ڈیسک",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "سیالکوٹ ہب (مین شوروم)",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "براہ راست امپورٹ ایکسپورٹ چینلز",
+        backbone: "گاڑیوں اور مشینری کی تجارت"
+      }
     },
     {
       id: "sial-intl-pk",
       name: "سیال انٹرنیشنل (پرائیویٹ) لمیٹڈ",
       country: "Pakistan",
       address: "سیالکوٹ، پنجاب، پاکستان",
-      role: "کارپوریٹ ہیڈ آفس اور مشینری کی درآمد",
+      role: "کارپوریٹ ہیڈ آفس اور مشینری کی امپورٹ ایکسپورٹ",
       email: "sialautotraders@gmail.com",
       contact: "کارپوریٹ افیئرز ڈیسک",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "کارپوریٹ ہیڈ آفس (سیالکوٹ)",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "عالمی امپورٹ ایکسپورٹ آپریشنز",
+        backbone: "ہیوی مشینری اور انفراسٹرکچر"
+      }
     },
     {
       id: "sial-co-pk",
       name: "سیال اینڈ کمپنی",
       country: "Pakistan",
       address: "سیالکوٹ، پنجاب، پاکستان",
-      role: "لاجسٹکس، شپنگ اور سپلائی چین آپریشنز",
+      role: "امپورٹ ایکسپورٹ لاجسٹکس اور سپلائی چین آپریشنز",
       email: "sialautotraders@gmail.com",
       contact: "مقامی لاجسٹکس ڈیسک",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "لاجسٹکس ڈسپیچ سینٹر (سیالکوٹ)",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "کسٹمز اور کلیئرنگ آپریشنز",
+        backbone: "امپورٹ ایکسپورٹ سپلائی چین"
+      }
     },
     {
       id: "sial-kingdom-om",
@@ -732,6 +949,13 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       role: "حقیقی اور متبادل آٹو پارٹس کی فراہمی",
       email: "sialautotraders@gmail.com",
       contact: "ہنڈائی اور کیا اسپیئرز ڈیسک",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "ملک بھر میں برانچیں (مسقط اور علاقائی مراکز)",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "ہنڈائی اور کیا پرزوں کی براہ راست درآمد",
+        backbone: "نئے اور استعمال شدہ حقیقی اسپیئر پارٹس"
+      }
     },
     {
       id: "yahya-bin-khalfan-om",
@@ -773,28 +997,49 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       id: "sial-young-a-kr",
       name: "سیال اینڈ ینگ اے ٹریڈنگ کمپنی",
       country: "South Korea",
-      address: "سیول، انچیون، جنوبی کوریا",
-      role: "گاڑیوں کے پارٹس کا اسٹریٹجک سورسنگ ہیڈ کوارٹر",
+      address: "سیول، انچیون، جنوبی كوریا",
+      role: "گاڑیوں کے پارٹس کا ایکسپورٹ سورسنگ ہیڈ کوارٹر",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "سیول پروکیورمنٹ سینٹر",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "پرزوں کی براہ راست برآمد کے چینلز",
+        backbone: "کورین حقیقی پرزوں کی برآمد"
+      }
     },
     {
       id: "yiwu-sial-cn",
       name: "ییوو سیال انٹرنیشنل ٹریڈنگ کمپنی لمیٹڈ",
       country: "China",
       address: "ییوو، ژجیانگ، چین",
-      role: "انڈسٹریل ہارڈویئر کا بنیادی مرکز",
+      role: "انڈسٹریل ہارڈویئر کا بنیادی برآمدی مرکز",
       email: "sialautotraders@gmail.com",
       contact: "WeChat: SIALautoparts",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "ییوو ہول سیل مرکز",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "عالمی برآمدی آپریشنز",
+        backbone: "صنعتی ہارڈویئر کی برآمد"
+      }
     },
     {
       id: "sial-intl-sa",
       name: "سیال انٹرنیشنل کمپنی",
       country: "Saudi Arabia",
       address: "جدہ، سعودی عرب",
-      role: "کرینوں کی فروخت، کرایہ اور آپریشنز",
+      role: "کرینوں کی فروخت، کرایہ اور اسپیئر پارٹس",
       email: "sialautotraders@gmail.com",
       contact: "جدہ علاقائی ڈیسک",
+      isEnhanced: true,
+      enhancedDetails: {
+        branches: "ریاض ہیڈ آفس اور جدہ یارڈز",
+        erp: "Odoo ERP سسٹم مربوط ہے",
+        logistics: "ہیوی بیڑے اور پرزوں کی لاجسٹکس",
+        backbone: "موبائل کرینیں اور OEM پارٹس"
+      }
     },
     {
       id: "sial-kingdom-mz",
@@ -814,9 +1059,7 @@ const NETWORK_COMPANIES_DATA: Record<Language, Array<{
       logo: "/mozambique_storefront.png"
     }
   ]
-};
-
-const containerVariants = {
+};const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,

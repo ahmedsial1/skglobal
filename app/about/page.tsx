@@ -12,40 +12,45 @@ const chairmanData = {
     title: "Group Chairman",
     name: "CH Munawar Hussain Sial",
     quote: "Integrity and trust form the foundation of global commerce. We build enduring bridges.",
-    desc1: "CH Munawar Hussain Sial, our Group Chairman, oversees the governance, trust-building, and long-term joint ventures of SIAL Group. Under his guidance, the Group has maintained an impeccable compliance record and solid relationships with international trade ministries and logistics authorities.",
-    desc2: "His leadership ensures that SIAL Group operates with high corporate responsibility, upholding regional standards and prioritizing community development alongside global trading activities.",
+    desc1: "CH Munawar Hussain Sial, our Group Chairman, oversees the global governance, trust-building initiatives, and long-term joint venture strategies of SIAL Group. Under his visionary guidance, the Group has maintained an impeccable compliance record and nurtured solid relationships with international trade ministries, logistics authorities, and key regulatory bodies across multiple continents.",
+    desc2: "His strategic leadership ensures that SIAL Group operates with the highest level of corporate social responsibility. By upholding stringent regional safety and operational standards, he prioritizes sustainable community development and local job creation alongside the Group's rapid global trading activities and cross-border logistical expansions.",
+    desc3: "To support the Group's long-term commercial sustainability and geographic reach, he establishes robust legal frameworks for international investments. His governance model ensures SIAL Group remains a premier trusted partner for state-owned enterprises, multinational corporations, and regional distributors, blending trade excellence with strict ethical accountability.",
     badge: "🏛️ Global Governance & Joint Ventures"
   },
   ar: {
     title: "رئيس المجموعة",
     name: "ش. منور حسين سيال",
     quote: "النزاهة والثقة تشكلان أساس التجارة العالمية. نحن نبني جسوراً متينة.",
-    desc1: "ش. منور حسين سيال، رئيس مجموعتنا، يشرف على الحوكمة وبناء الثقة والمشاريع المشتركة طويلة الأجل لمجموعة SIAL. تحت توجيهه، حافظت المجموعة على سجل امتثال لا تشوبه شائبة وعلاقات متينة مع وزارات التجارة الدولية وسلطات الخدمات اللوجستية.",
-    desc2: "تضمن قيادته أن تعمل مجموعة SIAL بمسؤولية مؤسسية عالية، ودعم المعايير الإقليمية وإعطاء الأولوية لتنمية المجتمع جنباً إلى جنب مع أنشطة التجارة العالمية.",
+    desc1: "ش. منور حسين سيال، رئيس مجموعتنا، يشرف على الحوكمة العالمية، ومبادرات بناء الثقة، واستراتيجيات المشاريع المشتركة طويلة الأجل لمجموعة SIAL. تحت توجيهه الرؤيوي، حافظت المجموعة على سجل امتثال لا تشوبه شائبة وعلاقات متينة مع وزارات التجارة الدولية وسلطات الخدمات اللوجستية والهيئات التنظيمية الرئيسية عبر قارات متعددة.",
+    desc2: "تضمن قيادته الاستراتيجية أن تعمل مجموعة SIAL بأعلى مستوى من المسؤولية الاجتماعية للمؤسسات. ومن خلال دعم معايير السلامة والتشغيل الإقليمية الصارمة، فإنه يعطي الأولوية للتنمية المجتمعية المستدامة وخلق فرص العمل المحلية جنبًا إلى جنب مع أنشطة التجارة العالمية السريعة للمجموعة والتوسعات اللوجستية عابرة الحدود.",
+    desc3: "ولدعم الاستدامة التجارية للمجموعة على المدى الطويل وتوسعها الجغرافي، يضع أطرًا قانونية قوية للاستثمارات الدولية. ويضمن نموذج الحوكمة الذي يتبعه أن تظل مجموعة SIAL شريكًا رئيسيًا موثوقًا للمؤسسات المملوكة للدولة، والشركات متعددة الجنسيات، والموزعين الإقليميين، من خلال الجمع بين التميز التجاري والمساءلة الأخلاقية الصارمة.",
     badge: "🏛️ الحوكمة العالمية والمشاريع المشتركة"
   },
   zh: {
     title: "集团董事长",
     name: "CH Munawar Hussain Sial",
     quote: "诚信与信任是全球贸易的基石。我们建立持久的桥梁。",
-    desc1: "集团董事长 CH Munawar Hussain Sial 监督 SIAL 集团的治理、信任建立和长期合资企业。在他的指导下，集团保持了无可挑剔的合规记录，并与国际贸易部 and 物流 authorities 建立了稳固的关系。",
-    desc2: "他的领导确保 SIAL 集团以高度的企业责任开展业务，维护地区标准，并在开展全球贸易活动的同时优先考虑社区发展。",
+    desc1: "集团董事长 CH Munawar Hussain Sial 负责监督 SIAL 集团的的全球治理、信誉建设和长期合资战略。在他的远见指导下，集团保持了无可挑剔的合规记录，并与多个大洲的的国际贸易部门、物流机构 and 关键监管团队建立了稳固的关系。",
+    desc2: "他的战略领导确保了 SIAL 集团以最高水平的企业社会责任开展业务。通过维护严格的地区安全和运营标准，他在推动集团快速全球贸易活动和跨境物流扩张的同时，优先考虑可持续的社区发展和本地就业机会。",
+    desc3: "为了支持集团的长期商业可持续性和地理覆盖范围，他为国际投资建立了健全的法律框架。他的治理模式确保了 SIAL 集团始终是国有企业、跨国公司和区域分销商的首选信赖合作伙伴，将卓越的贸易表现与严格的伦理问责紧密结合。",
     badge: "🏛️ 全球治理与合资企业"
   },
   ko: {
     title: "그룹 회장",
     name: "CH Munawar Hussain Sial",
     quote: "정직과 신뢰는 글로벌 상거래의 기초입니다. 우리는 지속 가능한 다리를 건설합니다.",
-    desc1: "그룹 회장인 CH Munawar Hussain Sial은 SIAL 그룹의 지배 구조, 신뢰 구축 및 장기 합작 투자를 감독합니다. 그의 지도하에 그룹은 무결점 준수 기록을 유지하고 국제 무역 부처 및 물류 당국과 견고한 관계를 유지해 왔습니다.",
-    desc2: "그의 리더십은 SIAL 그룹이 높은 기업 책임감을 가지고 운영되도록 보장하며, 글로벌 무역 활동과 함께 지역 표준을 준수하고 지역 사회 개발을 우선시합니다.",
+    desc1: "그룹 회장인 CH Munawar Hussain Sial은 SIAL 그룹의 글로벌 거버넌스, 신뢰 구축 이니셔티브 및 장기 합작 투자 전략을 감독합니다. 그의 선견지명 있는 지도 아래, 그룹은 완벽한 규정 준수 기록을 유지해 왔으며 여러 대륙에 걸친 국제 무역 부처, 물류 당국 및 주요 규제 기관들과 견고한 관계를 육성해 왔습니다.",
+    desc2: "그의 전략적 리더십은 SIAL 그룹이 최고 수준의 기업 사회적 책임을 바탕으로 운영되도록 보장합니다. 엄격한 지역 안전 및 운영 표준을 준수함으로써, 그는 그룹의 빠른 글로벌 무역 활동 및 국경을 초월한 물류 확장과 함께 지속 가능한 지역 사회 개발 및 현지 일자리 창출을 최우선 과제로 삼고 있습니다.",
+    desc3: "그룹의 장기적인 상업적 지속 가능성과 지리적 범위를 지원하기 위해, 그는 국제 투자를 위한 강력한 법률 프레임워크를 수립합니다. 그의 거버넌스 모델은 SIAL 그룹이 상업적 탁월성과 엄격한 윤리적 책임성을 조화롭게 결합하여 국영 기업, 다국적 기업 및 지역 유통업체들이 가장 신뢰하는 최고의 파트너로 남을 수 있도록 보장합니다.",
     badge: "🏛️ 글로벌 거버넌스 및 합작 투자"
   },
   ur: {
     title: "گروپ چیئرمین",
     name: "چوہدری منور حسین سیال",
     quote: "دیانت اور اعتماد عالمی تجارت کی بنیاد ہیں۔ ہم پائیدار روابط استوار کرتے ہیں۔",
-    desc1: "چوہدری منور حسین سیال، ہمارے گروپ چیئرمین، SIAL گروپ کے گورننس، اعتماد سازی اور طویل مدتی مشترکہ منصوبوں کی نگرانی کرتے ہیں۔ ان کی رہنمائی میں، گروپ نے ایک بے داغ تعمیل کا ریکارڈ اور بین الاقوامی تجارتی وزارتوں اور لاجسٹکس حکام کے ساتھ مضبوط تعلقات برقرار رکھے ہیں۔",
-    desc2: "ان کی قیادت اس بات کو یقینی بناتی ہے کہ SIAL گروپ اعلیٰ کارپوریٹ ذمہ داری کے ساتھ کام کرے، علاقائی معیارات کو برقرار رکھے اور عالمی تجارتی سرگرمیوں کے ساتھ ساتھ کمیونٹی کی ترقی کو ترجیح دے۔",
+    desc1: "چوہدری منور حسین سیال، ہمارے گروپ چیئرمین، SIAL گروپ کے عالمی گورننس، اعتماد سازی کے اقدامات، اور طویل مدتی مشترکہ منصوبوں کی حکمت عملیوں کی نگرانی کرتے ہیں۔ ان کی دوراندیش رہنمائی میں، گروپ نے تعمیل کا ایک بے داغ ریکارڈ برقرار رکھا ہے اور متعدد براعظموں میں بین الاقوامی تجارتی وزارتوں، لاجسٹکس حکام، اور اہم ریگولیٹری اداروں کے ساتھ مضبوط تعلقات استوار کیے ہیں۔",
+    desc2: "ان کی اسٹریٹجک قیادت اس بات کو یقینی بناتی ہے کہ SIAL گروپ کارپوریٹ سماجی ذمہ داری کے اعلیٰ ترین معیار کے ساتھ کام کرے۔ سخت علاقائی حفاظتی اور آپریشنل معیارات کو برقرار رکھتے ہوئے، وہ گروپ کی تیز رفتار عالمی تجارتی سرگرمیوں اور سرحد پار لاجسٹکس کی توسیع کے ساتھساتھ پائیدار کمیونٹی کی ترقی اور مقامی ملازمتوں کی تخلیق کو ترجیح دیتے ہیں۔",
+    desc3: "گروپ کی طویل مدتی تجارتی پائیداری اور جغرافیائی رسائی کو سہارا دینے کے لیے، وہ بین الاقوامی سرمایہ کاری کے لیے مضبوط قانونی فریم ورک قائم کرتے ہیں۔ ان کا گورننس ماڈل اس بات کو یقینی بناتا ہے کہ سیال گروپ تجارتی عمدگی کو سخت اخلاقی جوابدہی کے ساتھ ملا کر سرکاری اداروں، کثیر القومی کمپنیوں اور علاقائی تقسیم کاروں کے لیے ایک اہم قابلِ اعتماد شراکت دار رہے۔",
     badge: "🏛️ گلوبل گورننس اور مشترکہ منصوبے"
   }
 };
@@ -180,6 +185,9 @@ export default function About() {
         </p>
         <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
           {chair.desc2}
+        </p>
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {chair.desc3}
         </p>
       </div>
     </div>
