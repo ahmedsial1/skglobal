@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverCard from "@/components/HoverCard";
 import NetworkDirectory from "@/components/NetworkDirectory";
@@ -81,6 +81,110 @@ export default function About() {
   const chair = chairmanData[currentLang];
   const sectionTrans = sectionTranslations[currentLang];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [startX, setStartX] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        // swipe left -> next slide
+        setCurrentSlide((prev) => Math.min(prev + 1, 1));
+      } else {
+        // swipe right -> prev slide
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      }
+    }
+    setStartX(null);
+  };
+
+  const renderCEO = () => (
+    <div className="space-y-6">
+      <div className="flex justify-center">
+        <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+            style={{ backgroundImage: `url('/ceo.jpg')` }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-4">
+            <div className="space-y-1">
+              <span className="text-xs uppercase tracking-widest text-sial-blue font-bold">Group CEO & Founder</span>
+              <h3 className="text-2xl font-black text-slate-900">Muhammad Amjad</h3>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed text-justify">
+              &ldquo;{t("about.ceoQuote")}&rdquo;
+            </p>
+            <div className="pt-2 border-t border-slate-200 flex items-center space-x-2 text-xs text-slate-500">
+              <span>{t("about.ceoDelegate")}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4 pt-4">
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {t("about.ceoDesc1")}
+        </p>
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {t("about.ceoDesc2")}
+        </p>
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {t("about.ceoDesc3")}
+        </p>
+        <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-200">
+          <div>
+            <span className="text-xs text-slate-500 uppercase block">{t("about.focusAreas")}</span>
+            <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.focusValue")}</span>
+          </div>
+          <div>
+            <span className="text-xs text-slate-500 uppercase block">{t("about.strategicHubs")}</span>
+            <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.strategicValue")}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderChairman = () => (
+    <div className="space-y-6">
+      <div className="flex justify-center">
+        <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+            style={{ backgroundImage: `url('/chairman.jpg')` }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-4">
+            <div className="space-y-1">
+              <span className="text-xs uppercase tracking-widest text-sial-blue font-bold">{chair.title}</span>
+              <h3 className="text-2xl font-black text-slate-900">{chair.name}</h3>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed text-justify">
+              &ldquo;{chair.quote}&rdquo;
+            </p>
+            <div className="pt-2 border-t border-slate-200 flex items-center space-x-2 text-xs text-slate-500">
+              <span>{chair.badge}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4 pt-4">
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {chair.desc1}
+        </p>
+        <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+          {chair.desc2}
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <div className="bg-white text-slate-900 min-h-screen py-16 md:py-24 relative overflow-hidden">
       {/* Floating Animated Mesh Blobs */}
@@ -116,84 +220,81 @@ export default function About() {
               <div className="h-1 w-20 bg-sial-blue mx-auto mt-2"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-              {/* Chairman Profile */}
-              <div className="space-y-6">
-                <div className="flex justify-center">
-                  <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                      style={{ backgroundImage: `url('/chairman.jpg')` }}
-                    ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-4">
-                      <div className="space-y-1">
-                        <span className="text-xs uppercase tracking-widest text-sial-blue font-bold">{chair.title}</span>
-                        <h3 className="text-2xl font-black text-slate-900">{chair.name}</h3>
-                      </div>
-                      <p className="text-xs text-slate-700 leading-relaxed text-justify">
-                        &ldquo;{chair.quote}&rdquo;
-                      </p>
-                      <div className="pt-2 border-t border-slate-200 flex items-center space-x-2 text-xs text-slate-500">
-                        <span>{chair.badge}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Desktop View */}
+            <div className="hidden md:grid md:grid-cols-2 gap-12 items-start">
+              {renderCEO()}
+              {renderChairman()}
+            </div>
 
-                <div className="space-y-4 pt-4">
-                  <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
-                    {chair.desc1}
-                  </p>
-                  <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
-                    {chair.desc2}
-                  </p>
+            {/* Mobile Slider View */}
+            <div 
+              className="block md:hidden relative overflow-hidden"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                <div className="w-full flex-shrink-0 px-2">
+                  {renderCEO()}
+                </div>
+                <div className="w-full flex-shrink-0 px-2">
+                  {renderChairman()}
                 </div>
               </div>
 
-              {/* CEO Profile */}
-              <div className="space-y-6">
-                <div className="flex justify-center">
-                  <div className="relative p-[1px] bg-gradient-to-tr from-sial-blue to-slate-200 rounded-2xl w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl group">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                      style={{ backgroundImage: `url('/ceo.jpg')` }}
-                    ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-8 space-y-4">
-                      <div className="space-y-1">
-                        <span className="text-xs uppercase tracking-widest text-sial-blue font-bold">Group CEO & Founder</span>
-                        <h3 className="text-2xl font-black text-slate-900">Muhammad Amjad</h3>
-                      </div>
-                      <p className="text-xs text-slate-700 leading-relaxed text-justify">
-                        &ldquo;{t("about.ceoQuote")}&rdquo;
-                      </p>
-                      <div className="pt-2 border-t border-slate-200 flex items-center space-x-2 text-xs text-slate-500">
-                        <span>{t("about.ceoDelegate")}</span>
-                      </div>
-                    </div>
-                  </div>
+              {/* Navigation Controls */}
+              <div className="flex items-center justify-between mt-8 px-4">
+                {/* Previous Button */}
+                <button
+                  onClick={() => setCurrentSlide(0)}
+                  disabled={currentSlide === 0}
+                  className={`p-2.5 rounded-full border transition duration-300 ${
+                    currentSlide === 0 
+                      ? "border-slate-200 text-slate-300 cursor-not-allowed" 
+                      : "border-sial-blue text-sial-blue bg-sial-blue/5 hover:bg-sial-blue hover:text-white"
+                  }`}
+                  aria-label="Previous Slide"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                {/* Indicators */}
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setCurrentSlide(0)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      currentSlide === 0 ? "w-8 bg-sial-blue" : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                    }`}
+                    aria-label="CEO Slide"
+                  />
+                  <button
+                    onClick={() => setCurrentSlide(1)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      currentSlide === 1 ? "w-8 bg-sial-blue" : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                    }`}
+                    aria-label="Chairman Slide"
+                  />
                 </div>
 
-                <div className="space-y-4 pt-4">
-                  <p className="text-sm text-slate-600 leading-relaxed text-justify">
-                    {t("about.ceoDesc1")}
-                  </p>
-                  <p className="text-sm text-slate-600 leading-relaxed text-justify">
-                    {t("about.ceoDesc2")}
-                  </p>
-                  <p className="text-sm text-slate-600 leading-relaxed text-justify">
-                    {t("about.ceoDesc3")}
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-200">
-                    <div>
-                      <span className="text-xs text-slate-500 uppercase block">{t("about.focusAreas")}</span>
-                      <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.focusValue")}</span>
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 uppercase block">{t("about.strategicHubs")}</span>
-                      <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.strategicValue")}</span>
-                    </div>
-                  </div>
-                </div>
+                {/* Next Button */}
+                <button
+                  onClick={() => setCurrentSlide(1)}
+                  disabled={currentSlide === 1}
+                  className={`p-2.5 rounded-full border transition duration-300 ${
+                    currentSlide === 1 
+                      ? "border-slate-200 text-slate-300 cursor-not-allowed" 
+                      : "border-sial-blue text-sial-blue bg-sial-blue/5 hover:bg-sial-blue hover:text-white"
+                  }`}
+                  aria-label="Next Slide"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
