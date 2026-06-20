@@ -189,6 +189,16 @@ export default function About() {
         <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
           {chair.desc3}
         </p>
+        <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-200">
+          <div>
+            <span className="text-xs text-slate-500 uppercase block">{t("about.focusAreas")}</span>
+            <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.focusValue")}</span>
+          </div>
+          <div>
+            <span className="text-xs text-slate-500 uppercase block">{t("about.strategicHubs")}</span>
+            <span className="text-sm font-semibold text-slate-900 mt-1 block">{t("about.strategicValue")}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
