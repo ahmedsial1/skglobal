@@ -60,45 +60,68 @@ export default function SpareParts() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* Left Column: Categories List */}
               <div className="lg:col-span-7 space-y-6">
-                <p className="text-sm text-slate-600 leading-relaxed text-justify font-sans">
+                <p className="text-sm text-slate-655 leading-relaxed text-justify font-sans font-light">
                   {t("parts.specDesc")}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <HoverCard className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-2 flex flex-col justify-between hover:shadow-md transition-all duration-300">
-                    <div className="space-y-1.5">
-                      <div className="flex items-center space-x-2">
-                        <span className="w-2 h-2 rounded-full bg-sial-blue"></span>
-                        <h4 className="text-slate-900 font-extrabold text-sm tracking-tight">{t("parts.cat1Title")}</h4>
+                  {/* Category 1 */}
+                  <HoverCard className="bg-slate-50/50 hover:bg-white border border-slate-200/80 hover:border-sial-blue/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 rounded-lg bg-sial-blue/5 group-hover:bg-sial-blue/10 transition-colors duration-300">
+                          <svg className="w-5 h-5 text-sial-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </div>
+                        <h4 className="text-slate-900 font-black text-sm tracking-tight leading-snug">{t("parts.cat1Title")}</h4>
                       </div>
                       <p className="text-xs text-slate-550 leading-relaxed font-light">{t("parts.cat1Desc")}</p>
                     </div>
                   </HoverCard>
                   
-                  <HoverCard className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-2 flex flex-col justify-between hover:shadow-md transition-all duration-300">
-                    <div className="space-y-1.5">
-                      <div className="flex items-center space-x-2">
-                        <span className="w-2 h-2 rounded-full bg-sial-blue"></span>
-                        <h4 className="text-slate-900 font-extrabold text-sm tracking-tight">{t("parts.cat2Title")}</h4>
+                  {/* Category 2 */}
+                  <HoverCard className="bg-slate-50/50 hover:bg-white border border-slate-200/80 hover:border-sial-blue/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 rounded-lg bg-sial-blue/5 group-hover:bg-sial-blue/10 transition-colors duration-300">
+                          <svg className="w-5 h-5 text-sial-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <circle cx="12" cy="12" r="9" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v6M12 15v6M3 12h6M15 12h6" />
+                          </svg>
+                        </div>
+                        <h4 className="text-slate-900 font-black text-sm tracking-tight leading-snug">{t("parts.cat2Title")}</h4>
                       </div>
                       <p className="text-xs text-slate-550 leading-relaxed font-light">{t("parts.cat2Desc")}</p>
                     </div>
                   </HoverCard>
 
-                  <HoverCard className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-2 flex flex-col justify-between hover:shadow-md transition-all duration-300">
-                    <div className="space-y-1.5">
-                      <div className="flex items-center space-x-2">
-                        <span className="w-2 h-2 rounded-full bg-sial-blue"></span>
-                        <h4 className="text-slate-900 font-extrabold text-sm tracking-tight">{t("parts.cat3Title")}</h4>
+                  {/* Category 3 */}
+                  <HoverCard className="bg-slate-50/50 hover:bg-white border border-slate-200/80 hover:border-sial-blue/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 rounded-lg bg-sial-blue/5 group-hover:bg-sial-blue/10 transition-colors duration-300">
+                          <svg className="w-5 h-5 text-sial-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <h4 className="text-slate-900 font-black text-sm tracking-tight leading-snug">{t("parts.cat3Title")}</h4>
                       </div>
                       <p className="text-xs text-slate-550 leading-relaxed font-light">{t("parts.cat3Desc")}</p>
                     </div>
                   </HoverCard>
 
-                  <HoverCard className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-2 flex flex-col justify-between hover:shadow-md transition-all duration-300">
-                    <div className="space-y-1.5">
-                      <div className="flex items-center space-x-2">
-                        <span className="w-2 h-2 rounded-full bg-sial-blue"></span>
-                        <h4 className="text-slate-900 font-extrabold text-sm tracking-tight">{t("parts.cat4Title")}</h4>
+                  {/* Category 4 */}
+                  <HoverCard className="bg-slate-50/50 hover:bg-white border border-slate-200/80 hover:border-sial-blue/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 rounded-lg bg-sial-blue/5 group-hover:bg-sial-blue/10 transition-colors duration-300">
+                          <svg className="w-5 h-5 text-sial-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                          </svg>
+                        </div>
+                        <h4 className="text-slate-900 font-black text-sm tracking-tight leading-snug">{t("parts.cat4Title")}</h4>
                       </div>
                       <p className="text-xs text-slate-550 leading-relaxed font-light">{t("parts.cat4Desc")}</p>
                     </div>
@@ -107,34 +130,65 @@ export default function SpareParts() {
               </div>
 
               {/* Right Column: Infrastructure Card */}
-              <HoverCard className="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-md lg:col-span-5 space-y-6 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-sial-blue/5 rounded-full blur-3xl"></div>
-                <div className="relative w-full h-48 rounded-xl overflow-hidden border border-slate-200 shadow-sm mb-4">
+              <HoverCard className="bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-3xl shadow-2xl lg:col-span-5 space-y-6 relative overflow-hidden group text-white">
+                {/* Gradient Highlights */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-sial-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-sial-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                {/* Photo frame */}
+                <div className="relative w-full h-52 rounded-2xl overflow-hidden border border-slate-800 shadow-lg group">
                   <Image
                     src="/parts_warehouse.png"
                     alt="Genuine Hyundai and Kia automotive spare parts warehouse - SIAL Group"
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-103"
+                    className="object-cover transition-transform duration-750 group-hover:scale-105"
                     sizes="(max-w-768px) 100vw, 380px"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-40"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-85"></div>
+                  
+                  {/* Status Indicator */}
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-lg text-[9px] font-black uppercase tracking-wider text-sial-gold shadow-sm flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sial-gold animate-pulse"></span>
+                    OEM Distribution
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-4 border-b border-slate-150 pb-2 font-heading leading-snug">
-                  {t("parts.infraHeading")}
-                </h3>
+
+                <div className="space-y-2">
+                  <h3 className="text-lg sm:text-xl font-black text-white uppercase tracking-wider font-heading leading-tight flex items-center gap-2">
+                    <span className="w-1.5 h-6 bg-gradient-to-b from-sial-blue to-sial-gold rounded-full"></span>
+                    {t("parts.infraHeading")}
+                  </h3>
+                  <div className="h-[1px] w-full bg-slate-800/80"></div>
+                </div>
                 
-                <div className="space-y-4">
-                  <div className="border-l-4 border-sial-blue pl-4 space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900">{t("parts.infraOmanTitle")}</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed text-justify font-light">
+                <div className="space-y-6 relative pl-3 border-l-2 border-slate-800">
+                  {/* Oman Hub */}
+                  <div className="relative space-y-1.5 group-hover:translate-x-1 transition-transform duration-300">
+                    <div className="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-950 border-2 border-sial-blue flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 rounded-full bg-sial-blue animate-ping absolute"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-sial-blue"></div>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h4 className="text-sm font-black text-slate-100 uppercase tracking-wide">{t("parts.infraOmanTitle")}</h4>
+                      <span className="text-[8px] font-bold text-sial-blue bg-sial-blue/10 border border-sial-blue/20 px-2 py-0.5 rounded uppercase tracking-widest">Muscat HQ</span>
+                    </div>
+                    <p className="text-xs text-slate-400 leading-relaxed text-justify font-light">
                       {t("parts.infraOmanDesc")}
                     </p>
                   </div>
                   
-                  <div className="border-l-4 border-slate-400 pl-4 space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900">{t("parts.infraSaTitle")}</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed text-justify font-light">
+                  {/* Saudi Arabia Expansion */}
+                  <div className="relative space-y-1.5 group-hover:translate-x-1 transition-transform duration-300">
+                    <div className="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-950 border-2 border-sial-gold flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 rounded-full bg-sial-gold animate-ping absolute"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-sial-gold"></div>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h4 className="text-sm font-black text-slate-100 uppercase tracking-wide">{t("parts.infraSaTitle")}</h4>
+                      <span className="text-[8px] font-bold text-sial-gold bg-sial-gold/10 border border-sial-gold/20 px-2 py-0.5 rounded uppercase tracking-widest">Jeddah Hub</span>
+                    </div>
+                    <p className="text-xs text-slate-400 leading-relaxed text-justify font-light">
                       {t("parts.infraSaDesc")}
                     </p>
                   </div>
