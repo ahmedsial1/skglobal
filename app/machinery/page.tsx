@@ -48,11 +48,8 @@ export default function Machinery() {
         {/* Oman (SK Transports Oman) */}
         <ScrollReveal delay={0.15}>
           <section
-            className="bg-parallax-section border border-slate-800 p-6 sm:p-10 md:p-14 rounded-3xl relative overflow-hidden shadow-2xl bg-slate-950 transition-all duration-300"
-            style={{ backgroundImage: "url('/oman_cranes.png')" }}
+            className="border border-slate-800/80 p-6 sm:p-10 md:p-14 rounded-3xl relative overflow-hidden shadow-2xl bg-slate-950/95 backdrop-blur-xl transition-all duration-300"
           >
-            {/* Dark overlay mask */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/98 via-slate-950/92 to-slate-900/65 z-0"></div>
             
             <div className="space-y-12 sm:space-y-16 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
