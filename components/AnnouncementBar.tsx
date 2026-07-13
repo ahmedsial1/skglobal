@@ -23,9 +23,9 @@ export default function AnnouncementBar({ scrolled }: AnnouncementBarProps) {
       <div className="w-full overflow-hidden whitespace-nowrap relative flex items-center h-full" dir="ltr">
         <div className="animate-marquee whitespace-nowrap flex items-center select-none">
           {copies.map((text, index) => (
-            <span key={index} className="px-10 flex items-center space-x-2 text-slate-600">
+            <span key={index} className="px-10 flex items-center space-x-2 text-slate-800">
               <span className="text-sial-gold font-extrabold text-[12px] select-none">✦</span>
-              <span>{text}</span>
+              <span className="font-bold">{text}</span>
             </span>
           ))}
         </div>
