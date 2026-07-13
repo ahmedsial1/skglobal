@@ -15,6 +15,7 @@ const translations: Record<Language, any> = {
       hardware: "Industrial Hardware",
       contact: "Contact",
       getInTouch: "Get In Touch",
+      announcement: "SIAL GLOBAL | Global Industrial Sourcing Ecosystem — Factory-Direct Heavy Machinery, YSIT® Automotive Parts & SADAAN® Hardware Supplies.",
     },
     footer: {
       divisions: "Divisions",
@@ -238,6 +239,7 @@ const translations: Record<Language, any> = {
       hardware: "المعدات الصناعية",
       contact: "اتصل بنا",
       getInTouch: "تواصل معنا",
+      announcement: "سيال العالمية | منظومة التوريد الصناعي العالمي — آليات ثقيلة مباشرة من المصنع، قطع غيار سيارات ®YSIT ومعدات ®SADAAN الصناعية.",
     },
     footer: {
       divisions: "الأقسام",
@@ -461,6 +463,7 @@ const translations: Record<Language, any> = {
       hardware: "工业五金",
       contact: "联系我们",
       getInTouch: "取得联系",
+      announcement: "SIAL 全球 | 全球工业采购生态系统 — 工厂直营重型机械、YSIT® 汽车配件和 SADAAN® 五金工具。",
     },
     footer: {
       divisions: "业务部门",
@@ -684,6 +687,7 @@ const translations: Record<Language, any> = {
       hardware: "산업용 하드웨어",
       contact: "문의하기",
       getInTouch: "문의하기",
+      announcement: "SIAL 글로벌 | 글로벌 산업 소싱 에코시스템 — 공장 직송 중장비, YSIT® 자동차 부품 및 SADAAN® 산업 하드웨어.",
     },
     footer: {
       divisions: "사업 부문",
@@ -907,6 +911,7 @@ const translations: Record<Language, any> = {
       hardware: "انڈسٹریل ہارڈویئر",
       contact: "رابطہ کریں",
       getInTouch: "رابطہ کریں",
+      announcement: "سیال گلوبال | عالمی صنعتی سورسنگ ایکو سسٹم — فیکٹری سے براہ راست بھاری مشینری، ®YSIT آٹو پارٹس اور ®SADAAN ہارڈ ویئر سپلائیز۔",
     },
     footer: {
       divisions: "شعبہ جات",

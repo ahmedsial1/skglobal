@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLanguage, Language } from "@/context/LanguageContext";
+import AnnouncementBar from "./AnnouncementBar";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
@@ -50,13 +51,15 @@ export default function Navbar() {
   const currentLangLabel = LANGUAGES.find((l) => l.code === language)?.label || "English";
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-800 py-4 shadow-lg"
-          : "bg-slate-900 border-b border-slate-800 py-6"
-      }`}
-    >
+    <>
+      <AnnouncementBar scrolled={scrolled} />
+      <nav
+        className={`fixed left-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "top-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 py-4 shadow-lg"
+            : "top-[32px] sm:top-[36px] md:top-[40px] bg-slate-900 border-b border-slate-800 py-6"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
@@ -195,7 +198,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 
   function lgHiddenLangSelector() {
