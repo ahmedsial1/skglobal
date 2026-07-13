@@ -61,7 +61,52 @@ export default function Navbar() {
         }`}
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between w-full">
+        {/* Mobile Navbar Layout: Menu left, Logo center, Translator right */}
+        <div className="flex lg:hidden items-center justify-between w-full relative">
+          {/* Mobile Menu Button (Hamburger) - Left */}
+          <div className="flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-slate-300 hover:text-blue-400 focus:outline-none p-2"
+              aria-label="Toggle Menu"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+
+          {/* Centered Logo */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo.png" 
+                alt="SIAL Group Logo" 
+                width={150} 
+                height={80} 
+                className="h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+                priority 
+              />
+            </Link>
+          </div>
+
+          {/* Mobile Language Selector (Translator) - Right */}
+          <div className="flex items-center">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center space-x-1 text-xs text-slate-300 hover:text-blue-400 px-2.5 py-1.5 rounded border border-slate-700 bg-slate-800"
+            >
+              <span>🌐 {language.toUpperCase()}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop Navbar Layout: Original Design */}
+        <div className="hidden lg:flex items-center justify-between w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
@@ -132,30 +177,6 @@ export default function Navbar() {
             >
               {t("navbar.getInTouch")}
             </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-4">
-            {/* Language Selector for Mobile */}
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center space-x-1 text-xs text-slate-300 hover:text-blue-400 px-2 py-1 rounded border border-slate-700 bg-slate-800"
-            >
-              <span>🌐 {language.toUpperCase()}</span>
-            </button>
-
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-blue-400 focus:outline-none"
-            >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
           </div>
         </div>
       </div>
