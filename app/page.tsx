@@ -115,7 +115,7 @@ export default function Home() {
               </h1>
 
               {/* Description */}
-              <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed text-center lg:text-justify">
+              <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed text-justify">
                 {t("home.heroDesc")}
               </p>
 
@@ -163,7 +163,7 @@ export default function Home() {
                 {t("home.edgeTitle")}{" "}
                 <span className="text-sial-blue">{t("home.edgeHighlight")}</span>
               </h2>
-              <p className="text-base text-slate-600 leading-relaxed">
+              <p className="text-base text-slate-600 leading-relaxed text-justify lg:text-center">
                 {t("home.edgeDesc")}
               </p>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="space-y-6">
                   {/* South Korea */}
-                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80">
+                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80 text-center lg:text-left">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/seoul_hq.png"
@@ -185,11 +185,11 @@ export default function Home() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center justify-center lg:justify-start space-x-2">
                         <span className="text-xl">🇰🇷</span>
                         <h4 className="text-slate-900 font-bold text-base leading-snug">{t("home.koreaTitle")}</h4>
                       </div>
-                      <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider">{t("home.koreaEntity")}</span>
+                      <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider text-center lg:text-start">{t("home.koreaEntity")}</span>
                       <p className="text-xs text-slate-600 leading-relaxed text-justify">
                         {t("home.koreaDesc")}
                       </p>
@@ -197,7 +197,7 @@ export default function Home() {
                   </div>
 
                   {/* China */}
-                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80">
+                  <div className="bg-white/95 backdrop-blur-md p-5 rounded-xl space-y-4 shadow-sm border border-slate-200/80 text-center lg:text-left">
                     <div className="relative w-full h-40 rounded-lg overflow-hidden">
                       <Image
                         src="/china_logistics.png"
@@ -208,11 +208,11 @@ export default function Home() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center justify-center lg:justify-start space-x-2">
                         <span className="text-xl">🇨🇳</span>
                         <h4 className="text-slate-900 font-bold text-base leading-snug">{t("home.chinaTitle")}</h4>
                       </div>
-                      <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider">{t("home.chinaEntity")}</span>
+                      <span className="text-[11px] font-bold text-sial-blue block uppercase tracking-wider text-center lg:text-start">{t("home.chinaEntity")}</span>
                       <p className="text-xs text-slate-600 leading-relaxed text-justify">
                         {t("home.chinaDesc")}
                       </p>
@@ -223,37 +223,37 @@ export default function Home() {
 
               <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-md relative overflow-hidden border border-slate-200/80">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sial-blue/5 rounded-full blur-3xl"></div>
-                <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4 text-center lg:text-start">
                   {t("home.whyChooseTitle")}
                 </h3>
                 <ul className="space-y-6 text-xs text-slate-600">
                   <li className="space-y-1">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-center lg:justify-start space-x-2">
                       <span className="text-sial-blue text-base">✓</span>
                       <span className="text-slate-900 font-bold">{t("home.whyChoose1Title")}</span>
                     </div>
-                    <p className="pl-6">{t("home.whyChoose1Desc")}</p>
+                    <p className="pl-0 lg:pl-6 text-justify">{t("home.whyChoose1Desc")}</p>
                   </li>
                   <li className="space-y-1">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-center lg:justify-start space-x-2">
                       <span className="text-sial-blue text-base">✓</span>
                       <span className="text-slate-900 font-bold">{t("home.whyChoose2Title")}</span>
                     </div>
-                    <p className="pl-6">{t("home.whyChoose2Desc")}</p>
+                    <p className="pl-0 lg:pl-6 text-justify">{t("home.whyChoose2Desc")}</p>
                   </li>
                   <li className="space-y-1">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-center lg:justify-start space-x-2">
                       <span className="text-sial-blue text-base">✓</span>
                       <span className="text-slate-900 font-bold">{t("home.whyChoose3Title")}</span>
                     </div>
-                    <p className="pl-6">{t("home.whyChoose3Desc")}</p>
+                    <p className="pl-0 lg:pl-6 text-justify">{t("home.whyChoose3Desc")}</p>
                   </li>
                   <li className="space-y-1">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-center lg:justify-start space-x-2">
                       <span className="text-sial-blue text-base">✓</span>
                       <span className="text-slate-900 font-bold">{t("home.whyChoose4Title")}</span>
                     </div>
-                    <p className="pl-6">{t("home.whyChoose4Desc")}</p>
+                    <p className="pl-0 lg:pl-6 text-justify">{t("home.whyChoose4Desc")}</p>
                   </li>
                 </ul>
               </div>
@@ -280,7 +280,7 @@ export default function Home() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* CEO Column */}
-            <div className="group flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
+            <div className="group flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/ceo.jpg"
@@ -292,16 +292,18 @@ export default function Home() {
               </div>
               <div className="space-y-4 w-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">Group CEO & Founder</span>
-                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">Muhammad Amjad</h3>
+                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block text-center lg:text-start">Group CEO & Founder</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1 text-center lg:text-start">Muhammad Amjad</h3>
                 </div>
                 <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
-                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed text-justify">
                     &ldquo;Resilience is building proprietary pipelines that ensure our partners never fail.&rdquo;
                   </p>
                 </div>
-                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
-                  {t("footer.governance")}
+                <div className="w-full flex justify-center lg:justify-start">
+                  <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
+                    {t("footer.governance")}
+                  </div>
                 </div>
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {t("home.ceoDesc1")}
@@ -313,7 +315,7 @@ export default function Home() {
             </div>
 
             {/* Chairman Column */}
-            <div className="group flex flex-col items-start text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
+            <div className="group flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/60 shadow-lg shadow-slate-100/80 flex-shrink-0 w-[85vw] md:w-full snap-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src="/chairman.jpg"
@@ -325,16 +327,18 @@ export default function Home() {
               </div>
               <div className="space-y-4 w-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block">{chair.title}</span>
-                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1">{chair.name}</h3>
+                  <span className="text-xs uppercase tracking-widest text-sial-blue font-extrabold block text-center lg:text-start">{chair.title}</span>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight mt-1 text-center lg:text-start">{chair.name}</h3>
                 </div>
                 <div className="p-4 bg-blue-50/50 border-l-4 border-sial-blue rounded-r-xl">
-                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 italic font-semibold leading-relaxed text-justify">
                     &ldquo;{chair.quote}&rdquo;
                   </p>
                 </div>
-                <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
-                  {chair.badge}
+                <div className="w-full flex justify-center lg:justify-start">
+                  <div className="inline-block px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-900 text-xs font-bold rounded-lg uppercase tracking-wider">
+                    {chair.badge}
+                  </div>
                 </div>
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed text-justify font-medium">
                   {chair.desc1}
@@ -370,7 +374,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
               {t("home.divisionsTitle")}
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-slate-600 max-w-2xl mx-auto text-justify lg:text-center">
               {t("home.divisionsSubtitle")}
             </p>
           </div>
@@ -379,17 +383,17 @@ export default function Home() {
           {/* Heavy Machinery */}
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block origin-left">🏗️</span>
-              <h3 className="text-xl font-black text-slate-950 mb-3">
+              <span className="text-4xl mb-6 block origin-left text-center lg:text-start">🏗️</span>
+              <h3 className="text-xl font-black text-slate-950 mb-3 text-center lg:text-start">
                 {t("home.machineryTitle")}
               </h3>
-              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium text-justify lg:text-start">
                 {t("home.machineryDesc")}
               </p>
             </div>
             <Link
               href="/machinery"
-              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
+              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center justify-center lg:justify-start space-x-1 hover:text-sial-blue-dark"
             >
               <span>{t("home.explore")}</span>
               <span>→</span>
@@ -399,17 +403,17 @@ export default function Home() {
           {/* Spare Parts */}
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block origin-left">⚙️</span>
-              <h3 className="text-xl font-black text-slate-950 mb-3">
+              <span className="text-4xl mb-6 block origin-left text-center lg:text-start">⚙️</span>
+              <h3 className="text-xl font-black text-slate-950 mb-3 text-center lg:text-start">
                 {t("home.partsTitle")}
               </h3>
-              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium text-justify lg:text-start">
                 {t("home.partsDesc")}
               </p>
             </div>
             <Link
               href="/spare-parts"
-              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
+              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center justify-center lg:justify-start space-x-1 hover:text-sial-blue-dark"
             >
               <span>{t("home.explore")}</span>
               <span>→</span>
@@ -419,17 +423,17 @@ export default function Home() {
           {/* Hardware */}
           <div className="bg-white border border-slate-200/60 p-8 rounded-xl flex flex-col justify-between h-96 shadow-lg shadow-slate-100/80">
             <div>
-              <span className="text-4xl mb-6 block origin-left">⛓️</span>
-              <h3 className="text-xl font-black text-slate-950 mb-3">
+              <span className="text-4xl mb-6 block origin-left text-center lg:text-start">⛓️</span>
+              <h3 className="text-xl font-black text-slate-950 mb-3 text-center lg:text-start">
                 {t("home.hardwareTitle")}
               </h3>
-              <p className="text-[13px] text-slate-950 leading-relaxed font-medium">
+              <p className="text-[13px] text-slate-950 leading-relaxed font-medium text-justify lg:text-start">
                 {t("home.hardwareDesc")}
               </p>
             </div>
             <Link
               href="/hardware"
-              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center space-x-1 hover:text-sial-blue-dark"
+              className="text-xs font-bold text-sial-blue uppercase tracking-wider flex items-center justify-center lg:justify-start space-x-1 hover:text-sial-blue-dark"
             >
               <span>{t("home.explore")}</span>
               <span>→</span>
