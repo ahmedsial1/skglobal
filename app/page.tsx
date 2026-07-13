@@ -102,7 +102,7 @@ export default function Home() {
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             {/* Left Column: Text & CTAs */}
-            <div className="lg:col-span-7 text-start space-y-6 flex flex-col justify-center">
+            <div className="lg:col-span-7 text-center lg:text-start space-y-6 flex flex-col items-center lg:items-start justify-center">
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-sial-blue/20 bg-sial-blue/5 text-xs font-bold uppercase tracking-widest text-sial-blue">
                 <span>{t("home.legacyBadge")}</span>
@@ -115,7 +115,7 @@ export default function Home() {
               </h1>
 
               {/* Description */}
-              <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed text-justify">
+              <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed text-center lg:text-justify">
                 {t("home.heroDesc")}
               </p>
 
